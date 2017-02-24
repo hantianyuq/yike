@@ -9,11 +9,11 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="{{asset('home')}}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="{{asset('home')}}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="{{asset('home')}}/css/plugins/iCheck/custom.css" rel="stylesheet">
-    <link href="{{asset('home')}}/css/animate.css" rel="stylesheet">
-    <link href="{{asset('home')}}/css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="{{asset('admin')}}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/animate.css" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/style.css?v=4.1.0" rel="stylesheet">
 
 </head>
 
@@ -44,19 +44,20 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form class="form-horizontal">
+                            <form class="form-horizontal" action="{{url('admin/cate/adddo')}}" method="post">
+                                    {{csrf_field()}}
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">分类名：</label>
 
                                     <div class="col-sm-8">
-                                        <input type="email" placeholder="用户名" class="form-control">
+                                        <input type="text" placeholder="用户名" class="form-control" name="categray_name">
                                         <span class="help-block m-b-none">请输入要填入的分类名字</span>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-3 control-label">所属分类：</label>
                                     <div class="col-sm-8">
-                                        <select name="" id="">
+                                        <select name="pid" >
                                             <option value="0">顶级</option>
                                             <?php foreach($cate as $k=>$v){?>
                                             <option value="{{$v['categray_id']}}">{{$v['categray_name']}}</option>
@@ -66,8 +67,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-3 col-sm-8">
-                                        <button class="btn btn-sm btn-info" type="submit">登 录</button>
-                                    </div>
+                                        <input class="btn btn-sm btn-info" type="submit" value="登 录"/>
                                 </div>
                             </form>
                         </div>
@@ -79,14 +79,14 @@
 </div>
 
 <!-- 全局/js -->
-<script src="{{asset('home')}}/js/jquery.min.{{asset('home')}}/js?v=2.1.4"></script>
-<script src="{{asset('home')}}/js/bootstrap.min.{{asset('home')}}/js?v=3.3.6"></script>
+<script src="{{asset('admin')}}/js/jquery.min./js?v=2.1.4"></script>
+<script src="{{asset('admin')}}/js/bootstrap.min./js?v=3.3.6"></script>
 
 <!-- 自定义/js -->
-<script src="{{asset('home')}}/js/content.{{asset('home')}}/js?v=1.0.0"></script>
+<script src="{{asset('admin')}}/js/content./js?v=1.0.0"></script>
 
 <!-- iCheck -->
-<script src="{{asset('home')}}/js/plugins/iCheck/icheck.min.{{asset('home')}}/js"></script>
+<script src="{{asset('admin')}}/js/plugins/iCheck/icheck.min./js"></script>
 <script>
     $(document).ready(function () {
         $('.i-checks').iCheck({

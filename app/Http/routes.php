@@ -29,5 +29,10 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     Route::get("admin/index",'Admin\IndexController@index');
     Route::get("admin/index_v1",'Admin\IndexController@index_v1');
-    Route::get("admin/cate/show",'Admin\CategrayController@show');
+    Route::get("admin/cate/add",'Admin\CategrayController@add');
+    Route::any("admin/cate/adddo",'Admin\CategrayController@addDo');
+    Route::any("admin/cate/show",'Admin\CategrayController@show');
+    Route::any("admin/cate/del",'Admin\CategrayController@del');
+    Route::any("admin/cate/update",'Admin\CategrayController@update');
+    Route::any("admin/cate/updatado",'Admin\CategrayController@updateDo');
 });
