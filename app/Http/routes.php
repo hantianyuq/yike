@@ -26,7 +26,15 @@ Route::get('/', function () {
 |
 */
 
+
 Route::group(['middleware' => ['web']], function () {
     Route::get("admin/index",'Admin\IndexController@index');
     Route::get("admin/index_v1",'Admin\IndexController@index_v1');
+});
+
+/**
+ *  后台猿问组
+ */
+Route::group(['middleware' => ['web']], function () {
+    Route::get("home/answer",'Home\AnswerController@index');
 });
