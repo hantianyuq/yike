@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view("admin.index");
 });
 
 /*
@@ -29,4 +29,7 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     Route::get("admin/index",'Admin\IndexController@index');
     Route::get("admin/index_v1",'Admin\IndexController@index_v1');
+    Route::get("admin/TurnsShow",'Admin\Real\TurnsController@TurnsShow');
+    Route::any("admin/TurnsAdd",'Admin\Real\TurnsController@TurnsAdd');
+    Route::any("admin/TurnsUpload",'Admin\Real\TurnsController@TurnsUpload');
 });
