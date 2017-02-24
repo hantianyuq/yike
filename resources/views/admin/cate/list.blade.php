@@ -65,12 +65,12 @@
                         <tbody>
                         <?php foreach($cate as $k=>$v){?>
                         <tr class="gradeX">
-                            <td><?php echo str_repeat("-",$v['level'])?>{{$v['categray_id']}}</td>
-                            <td class="td">{{$v['categray_name']}}
+                            <td><?php echo str_repeat("-",$v['level'])?>{{$v['category_id']}}</td>
+                            <td class="td">{{$v['category_name']}}
                             </td>
-                            <td><a href="{{url('admin/cate/update').'?id = '.$v['categray_id']}}">修改</a>
+                            <td><a href="{{url('admin/cate/update').'?id = '.$v['category_id']}}">修改</a>
                             </td>
-                            <td class="del" cid="{{$v['categray_id']}}">删除</td>
+                            <td class="del" cid="{{$v['category_id']}}">删除</td>
                         </tr>
                         <?php }?>
                         </tbody>
@@ -109,14 +109,14 @@
                     cid:id,
                 },
                 success: function(msg){
-                   if(msg == 1){
+                    if(msg == 1){
                         obj.parent().remove();
                         alert('删除成功');
                     }else if(msg == 0){
                         alert('删除失败');
-                   }else{
-                       alert('有子分类不允许删除');
-                   }
+                    }else{
+                        alert('有子分类不允许删除');
+                    }
                 }
             });
 

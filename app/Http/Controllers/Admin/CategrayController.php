@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 
-class CategrayController extends Controller
+class CategoryController extends Controller
 
 {
     /**
@@ -14,7 +14,7 @@ class CategrayController extends Controller
      */
     public function add()
     {
-        $cate = DB::table('yi_section_categray')->get();
+        $cate = DB::table('section_category')->get();
         return view("admin.cate.show",[
             'cate'=>$cate,
         ]);
@@ -22,11 +22,11 @@ class CategrayController extends Controller
 
     public function addDo()
     {
-        $data[] = Input::get('categray_name');
+        $data[] = Input::get('category_name');
         $data[] = Input::get('pid');
-        $cate = DB::table('yi_section_categray')->where('categray_name',$data[0])->first();
+        $cate = DB::table('section_category')->where('category_name',$data[0])->first();
         if(empty($cate)){
-            $res = DB::insert('insert into yi_section_categray (categray_name, pid) values (?, ?)', $data);
+            $res = DB::insert('insert into yi_section_category (category_name, pid) values (?, ?)', $data);
             if($res){
 
                 return redirect('admin/cate/add');
@@ -50,8 +50,9 @@ class CategrayController extends Controller
      */
     public function show()
     {
-        $cate = DB::table('yi_section_categray')->get();
+        $cate = DB::table('section_category')->get();
         $cate = $this->arraySort($cate);
+        var_dump($cate);
         return view('admin.cate.list',[
             'cate'=>$cate,
         ]);
@@ -64,7 +65,7 @@ class CategrayController extends Controller
             if($v['pid'] == $pid){
                 $v['level'] = $level;
                 $res[$k] = $v;
-                $this->arraySort($arr,$v['categray_id'],$level+1);
+                $this->arraySort($arr,$v['category_id'],$level+1);
 
             }
         }
@@ -79,9 +80,9 @@ class CategrayController extends Controller
 
     public function del(){
         $id = Input::get('cid');
-        $res = DB::table('yi_section_categray')->where('pid',$id)->first();
+        $res = DB::table('section_category')->where('pid',$id)->first();
         if(empty($res)){
-            $deleted = DB::delete("delete from yi_section_categray where categray_id =$id");
+            $deleted = DB::delete("delete from yi_section_category where category_id =$id");
             if($deleted){
                 echo 1;
             }else{
@@ -100,20 +101,20 @@ class CategrayController extends Controller
     public function update()
     {
 
-       $id =  Input::get('id_');
-        $cate = DB::table('yi_section_categray')->get();
+        $id =  Input::get('id_');
+        $cate = DB::table('section_category')->get();
         foreach($cate as $k=>$v){
-            if($v['categray_id'] == $id){
+            if($v['category_id'] == $id){
                 $data = $v;
                 unset($cate[$k]);
             }
 
         }
-       return view('admin.cate.update',[
-           'cate'=>$cate,
-           'data'=>$data,
+        return view('admin.cate.update',[
+            'cate'=>$cate,
+            'data'=>$data,
 
-       ]);
+        ]);
 
 
     }
@@ -122,12 +123,12 @@ class CategrayController extends Controller
     public function updateDo()
     {
         $id = Input::get('cid');
-        $categray_name = Input::get('categray_name');
+        $category_name = Input::get('category_name');
         $pid = Input::get('pid');
-        $res = DB::table('yi_section_categray')->where('categray_name',$categray_name)->first();
+        $res = DB::table('section_category')->where('category_name',$category_name)->first();
         if(empty($res)){
 
-            $affected = DB::update("update yi_section_categray set categray_name ='".$categray_name."',pid=$pid  where categray_id = ?", ["$id"]);
+            $affected = DB::update("update yi_section_category set category_name ='".$category_name."',pid=$pid  where name = ?", ["$id"]);
             if($affected){
                 return redirect('admin/cate/show');
 
