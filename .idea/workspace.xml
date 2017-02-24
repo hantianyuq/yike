@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="69ee0ac9-0a4b-4c6d-91a9-39aad9cf3c71" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/cate/update.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/cate/update.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategrayController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" />
     </list>
     <ignored path="yike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +25,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+              <folding>
+                <element signature="e#45#81#0#PHP" expanded="true" />
+                <marker date="1487933961879" expanded="true" signature="739:805" ph="insert into yi_section_category... " />
+                <marker date="1487933961879" expanded="true" signature="1870:1921" ph="delete from " />
+                <marker date="1487933961879" expanded="true" signature="2893:2934" ph="update yi_se... " />
+                <marker date="1487933961879" expanded="true" signature="2893:2938" ph="update yi_se... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -37,7 +54,7 @@
       <file leaf-file-name="list.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/cate/list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="2262">
               <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
               <folding />
             </state>
@@ -54,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/cate/update.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="46" column="108" selection-start-line="46" selection-start-column="108" selection-end-line="46" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -82,10 +99,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/SectionController.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CategrayController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/cate/list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/cate/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/cate/update.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" />
       </list>
     </option>
   </component>
@@ -460,15 +478,15 @@
       <updated>1487830494932</updated>
       <workItem from="1487851114250" duration="3875000" />
       <workItem from="1487896051020" duration="7215000" />
-      <workItem from="1487903718010" duration="19865000" />
+      <workItem from="1487903718010" duration="20220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30955000" />
+    <option name="totallyTimeSpent" value="31310000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="728" extended-state="1" />
+    <frame x="0" y="0" width="1366" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -509,16 +527,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategrayController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding>
             <element signature="e#45#81#0#PHP" expanded="true" />
-            <marker date="1487925742462" expanded="true" signature="739:805" ph="insert into yi_section_category... " />
-            <marker date="1487925742462" expanded="true" signature="1870:1921" ph="delete from " />
-            <marker date="1487925742462" expanded="true" signature="2893:2927" ph="update yi_se... " />
-            <marker date="1487925742462" expanded="true" signature="2893:2931" ph="update yi_se... " />
+            <marker date="1487933961879" expanded="true" signature="739:805" ph="insert into yi_section_category... " />
+            <marker date="1487933961879" expanded="true" signature="1870:1921" ph="delete from " />
+            <marker date="1487933961879" expanded="true" signature="2893:2934" ph="update yi_se... " />
+            <marker date="1487933961879" expanded="true" signature="2893:2938" ph="update yi_se... " />
           </folding>
         </state>
       </provider>
@@ -539,16 +557,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategrayController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#45#81#0#PHP" expanded="true" />
-            <marker date="1487925742462" expanded="true" signature="739:805" ph="insert into yi_section_category... " />
-            <marker date="1487925742462" expanded="true" signature="1870:1921" ph="delete from " />
-            <marker date="1487925742462" expanded="true" signature="2893:2927" ph="update yi_se... " />
-            <marker date="1487925742462" expanded="true" signature="2893:2931" ph="update yi_se... " />
+            <marker date="1487933961879" expanded="true" signature="739:805" ph="insert into yi_section_category... " />
+            <marker date="1487933961879" expanded="true" signature="1870:1921" ph="delete from " />
+            <marker date="1487933961879" expanded="true" signature="2893:2934" ph="update yi_se... " />
+            <marker date="1487933961879" expanded="true" signature="2893:2938" ph="update yi_se... " />
           </folding>
         </state>
       </provider>
@@ -735,36 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategrayController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="124" column="32" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
-          <folding>
-            <element signature="e#45#81#0#PHP" expanded="true" />
-            <marker date="1487925742462" expanded="true" signature="739:805" ph="insert into yi_section_category... " />
-            <marker date="1487925742462" expanded="true" signature="1870:1921" ph="delete from " />
-            <marker date="1487925742462" expanded="true" signature="2893:2927" ph="update yi_se... " />
-            <marker date="1487925742462" expanded="true" signature="2893:2931" ph="update yi_se... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/cate/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/cate/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -773,11 +761,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/cate/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2262">
+          <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/cate/update.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="46" column="108" selection-start-line="46" selection-start-column="108" selection-end-line="46" selection-end-column="108" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding>
+            <element signature="e#45#81#0#PHP" expanded="true" />
+            <marker date="1487933961879" expanded="true" signature="739:805" ph="insert into yi_section_category... " />
+            <marker date="1487933961879" expanded="true" signature="1870:1921" ph="delete from " />
+            <marker date="1487933961879" expanded="true" signature="2893:2934" ph="update yi_se... " />
+            <marker date="1487933961879" expanded="true" signature="2893:2938" ph="update yi_se... " />
+          </folding>
         </state>
       </provider>
     </entry>

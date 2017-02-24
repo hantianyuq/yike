@@ -128,7 +128,7 @@ class CategoryController extends Controller
         $res = DB::table('section_category')->where('category_name',$category_name)->first();
         if(empty($res)){
 
-            $affected = DB::update("update yi_section_category set category_name ='".$category_name."',pid=$pid  where name = ?", ["$id"]);
+            $affected = DB::update("update yi_section_category set category_name ='".$category_name."',pid=$pid  where category_id = ?", ["$id"]);
             if($affected){
                 return redirect('admin/cate/show');
 
