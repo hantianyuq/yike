@@ -30,3 +30,13 @@ Route::group(['middleware' => ['web']], function () {
     Route::get("admin/index",'Admin\IndexController@index');
     Route::get("admin/index_v1",'Admin\IndexController@index_v1');
 });
+
+
+// 课程章节
+Route::group(['middleware' => ['web']], function () {
+    Route::get("courseShow",'Admin\free\CourseController@courseShow');  // 章节展示
+    Route::get("courseAdd",'Admin\free\CourseController@courseAdd');	   // 章节添加 
+    Route::get("courseDel",'Admin\free\CourseController@courseDel');	   // 章节删除 
+    Route::get("courseEdit",'Admin\free\CourseController@courseEdit');	   // 章节编辑 
+    Route::post("courseEdit_do",'Admin\free\CourseController@courseEdit_do');	   // 章节编辑 
+});

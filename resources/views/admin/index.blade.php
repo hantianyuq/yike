@@ -7,10 +7,10 @@
 
     <title> hAdmin- 主页</title>
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="{{asset('home')}}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="{{asset('home')}}/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
-    <link href="{{asset('home')}}/css/animate.css" rel="stylesheet">
-    <link href="{{asset('home')}}/css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="{{asset('admin')}}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/animate.css" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/style.css?v=4.1.0" rel="stylesheet">
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
@@ -90,39 +90,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">表单</span><span class="fa arrow"></span></a>
+                        <a href=""><i class="fa fa-edit"></i> <span class="nav-label">课程章节</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="form_basic.html">基本表单</a>
+                            <li><a class="J_menuItem" href="{{URL('courseShow')}}">章节展示</a>
                             </li>
-                            <li><a class="J_menuItem" href="form_validate.html">表单验证</a>
-                            </li>
-                            <li><a class="J_menuItem" href="form_advanced.html">高级插件</a>
-                            </li>
-                            <li><a class="J_menuItem" href="form_wizard.html">表单向导</a>
-                            </li>
-                            <li>
-                                <a href="#">文件上传 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_webuploader.html">百度WebUploader</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="form_file_upload.html">DropzoneJS</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">编辑器 <span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li><a class="J_menuItem" href="form_editors.html">富文本编辑器</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="form_simditor.html">simditor</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="form_markdown.html">MarkDown编辑器</a>
-                                    </li>
-                                    <li><a class="J_menuItem" href="code_editor.html">代码编辑器</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="J_menuItem" href="layerdate.html">日期选择器layerDate</a>
+                            <li><a class="J_menuItem" href="{{URL('courseAdd')}}">章节添加</a>
                             </li>
                         </ul>
                     </li>
@@ -436,18 +408,18 @@
     </div>
 
     <!-- 全局js -->
-    <script src="{{asset('home')}}/js/jquery.min.js?v=2.1.4"></script>
-    <script src="{{asset('home')}}/js/bootstrap.min.js?v=3.3.6"></script>
-    <script src="{{asset('home')}}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="{{asset('home')}}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="{{asset('home')}}/js/plugins/layer/layer.min.js"></script>
+    <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
+    <script src="{{asset('admin')}}/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="{{asset('admin')}}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/layer/layer.min.js"></script>
 
     <!-- 自定义js -->
-    <script src="{{asset('home')}}/js/hAdmin.js?v=4.1.0"></script>
-    <script type="text/javascript" src="{{asset('home')}}/js/index.js"></script>
+    <script src="{{asset('admin')}}/js/hAdmin.js?v=4.1.0"></script>
+    <script type="text/javascript" src="{{asset('admin')}}/js/index.js"></script>
 
     <!-- 第三方插件 -->
-    <script src="{{asset('home')}}/js/plugins/pace/pace.min.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/pace/pace.min.js"></script>
 <div style="text-align:center;">
 <p>来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
 </div>

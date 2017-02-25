@@ -8,10 +8,10 @@
 
     <!--360浏览器优先以webkit内核解析-->
     <title> - 主页示例</title>
-    <link rel="shortcut icon" href="favicon.ico"> <link href="{{asset('home')}}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="{{asset('home')}}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="{{asset('home')}}/css/animate.css" rel="stylesheet">
-    <link href="{{asset('home')}}/css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"> <link href="{{asset('admin')}}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/animate.css" rel="stylesheet">
+    <link href="{{asset('admin')}}/css/style.css?v=4.1.0" rel="stylesheet">
 </head>
 <body class="gray-bg">
     <div class="wrapper wrapper-content">
@@ -598,16 +598,16 @@
         </div>
     </div>
     <!-- 全局js -->
-    <script src="{{asset('home')}}/js/jquery.min.js?v=2.1.4"></script>
-    <script src="{{asset('home')}}/js/bootstrap.min.js?v=3.3.6"></script>
-    <script src="{{asset('home')}}/js/plugins/layer/layer.min.js"></script>
+    <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
+    <script src="{{asset('admin')}}/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="{{asset('admin')}}/js/plugins/layer/layer.min.js"></script>
     <!-- Flot -->
-    <script src="{{asset('home')}}/js/plugins/flot/jquery.flot.js"></script>
-    <script src="{{asset('home')}}/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="{{asset('home')}}/js/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="{{asset('home')}}/js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/flot/jquery.flot.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/flot/jquery.flot.pie.js"></script>
     <!-- 自定义js -->
-    <script src="{{asset('home')}}/js/content.js"></script>
+    <script src="{{asset('admin')}}/js/content.js"></script>
     <!--flotdemo-->
     <script type="text/javascript">
         $(function() {
