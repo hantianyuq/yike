@@ -14,8 +14,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="慕课网实战课程结合视频快捷方便的体验,并与视频同步学习,边编程边看视频" />
 
-    <link rel="stylesheet" href="Content/moco.min.css" type="text/css" />
-
+    <link rel="stylesheet" href="{{asset('home')}}/Content/moco.min.css" type="text/css" />
+    <script type="text/javascript" src="{{asset('home')}}/Scripts/jquery.stellar.min.js"></script>
+    <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
+    <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
     <style type="text/css">
         .moco-modal-info {
             font-size: 14px;
@@ -37,13 +39,13 @@
 
 
 
-    <link rel="stylesheet" href="Content/c588d3b17a134fcdb6883d84f9681c48.css" type="text/css" />
+    <link rel="stylesheet" href="{{asset('home')}}/Content/c588d3b17a134fcdb6883d84f9681c48.css" type="text/css" />
 </head>
 <body >
 
 <div id="header">
     <div class="page-container" id="nav">
-        <div id="logo" class="logo"><a href="http://www.imooc.com/" target="_self" class="hide-text" title="首页">慕课网</a></div>
+        <div id="logo" class="logo"><a href="" target="_self" class="hide-text" title="首页">慕课网</a></div>
 
         <button type="button" class="navbar-toggle visible-xs-block js-show-menu" >
             <i class="sz-list"></i>
@@ -54,10 +56,10 @@
                 <i class="sz-list"></i>
             </a>
             <ul class="nav-item l">
-                <li class="set-btn visible-xs-block"><a href="http://www.imooc.com/user/newlogin" target="_self">登录</a> / <a href="http://www.imooc.com/user/newsignup" target="_self">注册</a></li>
+                <li class="set-btn visible-xs-block"><a href="" target="_self">登录</a> / <a href="http://www.imooc.com/user/newsignup" target="_self">注册</a></li>
 
-                <li><a href="http://www.imooc.com/course/list" target="_self">课程</a></li>
-                <li><a href="http://www.imooc.com/course/program" target="_self" class="program-nav">职业路径<i class="icn-new"></i></a></li>
+                <li><a href="" target="_self">课程</a></li>
+                <li><a href="" target="_self" class="program-nav">职业路径<i class="icn-new"></i></a></li>
                 <li><a href="/" class="active" target="_self">实战</a></li>
                 <!--<li><a href="http://www.imooc.com/corp/index"   target="_self">分享</a></li>-->
                 <li><a href="http://www.imooc.com/wenda" target="_self">猿问</a></li>
@@ -106,9 +108,13 @@
 <div class="banner-bg-box">
     <div class="banner-bg">
         <ul class="banner-box">
-            <li class=""><a href="http://coding.imooc.com/class/38.html" target="_blank" onclick="_hmt.push(['_trackEvent', '实战首页', 'click', '一屏实战课程推荐位'])" data-track="szbanner-1-3"><img src="Picture/58ac1a9a00014e4408000240.jpg" title="7天搞定Node.js微信公众号开发" /></a></li>
-            <li class=""><a href="http://coding.imooc.com/class/15.html" target="_blank" onclick="_hmt.push(['_trackEvent', '实战首页', 'click', '一屏实战课程推荐位'])" data-track="szbanner-1-1"><img src="Picture/58abd1ee0001d19908000240.jpg" title="组件方式开发 Web App全站" /></a></li>
-            <li class=""><a href="http://coding.imooc.com/class/71.html" target="_blank" onclick="_hmt.push(['_trackEvent', '实战首页', 'click', '一屏实战课程推荐位'])" data-track="szbanner-1-2"><img src="Picture/58abe58a00017f8108000240.jpg" title="算法与数据结构C++精解" /></a></li>
+            @foreach($turns as $key => $value)
+                <li class="">
+                    <a href="http://coding.imooc.com/class/38.html" target="_blank" onclick="_hmt.push(['_trackEvent', '实战首页', 'click', '一屏实战课程推荐位'])" data-track="szbanner-1-3">
+                        <img src="{{asset('/')}}<?=$value['real_turns_path']?>" title="<?=$value['real_turns_name']?>" />
+                    </a>
+                </li>
+            @endforeach
         </ul>
         <ul class="banner-dots"></ul>
         <a href="javascript:;" class="banner-anchor prev"></a>
@@ -124,30 +130,23 @@
                 <li class="cato-nav-item on">
                     <a href="/" id="cato">全部</a>
                 </li>
-                <li class="cato-nav-item ">
-                    <a href="/?c=fe" data-ct="fe">前端开发</a>
-                </li>
-                <li class="cato-nav-item ">
-                    <a href="/?c=be" data-ct="be">后端开发</a>
-                </li>
-                <li class="cato-nav-item ">
-                    <a href="/?c=mobile" data-ct="mobile">移动开发</a>
-                </li>
-                <li class="cato-nav-item ">
-                    <a href="/?c=data" data-ct="data">数据库</a>
-                </li>
-                <li class="cato-nav-item ">
-                    <a href="/?c=op" data-ct="op">运维&测试</a>
-                </li>
+                @foreach($direction as $key => $value)
+                    <li class="cato-nav-item">
+                        <a href="{{url('home/direction')}}?name=<?=$value['direction_name']?>" data-ct="">{{$value['direction_name']}}</a>
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>
+    <script>
+
+    </script>
     <div class="index-list-wrap">
         <div class="moco-course-list clearfix">
             <div class="moco-course-wrap">
                 <a href="/class/83.html">
                     <div class="moco-course-box">
-                        <img  alt="React.js入门与实战   开发适配PC端及移动端新闻头条平台" src="Picture/58a68f000001262805400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="React.js入门与实战   开发适配PC端及移动端新闻头条平台" src="{{asset('home')}}/Picture/58a68f000001262805400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 React.js入门与实战   开发适配PC端及移动端新闻头条平台
@@ -164,7 +163,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/84.html">
                     <div class="moco-course-box">
-                        <img  alt="组件化开发完整AndroidApp   开发同时封装出通用SDK" src="Picture/589c0e990001ac9505400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="组件化开发完整AndroidApp   开发同时封装出通用SDK" src="{{asset('home')}}/Picture/589c0e990001ac9505400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 组件化开发完整AndroidApp   开发同时封装出通用SDK
@@ -181,7 +180,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/80.html">
                     <div class="moco-course-box">
-                        <img  alt="AngularJS仿拉勾网WebApp  开发移动端单页应用" src="Picture/588170340001b26105400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="AngularJS仿拉勾网WebApp  开发移动端单页应用" src="{{asset('home')}}/Picture/588170340001b26105400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 AngularJS仿拉勾网WebApp  开发移动端单页应用
@@ -198,7 +197,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/13.html">
                     <div class="moco-course-box">
-                        <img  alt="webApp书城整站开发" src="Picture/586e0f55000158db05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="webApp书城整站开发" src="{{asset('home')}}/Picture/586e0f55000158db05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 webApp书城整站开发
@@ -215,7 +214,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/79.html">
                     <div class="moco-course-box">
-                        <img  alt="高性能可扩展MySQL数据库设计及架构优化 电商项目" src="Picture/586359c00001af9005400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="高性能可扩展MySQL数据库设计及架构优化 电商项目" src="{{asset('home')}}/Picture/586359c00001af9005400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 高性能可扩展MySQL数据库设计及架构优化 电商项目
@@ -232,7 +231,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/78.html">
                     <div class="moco-course-box">
-                        <img  alt="强力django+杀手级xadmin  打造上线标准的在线教育平台" src="Picture/5859ed790001b9da05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="强力django+杀手级xadmin  打造上线标准的在线教育平台" src="{{asset('home')}}/Picture/5859ed790001b9da05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 强力django+杀手级xadmin  打造上线标准的在线教育平台
@@ -249,7 +248,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/77.html">
                     <div class="moco-course-box">
-                        <img  alt="Android自动化测试实战  工具 框架 脚本" src="Picture/5850bc4500015ecd05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="Android自动化测试实战  工具 框架 脚本" src="{{asset('home')}}/Picture/5850bc4500015ecd05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 Android自动化测试实战  工具 框架 脚本
@@ -266,7 +265,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/75.html">
                     <div class="moco-course-box">
-                        <img  alt="微信小程序入门与实战  常用组件 API 开发技巧 项目实战" src="Picture/583e42fb0001e04f05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="微信小程序入门与实战  常用组件 API 开发技巧 项目实战" src="{{asset('home')}}/Picture/583e42fb0001e04f05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 微信小程序入门与实战  常用组件 API 开发技巧 项目实战
@@ -283,7 +282,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/74.html">
                     <div class="moco-course-box">
-                        <img  alt="Vue.js高仿饿了么外卖App 最火前端框架 1.0升级2.0" src="Picture/582ac41a0001d3c705400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="Vue.js高仿饿了么外卖App 最火前端框架 1.0升级2.0" src="{{asset('home')}}/Picture/582ac41a0001d3c705400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 Vue.js高仿饿了么外卖App 最火前端框架 1.0升级2.0
@@ -300,7 +299,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/81.html">
                     <div class="moco-course-box">
-                        <img  alt="巧用第三方快速开发Android App 热门SDK及框架" src="Picture/5876eed20001476f05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="巧用第三方快速开发Android App 热门SDK及框架" src="{{asset('home')}}/Picture/5876eed20001476f05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 巧用第三方快速开发Android App 热门SDK及框架
@@ -317,7 +316,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/53.html">
                     <div class="moco-course-box">
-                        <img  alt="Android专项测试-Python篇  10年测试经验讲师" src="Picture/582d71ae00017d5905400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="Android专项测试-Python篇  10年测试经验讲师" src="{{asset('home')}}/Picture/582d71ae00017d5905400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 Android专项测试-Python篇  10年测试经验讲师
@@ -334,7 +333,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/76.html">
                     <div class="moco-course-box">
-                        <img  alt="Android5.0+高级动画开发 矢量图动画 轨迹动画 路径变换" src="Picture/5847b10c000199ec05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="Android5.0+高级动画开发 矢量图动画 轨迹动画 路径变换" src="{{asset('home')}}/Picture/5847b10c000199ec05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 Android5.0+高级动画开发 矢量图动画 轨迹动画 路径变换
@@ -351,7 +350,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/71.html">
                     <div class="moco-course-box">
-                        <img  alt="算法与数据结构C++精解" src="Picture/580d752500019ca805400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="算法与数据结构C++精解" src="{{asset('home')}}/Picture/580d752500019ca805400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 算法与数据结构C++精解
@@ -368,7 +367,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/72.html">
                     <div class="moco-course-box">
-                        <img  alt="6小时用 jQuery 实现小应用" src="Picture/5806de7c00014a3105400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="6小时用 jQuery 实现小应用" src="{{asset('home')}}/Picture/5806de7c00014a3105400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 6小时用 jQuery 实现小应用
@@ -385,7 +384,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/70.html">
                     <div class="moco-course-box">
-                        <img  alt="Android网络层架构设计实战  基于okhttp3" src="Picture/5812bdf10001253505400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="Android网络层架构设计实战  基于okhttp3" src="{{asset('home')}}/Picture/5812bdf10001253505400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 Android网络层架构设计实战  基于okhttp3
@@ -402,7 +401,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/69.html">
                     <div class="moco-course-box">
-                        <img  alt="React Native快速开发 厕所在哪App LBS定位 框架封装" src="Picture/57ec8a820001c60b05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="React Native快速开发 厕所在哪App LBS定位 框架封装" src="{{asset('home')}}/Picture/57ec8a820001c60b05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 React Native快速开发 厕所在哪App LBS定位 框架封装
@@ -419,7 +418,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/56.html">
                     <div class="moco-course-box">
-                        <img  alt="React Native贯穿全栈开发App" src="Picture/57bd5ec80001b0c405400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="React Native贯穿全栈开发App" src="{{asset('home')}}/Picture/57bd5ec80001b0c405400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 React Native贯穿全栈开发App
@@ -436,7 +435,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/57.html">
                     <div class="moco-course-box">
-                        <img  alt="Yii2.0打造完整电商平台" src="Picture/579190240001d51d05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="Yii2.0打造完整电商平台" src="{{asset('home')}}/Picture/579190240001d51d05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 Yii2.0打造完整电商平台
@@ -453,7 +452,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/62.html">
                     <div class="moco-course-box">
-                        <img  alt="Python高级编程技巧实战" src="Picture/57bd5f4300013d9e05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="Python高级编程技巧实战" src="{{asset('home')}}/Picture/57bd5f4300013d9e05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 Python高级编程技巧实战
@@ -470,7 +469,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/50.html">
                     <div class="moco-course-box">
-                        <img  alt="所向披靡的响应式开发" src="Picture/576b84c10001b1c005400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="所向披靡的响应式开发" src="{{asset('home')}}/Picture/576b84c10001b1c005400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 所向披靡的响应式开发
@@ -487,7 +486,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/49.html">
                     <div class="moco-course-box">
-                        <img  alt="扛得住的MySQL数据库架构" src="Picture/5763761f0001c35e05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="扛得住的MySQL数据库架构" src="{{asset('home')}}/Picture/5763761f0001c35e05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 扛得住的MySQL数据库架构
@@ -504,7 +503,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/48.html">
                     <div class="moco-course-box">
-                        <img  alt="前端后台ThinkPHP开发整站" src="Picture/576376440001766205400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="前端后台ThinkPHP开发整站" src="{{asset('home')}}/Picture/576376440001766205400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 前端后台ThinkPHP开发整站
@@ -521,7 +520,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/38.html">
                     <div class="moco-course-box">
-                        <img  alt="Node.js七天搞定微信公众号" src="Picture/576376520001da3d05400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="Node.js七天搞定微信公众号" src="{{asset('home')}}/Picture/576376520001da3d05400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 Node.js七天搞定微信公众号
@@ -538,7 +537,7 @@
             <div class="moco-course-wrap">
                 <a href="/class/15.html">
                     <div class="moco-course-box">
-                        <img  alt="组件方式开发 Web App全站 " src="Picture/5763765d0001352105400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="组件方式开发 Web App全站 " src="{{asset('home')}}/Picture/5763765d0001352105400300-360-202.jpg"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
                                 组件方式开发 Web App全站
@@ -564,9 +563,9 @@
     </div>
     <div class="recom-box clearfix">
         <div class="r right-pic js-play">
-            <img src="Picture/recom2.png" />
+            <img src="{{asset('home')}}/Picture/recom2.png" />
         </div>
-        <a href="/product" target="_blank" class="r"><img src="Picture/recom1.png" /></a>
+        <a href="/product" target="_blank" class="r"><img src="{{asset('home')}}/Picture/recom1.png" /></a>
 
     </div>
 </div>
@@ -580,7 +579,7 @@
         </div>
         <ul class="star-item">
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/583fbd5d000116fe01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/583fbd5d000116fe01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>七月在夏天</h3>
                     <p>神秘讲师“七月”</p>
@@ -592,7 +591,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/58639ce20001fce901510152-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/58639ce20001fce901510152-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>__bobby</h3>
                     <p>django专家</p>
@@ -605,7 +604,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/58a41bf30001060d01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/58a41bf30001060d01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>任志强</h3>
                     <p>Android高级工程师</p>
@@ -614,7 +613,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/58a421400001a51601400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/58a421400001a51601400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>亚里士朱德</h3>
                     <p>资深前端工程师</p>
@@ -626,7 +625,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57ea56af00010c3601400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57ea56af00010c3601400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>Lyn</h3>
                     <p>百度前端工程师</p>
@@ -638,7 +637,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57ea56bd0001f6cb01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57ea56bd0001f6cb01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>远人</h3>
                     <p>前端架构师</p>
@@ -650,7 +649,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57ea56cb0001849501400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57ea56cb0001849501400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>Scott</h3>
                     <p>nodejs技术专家</p>
@@ -663,7 +662,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57ea56d4000174ae01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57ea56d4000174ae01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>singwa</h3>
                     <p>PHP开发工程师</p>
@@ -675,7 +674,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57f86da20001310801400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57f86da20001310801400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>360李捷</h3>
                     <p>PHP高级工程师</p>
@@ -687,7 +686,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57f887c40001341b01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57f887c40001341b01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>程序员硕</h3>
                     <p>资深开发工程师/架构师</p>
@@ -699,7 +698,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57f8888d0001a9b401400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57f8888d0001a9b401400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>ParryKK</h3>
                     <p>前阿里前端工程师</p>
@@ -712,7 +711,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57f889ab00018b7f01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57f889ab00018b7f01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>姜维_Wayne</h3>
                     <p>前端架构师</p>
@@ -724,7 +723,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57f88a090001e84201400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57f88a090001e84201400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>sqlercn</h3>
                     <p>数据库架构师</p>
@@ -737,7 +736,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57f89af00001f71401400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57f89af00001f71401400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>表严肃</h3>
                     <p>全栈工程师</p>
@@ -750,7 +749,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/57f89b380001922601400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/57f89b380001922601400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>vczero_</h3>
                     <p> 现阿里技术专家</p>
@@ -762,7 +761,7 @@
                 </div>
             </li>
             <li>
-                <span class="teacher-pic" style="background:#fff url(Images/580f1686000113dd01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                <span class="teacher-pic" style="background:#fff url({{asset('home')}}/Images/580f1686000113dd01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
                 <div class="star-info">
                     <h3>liuyubobobo</h3>
                     <p>全栈工程师</p>
@@ -799,7 +798,7 @@
     <div class="scroll_div">
         <ul class="pic-content banner-box">
             <li>
-                <img src="Picture/55f26e8c0001cd4a01000100-100-100.jpg">
+                <img src="{{asset('home')}}/Picture/55f26e8c0001cd4a01000100-100-100.jpg">
                 <div class="user-content">
                     <h3>qq_星尘丶_0</h3>
                     <div class="student-tag">来自<a href="/class/56.html" target="_blank">React Native贯穿全栈开发App</a></div>
@@ -807,7 +806,7 @@
                 </div>
             </li>
             <li>
-                <img src="Picture/54585079000110f202200220-100-100.jpg">
+                <img src="{{asset('home')}}/Picture/54585079000110f202200220-100-100.jpg">
                 <div class="user-content">
                     <h3>一直被忽略</h3>
                     <div class="student-tag">来自<a href="/class/70.html" target="_blank">Android网络层架构设计实战  基于okhttp3</a></div>
@@ -815,7 +814,7 @@
                 </div>
             </li>
             <li>
-                <img src="Picture/57ffce4b0001aadb07000700-100-100.jpg"/>
+                <img src="{{asset('home')}}/Picture/57ffce4b0001aadb07000700-100-100.jpg"/>
                 <div class="user-content">
                     <h3>woider</h3>
                     <div class="student-tag">来自<a href="/class/48.html" target="_blank">前端后台ThinkPHP开发整站</a></div>
@@ -823,7 +822,7 @@
                 </div>
             </li>
             <li>
-                <img src="Picture/54584f7b0001559202200220-100-100.jpg"/>
+                <img src="{{asset('home')}}/Picture/54584f7b0001559202200220-100-100.jpg"/>
                 <div class="user-content">
                     <h3>爱读书的Iceberg</h3>
                     <div class="student-tag">来自<a href="/class/51.html" target="_blank">飞速上手的跨平台App开发</a></div>
@@ -832,7 +831,7 @@
                 </div>
             </li>
             <li>
-                <img src="Picture/533e4d850001c10602000200-100-100.jpg"/>
+                <img src="{{asset('home')}}/Picture/533e4d850001c10602000200-100-100.jpg"/>
                 <div class="user-content">
                     <h3>TonyGu</h3>
                     <div class="student-tag">来自<a href="/class/62.html" target="_blank">Python高级编程技巧实战</a></div>
@@ -840,7 +839,7 @@
                 </div>
             </li>
             <li>
-                <img src="Picture/5457a1400001cf5101000100-100-100.jpg"/>
+                <img src="{{asset('home')}}/Picture/5457a1400001cf5101000100-100-100.jpg"/>
                 <div class="user-content">
                     <h3>Franc_Ribery</h3>
                     <div class="student-tag">来自<a href="/class/15.html" target="_blank">组件方式开发 Web App全站 </a></div>
@@ -848,7 +847,7 @@
                 </div>
             </li>
             <li>
-                <img src="Picture/533e4d510001c2ad02000200-100-100.jpg"/>
+                <img src="{{asset('home')}}/Picture/533e4d510001c2ad02000200-100-100.jpg"/>
                 <div class="user-content">
                     <h3>Muyy</h3>
                     <div class="student-tag">来自<a href="/class/38.html" target="_blank">Node.js七天搞定微信公众号</a></div>
@@ -856,7 +855,7 @@
                 </div>
             </li>
             <li>
-                <img src="Picture/545861f00001be3402200220-100-100.jpg"/>
+                <img src="{{asset('home')}}/Picture/545861f00001be3402200220-100-100.jpg"/>
                 <div class="user-content">
                     <h3>慕粉1357924680</h3>
                     <div class="student-tag">来自<a href="/class/53.html" target="_blank">Android专项测试-Python篇  10年测试经验讲师</a></div>
@@ -891,21 +890,21 @@
                 <a class="followus-weixin" href="javascript:;"  target="_blank" title="微信">
                     <div class="flw-weixin-box"></div>
                 </a>
-                <a class="followus-weibo" href="http://weibo.com/u/3306361973"  target="_blank" title="新浪微博"></a>
-                <a class="followus-qzone" href="http://user.qzone.qq.com/1059809142/" target="_blank" title="QQ空间"></a>
+                <a class="followus-weibo" href=""  target="_blank" title="新浪微博"></a>
+                <a class="followus-qzone" href="" target="_blank" title="QQ空间"></a>
             </div>
             <div class="footer_intro l">
                 <div class="footer_link">
                     <ul>
-                        <li><a href="http://www.imooc.com/" target="_blank">网站首页</a></li>
-                        <li><a href="http://www.imooc.com/about/cooperate" target="_blank" title="企业合作">企业合作</a></li>
-                        <li><a href="http://www.imooc.com/about/job" target="_blank">人才招聘</a></li>
-                        <li> <a href="http://www.imooc.com/about/contact" target="_blank">联系我们</a></li>
-                        <li> <a href="http://www.imooc.com/about/recruit" target="_blank">讲师招募</a></li>
-                        <li> <a href="http://coding.imooc.com/user/faq" target="_blank">常见问题</a></li>
-                        <li> <a href="http://www.imooc.com/user/feedback" target="_blank">意见反馈</a></li>
-                        <li><a href="http://daxue.imooc.com/" target="_blank">慕课大学</a></li>
-                        <li> <a href="http://www.imooc.com/about/friendly" target="_blank">友情链接</a></li>
+                        <li><a href="" target="_blank">网站首页</a></li>
+                        <li><a href="" target="_blank" title="企业合作">企业合作</a></li>
+                        <li><a href="" target="_blank">人才招聘</a></li>
+                        <li> <a href="" target="_blank">联系我们</a></li>
+                        <li> <a href="" target="_blank">讲师招募</a></li>
+                        <li> <a href="" target="_blank">常见问题</a></li>
+                        <li> <a href="" target="_blank">意见反馈</a></li>
+                        <li><a href="" target="_blank">慕课大学</a></li>
+                        <li> <a href="" target="_blank">友情链接</a></li>
                         <!-- <li><a href="http://www.imooc.com/about/us" target="_blank">关于我们</a></li> -->
                     </ul>
                 </div>
@@ -926,7 +925,7 @@
         <i class="sz-help_outline"></i>
         <span class="">常见问题</span>
     </a>
-    <a href="http://www.imooc.com/mobile/app" target="_blank" class="elevator-app" >
+    <a href="" target="_blank" class="elevator-app" >
         <i class="sz-appdownload"></i>
         <span class="">APP下载</span>
         <div class="elevator-app-box"></div>
@@ -944,8 +943,7 @@
 
 
 
-<script src="Scripts/ssologin.js"></script>
-<script type="text/javascript" src="Scripts/common.js"></script>
+
 <script>
     requirejs.config({
         urlArgs:seajsTimestamp,
@@ -983,7 +981,7 @@
     });
 </script>
 
-<script type="text/javascript" src="Scripts/jquery.stellar.min.js"></script>
+
 <script data-entry="index/index">requirejs(['index/index']);</script>
 <!--<script type='text/javascript'>
 	$.stellar();
@@ -1019,3 +1017,4 @@
 
 </body>
 </html>
+dqw

@@ -25,6 +25,10 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], function () {
+    Route::get("real",'Real\RealIndexController@RealIndex');
+    Route::get("direction",'Real\RealIndexController@Direction');
+});
 
 Route::group(['middleware' => ['web']], function () {
     Route::get("admin/index",'Admin\IndexController@index');
@@ -33,3 +37,4 @@ Route::group(['middleware' => ['web']], function () {
     Route::any("admin/TurnsAdd",'Admin\Real\TurnsController@TurnsAdd');
     Route::any("admin/TurnsUpload",'Admin\Real\TurnsController@TurnsUpload');
 });
+
