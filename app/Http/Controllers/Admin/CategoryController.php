@@ -52,7 +52,6 @@ class CategoryController extends Controller
     {
         $cate = DB::table('section_category')->get();
         $cate = $this->arraySort($cate);
-        var_dump($cate);
         return view('admin.cate.list',[
             'cate'=>$cate,
         ]);
