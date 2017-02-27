@@ -67,6 +67,8 @@
                         </li>
                         <li><a class="J_menuItem" href="chapter/add">免费小章节添加</a>
                         </li>
+                        <li><a class="J_menuItem" href="review/show">评论展示</a>
+                        </li>
                     </ul>
                 </li>
                 <li>

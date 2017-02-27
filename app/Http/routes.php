@@ -47,4 +47,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::any("admin/chapter/del",'Admin\free\ChapterController@del');
     Route::any("admin/chapter/update",'Admin\free\ChapterController@update');
 
+    Route::any("admin/review/show",'Admin\free\ReviewController@show');
+    Route::any("admin/review/del",'Admin\free\ReviewController@del');
 });
