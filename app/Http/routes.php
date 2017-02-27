@@ -35,4 +35,16 @@ Route::group(['middleware' => ['web']], function () {
     Route::any("admin/cate/del",'Admin\CategrayController@del');
     Route::any("admin/cate/update",'Admin\CategrayController@update');
     Route::any("admin/cate/updatado",'Admin\CategrayController@updateDo');
+    Route::any("admin/section/add",'Admin\free\SectionController@add');
+    Route::any("admin/section/adddo",'Admin\free\SectionController@addDo');
+    Route::any("admin/section/lists",'Admin\free\SectionController@lists');
+    Route::any("admin/section/del",'Admin\free\SectionController@del');
+    Route::any("admin/section/update",'Admin\free\SectionController@update');
+
+    Route::any("admin/chapter/add",'Admin\free\ChapterController@add');
+    Route::any("admin/chapter/adddo",'Admin\free\ChapterController@addDo');
+    Route::any("admin/chapter/lists",'Admin\free\ChapterController@lists');
+    Route::any("admin/chapter/del",'Admin\free\ChapterController@del');
+    Route::any("admin/chapter/update",'Admin\free\ChapterController@update');
+
 });

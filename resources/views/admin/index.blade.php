@@ -27,12 +27,12 @@
                                 <span class="clear">
                                     <span class="block m-t-xs" style="font-size:20px;">
                                         <i class="fa fa-area-chart"></i>
-                                        <strong class="font-bold">hAdmin</strong>
+                                        <strong class="font-bold">yike</strong>
                                     </span>
                                 </span>
                         </a>
                     </div>
-                    <div class="logo-element">hAdmin
+                    <div class="logo-element">yike
                     </div>
                 </li>
 
@@ -57,13 +57,15 @@
                     <span class="ng-scope">分类</span>
                 </li>
                 <li>
-                    <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">信箱 </span><span class="label label-warning pull-right">16</span></a>
+                    <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">免费章节</span><span class="label label-warning pull-right">16</span></a>
                     <ul class="nav nav-second-level">
-                        <li><a class="J_menuItem" href="mailbox.html">收件箱</a>
+                        <li><a class="J_menuItem" href="section/lists">免费章节展示</a>
                         </li>
-                        <li><a class="J_menuItem" href="mail_detail.html">查看邮件</a>
+                        <li><a class="J_menuItem" href="section/add">免费章节添加</a>
                         </li>
-                        <li><a class="J_menuItem" href="mail_compose.html">写信</a>
+                        <li><a class="J_menuItem" href="chapter/lists">免费小章节展示</a>
+                        </li>
+                        <li><a class="J_menuItem" href="chapter/add">免费小章节添加</a>
                         </li>
                     </ul>
                 </li>
