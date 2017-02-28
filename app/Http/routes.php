@@ -49,4 +49,8 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::any("admin/review/show",'Admin\free\ReviewController@show');
     Route::any("admin/review/del",'Admin\free\ReviewController@del');
+
+
+
+    Route::any("home/section/lists",'Home\free\SectionController@lists');
 });
