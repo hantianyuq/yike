@@ -28,6 +28,20 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], function () {
     Route::get("real",'Real\RealIndexController@RealIndex');
     Route::get("direction",'Real\RealIndexController@Direction');
+    Route::get("class",'Real\RealIndexController@CouresClass');
+    Route::get("class/chapter",'Real\RealIndexController@ClassChapter');
+    Route::get("qqlogin",'LoginController@qq_login');
+    Route::get("qq_callback",'LoginController@qq_callback');
+    Route::get("qq_user",'LoginController@qq_user');
+    Route::get("shop",'Pay\PayController@Shop');
+    //验证码
+    Route::get("captcha/mews",'LoginController@mews');
+    //用户注册
+    Route::post("user/register",'LoginController@register');
+    //用户激活邮箱
+    Route::get("email_register",'LoginController@email_register');
+    //QQ互联用户绑定邮箱
+    Route::get("qq_register",'LoginController@qq_register');
 });
 
 Route::group(['middleware' => ['web']], function () {
@@ -37,4 +51,5 @@ Route::group(['middleware' => ['web']], function () {
     Route::any("admin/TurnsAdd",'Admin\Real\TurnsController@TurnsAdd');
     Route::any("admin/TurnsUpload",'Admin\Real\TurnsController@TurnsUpload');
 });
+
 

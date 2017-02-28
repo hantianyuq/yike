@@ -18,6 +18,7 @@
     <script type="text/javascript" src="{{asset('home')}}/Scripts/jquery.stellar.min.js"></script>
     <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
     <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
+    <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
     <style type="text/css">
         .moco-modal-info {
             font-size: 14px;
@@ -43,67 +44,7 @@
 </head>
 <body >
 
-<div id="header">
-    <div class="page-container" id="nav">
-        <div id="logo" class="logo"><a href="" target="_self" class="hide-text" title="首页">慕课网</a></div>
-
-        <button type="button" class="navbar-toggle visible-xs-block js-show-menu" >
-            <i class="sz-list"></i>
-        </button>
-
-        <div class="g-menu-mini l">
-            <a href="javascript:;" class="menu-ctrl">
-                <i class="sz-list"></i>
-            </a>
-            <ul class="nav-item l">
-                <li class="set-btn visible-xs-block"><a href="" target="_self">登录</a> / <a href="http://www.imooc.com/user/newsignup" target="_self">注册</a></li>
-
-                <li><a href="" target="_self">课程</a></li>
-                <li><a href="" target="_self" class="program-nav">职业路径<i class="icn-new"></i></a></li>
-                <li><a href="/" class="active" target="_self">实战</a></li>
-                <!--<li><a href="http://www.imooc.com/corp/index"   target="_self">分享</a></li>-->
-                <li><a href="http://www.imooc.com/wenda" target="_self">猿问</a></li>
-                <li><a href="http://www.imooc.com/article" target="_self">手记</a></li>
-                <!--<li><a href="http://www.imooc.com/wiki" target="_self">WIKI</a></li>-->
-
-            </ul>
-        </div>
-        <div id="login-area">
-            <ul class="header-unlogin clearfix">
-                <li class="shop-cart" id="shop-cart">
-                    <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
-                        <span class="sz-shopping-cart js-endcart"></span>
-                        <span class="shopping_icon js-cart-num"  data-ordernum="0" data-cartnum="0" style='display: none'>0</span>
-                        <span>购物车</span>
-                    </a>
-                    <div class="my-cart" id="js-my-cart"></div>
-                </li>
-                <li class="header-signin">
-                    <a href="#" id="js-signin-btn">登录</a>
-                </li>
-                <li class="header-signup">
-                    <a href="#" id="js-signup-btn">注册</a>
-                </li>
-            </ul>
-        </div>
-        <div class='search-warp clearfix' style='min-width: 32px; height: 60px;'>
-
-            <div class="pa searchTags js-searchtags" ></div>
-
-            <div class="search-area" data-search="top-banner">
-                <input class="search-input" data-suggest-trigger="suggest-trigger" placeholder="请输入想搜索的内容..." type="text" autocomplete="off">
-                <input type='hidden' class='btn_search' data-search-btn="search-btn" />
-                <ul class="search-area-result" data-suggest-result="suggest-result">
-                </ul>
-            </div>
-            <div class='showhide-search' data-show='no'><i class='sz-search'></i></div>
-        </div>
-    </div>
-</div>
-
-
-
-
+@include("home.layouts.header")
 <!-- 顶部banner轮播 -->
 <div class="banner-bg-box">
     <div class="banner-bg">
@@ -143,23 +84,25 @@
     </script>
     <div class="index-list-wrap">
         <div class="moco-course-list clearfix">
+            @foreach($course as $key => $value)
             <div class="moco-course-wrap">
-                <a href="/class/83.html">
+                <a href="{{url('home/class')}}?real_course_id={{$value['real_course_id']}}">
                     <div class="moco-course-box">
-                        <img  alt="React.js入门与实战   开发适配PC端及移动端新闻头条平台" src="{{asset('home')}}/Picture/58a68f000001262805400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="{{$value['real_course_name']}}" src="{{asset('home')}}/{{$value['real_coures_thum']}}"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
-                                React.js入门与实战   开发适配PC端及移动端新闻头条平台
+                                {{$value['real_course_name']}}
                             </h3>
-                            <p>跟随Facebook的脚步，从入门开始，学习领悟React.js不同的开发思想，搭建一个同时适配PC与移动端新闻平台</p>
+                            <p>{{$value['real_coures_intro']}}</p>
                         </div>
                         <div class="moco-course-bottom">
-                            <span class="l color-red">￥199.00</span>
-                            <span class="r">134人学习</span>
+                            <span class="l color-red">￥{{$value['real_coures_price']}}</span>
+                            <span class="r">{{$value['real_coures_people_number']}}人学习</span>
                         </div>
                     </div>
                 </a>
             </div>
+            @endforeach
             <div class="moco-course-wrap">
                 <a href="/class/84.html">
                     <div class="moco-course-box">
@@ -941,48 +884,11 @@
     </a>
 </div>
 
+@include("home.layouts.signin");
 
 
 
-<script>
-    requirejs.config({
-        urlArgs:seajsTimestamp,
-        baseUrl: '/static/module/',
-        skipDataMain: true,
-        waitSeconds: 0,
-        paths: {
-            lib: '/static/lib',
-            jwplayer: '/static/lib/jwplayer/1.0.0/jwplayer.js',
-            ide: '/static/lib/ide/dest/ide.min.js',
-            juicer: '/static/lib/juicer/juicer.min.js',
-            ace:'/static/lib/ace/src-min-noconflict/ace.js',
-            autocomplete:'/static/lib/util/autocomplete.js',
-            validate:'/static/lib/util/validate.js',
-            placeholder:'/static/lib/util/placeholder.js',
-            modalbutton:'/static/lib/util/modal.button.js',
-            scrollbar: '/static/lib/scrollbar/jquery.scrollbar.js',
-            ueditor: '/static/lib/ueditor/ueditor.final.min.js',
-            store: '/static/lib/store/store.min.js',
-            pagination: '/static/lib/pagination/jquery.pagination.js',
-            SyntaxHighlighter:'/static/lib/ueditor/third-party/SyntaxHighlighter/shCore.js',
-            socketio: '/static/lib/socket.io/1.3.6/socket.io.min.js',
-            clipbord: '/static/lib/clipboard/dist/clipboard.min.js',
-            swfobject: '/static/lib/swfobject/2.2/swfobject.min.js',
-            jqueryValidate: '/static/lib/jquery-validate/jquery.validate.min.js'
-        },
-        shim: {
-            'ide': {
-                exports: 'ide'
-            },
-            'swfobject': {
-                exports: 'swfobject'
-            }
-        }
-    });
-</script>
-
-
-<script data-entry="index/index">requirejs(['index/index']);</script>
+{{--<script data-entry="index/index">requirejs(['index/index']);</script>--}}
 <!--<script type='text/javascript'>
 	$.stellar();
     (function(m, ei, q, i, a, j, s) {
@@ -1000,7 +906,49 @@
 </script>-->
 
 
+<script type="text/javascript" src="{{asset('home')}}/Scripts/require.js"></script>
+<script src='{{asset('home')}}/Scripts/jquery.min.js'></script>
+<script src="{{asset('home')}}/Scripts/ssologin.js"></script>
+<script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
+<script>
+    requirejs.config({
+        urlArgs: requirejsTimestamp,
+        baseUrl: '/static/module/',
+        skipDataMain: true,
+        waitSeconds: 0,
+        paths: {
+            lib: '/static/lib',
+            socketio: '/static/lib/socket.io/1.3.6/socket.io.min.js',
+            store: '/static/lib/store/store.min.js',
+            ueditor: '/static/lib/ueditor/ueditor.final.min.js',
+            moco: '/static/moco/v1.0/dist/js/moco.min.js',
+            scrollbar: '/static/lib/scrollbar/jquery.scrollbar.js',
+            juicer: '/static/lib/juicer/juicer.min.js',
+            ace: '/static/lib/ace/src-min-noconflict/ace.js',
+            //ace: '/static/lib/ace/src/ace.js',
+            pagination: '/static/lib/pagination/jquery.pagination.js',
+            swfobject: '/static/lib/swfobject/2.2/swfobject.min.js',
+            uploader: '/static/lib/webuploader/0.1.5/webuploader.js',
 
+            jwplayer: '/static/lib/jwplayer/1.0.0/jwplayer.js',
+            ide: '/static/lib/ide/dest/ide.min.js',
+            autocomplete:'/static/lib/util/autocomplete.js',
+            validate:'/static/lib/util/validate.js',
+            placeholder:'/static/lib/util/placeholder.js',
+            modalbutton:'/static/lib/util/modal.button.js',
+            scrollbar: '/static/lib/scrollbar/jquery.scrollbar.js',
+            SyntaxHighlighter:'/static/lib/ueditor/third-party/SyntaxHighlighter/shCore.js',
+            socketio: '/static/lib/socket.io/1.3.6/socket.io.min.js',
+            clipbord: '/static/lib/clipboard/dist/clipboard.min.js',
+            jqueryValidate: '/static/lib/jquery-validate/jquery.validate.min.js'
+        },
+        shim: {
+            'swfobject': {
+                exports: 'swfobject'
+            }
+        }
+    });
+</script>
 
 
 <div style="display: none">
