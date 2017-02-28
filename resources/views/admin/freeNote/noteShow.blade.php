@@ -29,7 +29,7 @@
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>免费课程</h5>
+                    <h5>笔记管理</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="" style="margin-left: 20px; margin-top: 10px; margin-bottom: 5px;">
-                    <a href="{{URL('courseAdd')}}" class="btn btn-primary ">添加课程</a>
+                    <!-- <a href="dataAdd" class="btn btn-primary ">添加行</a> -->
                     
                 </div>
 
@@ -60,30 +60,34 @@
 
                     <table class="table table-striped table-bordered table-hover dataTables-example">
                         <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>课程名称</th>
-                                    <th>难度级别</th>
-                                    <!-- <th>分类</th> -->
-                                    <th>简介</th>
-                                    <th>操作</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php foreach($course as $k=>$v){ ?>
-                                <tr class="gradeC">
-                                    <td><?=$v['course_id'] ?></td>
-                                    <td><?=$v['course_name'] ?></td>
-                                    <td>
-                                    <?=$v['course_rank'] ?>
-                                    </td>
-                                    <td><?=$v['course_intro'] ?></td>
-                                    <td>
-                                        <a href="{{URL('courseEdit')}}?id=<?=$v['course_id'] ?>" class="edit">编辑</a>|
-                                        <a href="javascript:;" class="del" id="<?=$v['course_id'] ?>">删除</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
+                        <tr>
+                            <th>ID</th>
+                            <th>发布人</th>
+                            <th>审核状态</th>
+                            <th>发布内容</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach($note as $k=>$v){ ?>
+                        <tr class="gradeC" >
+                            <td><?=$v['note_id'] ?></td>
+                            <td><?=$v['user_name'] ?></td>
+                            <td id="<?=$v['note_id'] ?>"><span class='status'>
+                            <?php
+                                if($v['status'] == 1){
+                                    echo "<font color='green'>√</font>";
+                                }else{
+                                    echo "<font color='red'>×</font>";
+                                }
+                            ?>
+                            </span></td>
+                            <td><?=$v['note_content'] ?></td>
+                            <td class="center">
+                                <a href="javascript:;" id="<?=$v['note_id'] ?>" class="del">删除</a>
+                            </td>
+                        </tr>
+                        <?php } ?>
 
                         </tbody>
 
@@ -110,6 +114,41 @@
 <script src="{{asset('admin')}}/js/content.js?v=1.0.0"></script>
 <script>
     $(function(){
+        // 即点即改
+        $(document).on('click','.status',function(){
+            var status = $(this).children().html();
+            var id = $(this).parent().attr('id');
+            var _this = $(this);
+            if(status == '√'){
+                status = 0;
+            }else{
+                status = 1;
+            }
+            // alert(id);
+            $.ajax({
+                type: "get",
+                url: "{{URL('noteUpdate')}}",
+                data:{
+                    id:id,
+                    status:status,
+                },
+                success: function(msg){
+                    // alert(msg);
+                    if(msg == 1){
+                        if(status == 0){
+                            _this.html("<font color=red>×</font>");
+                        }else{
+                            _this.html("<font color=green>√</font>");
+                        }
+                    }else{
+                        alert('修改失败');
+                    }
+                }
+            });
+        })
+
+
+
         // 删除
         $('.del').click(function(){
             var id = $(this).attr('id');
@@ -117,7 +156,7 @@
             if(confirm('确定要删除吗？')){
                 $.ajax({
                     type:"get",
-                    url:"{{URL('courseDel')}}",
+                    url:"{{URL('noteDel')}}",
                     data:{
                         id:id
                     },
@@ -128,7 +167,7 @@
                             alert('删除失败');
                         }
                     }
-                })
+                });
             }
         })
     })

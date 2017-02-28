@@ -29,18 +29,18 @@
             <div class="col-sm-6">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>章节添加</h5>
+                        <h5>课程添加</h5>
                     </div>
                     <div class="ibox-content">
                         <form class="form-horizontal m-t" id="commentForm" action="{{URL('courseAdd')}}">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">章节名称：</label>
+                                <label class="col-sm-3 control-label">课程名称：</label>
                                 <div class="col-sm-8">
                                     <input id="cname" name="name" minlength="2" type="text" class="form-control" required="" aria-required="true">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">章节分类：</label>
+                                <label class="col-sm-3 control-label">课程分类：</label>
                                 <div class="col-sm-8">
                                    <select name="cate" class="form-control">
                                        <option value="0">...请选择</option>

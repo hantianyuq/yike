@@ -11,10 +11,9 @@ class CourseController extends Controller
 	// 课程展示
 	public function courseShow()
 	{
-		$coures = DB::table('section_course')->get();
-		
+		$course = DB::table('section_course')->get();
 		return view('admin.freeCourse.courseShow',[
-				'coures'=>$coures,
+				'course'=>$course,
 			]);
 	}
 
@@ -35,14 +34,12 @@ class CourseController extends Controller
 					'category_id'=>$cate,
 				]);
 			if($res){
-				// echo "<script>alert('添加成功');location.href='navShow'</script>";
-				return redirect()->action('Admin\free\CouresController@courseShow');
+				return redirect()->action('Admin\free\CourseController@courseShow');
 			}else{
 				echo "添加失败";
 			}
 		}else{
-			$cate = DB::table('section_category')->get();
-			// var_dump($cate);
+			$cate = DB::table('section_category')->where("pid",">","0")->get();
 			return view('admin.freeCourse.courseAdd',[
 					'cate'=>$cate,
 				]);
@@ -54,7 +51,6 @@ class CourseController extends Controller
 	public function courseDel(Request $request)
 	{
 		$id = $request->input('id');
-		// var_dump($id);
 		$res = DB::table('section_course')->where("course_id",$id)->delete();
 		return $res ? 1 : 0;
 	}

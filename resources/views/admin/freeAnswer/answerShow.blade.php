@@ -29,7 +29,7 @@
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>免费课程</h5>
+                    <h5>问答管理</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="" style="margin-left: 20px; margin-top: 10px; margin-bottom: 5px;">
-                    <a href="{{URL('courseAdd')}}" class="btn btn-primary ">添加课程</a>
+                    <!-- <a href="dataAdd" class="btn btn-primary ">添加行</a> -->
                     
                 </div>
 
@@ -60,33 +60,31 @@
 
                     <table class="table table-striped table-bordered table-hover dataTables-example">
                         <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>课程名称</th>
-                                    <th>难度级别</th>
-                                    <!-- <th>分类</th> -->
-                                    <th>简介</th>
-                                    <th>操作</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php foreach($course as $k=>$v){ ?>
-                                <tr class="gradeC">
-                                    <td><?=$v['course_id'] ?></td>
-                                    <td><?=$v['course_name'] ?></td>
-                                    <td>
-                                    <?=$v['course_rank'] ?>
-                                    </td>
-                                    <td><?=$v['course_intro'] ?></td>
-                                    <td>
-                                        <a href="{{URL('courseEdit')}}?id=<?=$v['course_id'] ?>" class="edit">编辑</a>|
-                                        <a href="javascript:;" class="del" id="<?=$v['course_id'] ?>">删除</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
+                        <tr>
+                            <th>ID</th>
+                            <th>提问人</th>
+                            <th>提问内容</th>
+                            <th>时间</th>
+                            <th>p_id</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach($answer as $k=>$v){ ?>
+                        <tr class="gradeC" >
+                            <td><?=$v['answer_id'] ?></td>
+                            <td><?=$v['user_name'] ?></td>
+                            <td><?=$v['answer_content'] ?></td>
+                            <td><?=$v['answer_time'] ?></td>
+                            <td><?=$v['p_id'] ?></td>
+                            <td class="center">
+                                <a href="javascript:;" id="<?=$v['answer_id'] ?>"  class="del">删除</a>
+                            </td>
+                        </tr>
+                        <?php } ?>
 
                         </tbody>
-
+<!-- onclick="return confirm('确定将这些记录删除吗?')" -->
                     </table>
 
                 </div>
@@ -114,16 +112,17 @@
         $('.del').click(function(){
             var id = $(this).attr('id');
             var _this = $(this);
-            if(confirm('确定要删除吗？')){
+            // alert(id);return false;
+            if(confirm('该信息关联数据将全部删除？')){
                 $.ajax({
                     type:"get",
-                    url:"{{URL('courseDel')}}",
+                    url:"{{URL('answerDel')}}",
                     data:{
                         id:id
                     },
                     success: function(msg){
                         if(msg == 1){
-                            _this.parent().parent().remove();
+                            location.href = "{{URL('answerShow')}}";
                         }else{
                             alert('删除失败');
                         }

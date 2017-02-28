@@ -29,7 +29,7 @@
         <div class="col-sm-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <h5>免费课程</h5>
+                    <h5>提问管理</h5>
                     <div class="ibox-tools">
                         <a class="collapse-link">
                             <i class="fa fa-chevron-up"></i>
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="" style="margin-left: 20px; margin-top: 10px; margin-bottom: 5px;">
-                    <a href="{{URL('courseAdd')}}" class="btn btn-primary ">添加课程</a>
+                    <!-- <a href="dataAdd" class="btn btn-primary ">添加行</a> -->
                     
                 </div>
 
@@ -60,35 +60,30 @@
 
                     <table class="table table-striped table-bordered table-hover dataTables-example">
                         <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>课程名称</th>
-                                    <th>难度级别</th>
-                                    <!-- <th>分类</th> -->
-                                    <th>简介</th>
-                                    <th>操作</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <?php foreach($course as $k=>$v){ ?>
-                                <tr class="gradeC">
-                                    <td><?=$v['course_id'] ?></td>
-                                    <td><?=$v['course_name'] ?></td>
-                                    <td>
-                                    <?=$v['course_rank'] ?>
-                                    </td>
-                                    <td><?=$v['course_intro'] ?></td>
-                                    <td>
-                                        <a href="{{URL('courseEdit')}}?id=<?=$v['course_id'] ?>" class="edit">编辑</a>|
-                                        <a href="javascript:;" class="del" id="<?=$v['course_id'] ?>">删除</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-
+                        <tr>
+                            <th>ID</th>
+                            <th>提问人</th>
+                            <th>提问内容</th>
+                            <th>来源章节</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach($issue as $k=>$v){ ?>
+                        <tr class="gradeC" >
+                            <td><?=$v['issue_id'] ?></td>
+                            <td><?=$v['user_name'] ?></td>
+                            <td><?=$v['issue_content'] ?></td>
+                            <td><?=$v['chapter_name'] ?></td>
+                            <td><?=$v['issue_time'] ?></td>
+                            <td class="center">
+                                <a href="javascript:;" id="<?=$v['issue_id'] ?>" class="del">删除</a>
+                            </td>
+                        </tr>
+                        <?php } ?>
                         </tbody>
-
                     </table>
-
                 </div>
             </div>
         </div>
@@ -114,22 +109,21 @@
         $('.del').click(function(){
             var id = $(this).attr('id');
             var _this = $(this);
-            if(confirm('确定要删除吗？')){
-                $.ajax({
-                    type:"get",
-                    url:"{{URL('courseDel')}}",
-                    data:{
-                        id:id
-                    },
-                    success: function(msg){
-                        if(msg == 1){
-                            _this.parent().parent().remove();
-                        }else{
-                            alert('删除失败');
-                        }
+            if(confirm('该数据下所有数据都将删除？'))
+            $.ajax({
+                type:"get",
+                url:"{{URL('issueDel')}}",
+                data:{
+                    id:id
+                },
+                success: function(msg){
+                    if(msg == 1){
+                        _this.parent().parent().remove();
+                    }else{
+                        alert('删除失败');
                     }
-                })
-            }
+                }
+            })
         })
     })
 </script>

@@ -90,11 +90,17 @@
                         </ul>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-edit"></i> <span class="nav-label">课程章节</span><span class="fa arrow"></span></a>
+                        <a href=""><i class="fa fa-edit"></i> <span class="nav-label">免费课程</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a class="J_menuItem" href="{{URL('courseShow')}}">章节展示</a>
+                            <li><a class="J_menuItem" href="{{URL('courseShow')}}">课程展示</a>
                             </li>
-                            <li><a class="J_menuItem" href="{{URL('courseAdd')}}">章节添加</a>
+                            <li><a class="J_menuItem" href="{{URL('courseAdd')}}">课程添加</a>
+                            </li>
+                            <li><a class="J_menuItem" href="{{URL('noteShow')}}">笔记管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="{{URL('issueShow')}}">题问管理</a>
+                            </li>
+                            <li><a class="J_menuItem" href="{{URL('answerShow')}}">问答管理</a>
                             </li>
                         </ul>
                     </li>
