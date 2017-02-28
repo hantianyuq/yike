@@ -9,7 +9,11 @@ use Illuminate\Support\Facades\DB;
 class SectionController extends Controller
 
 {
-
+    /**
+     * 搜索展示所有的章节
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
      public function lists(Request $request)
      {
          $tid = $request->input('tid');
@@ -51,8 +55,6 @@ class SectionController extends Controller
 
 
      }
-
-
 
 
 
