@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <title>
-            Java入门第二季_Java视频教程-慕课网
+            C++远征之起航篇-慕课网
     </title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="renderer" content="webkit">
@@ -15,7 +15,7 @@
 
 <meta name="Keywords" content="" />
 
-<meta name="description" content="本课程是程序猿质变课程，理解面向对象的思想，掌握面向对象的基本原则以及 Java 面向对象编程基本实现原理，熟练使用封装、继承、多态面向对象三大特性" />
+<meta name="description" content="本课程是C++的初级课程，是在C语言基础上的一个延伸，讲述了包括新增数据类型、命名空间等内容，最后通过一个通俗易懂的例子将所述知识点融会贯通" />
 
 
 
@@ -23,7 +23,7 @@
 
 
 
-<link rel="stylesheet" href="{{asset('new')}}/css/moco.min.css" type="text/css" />
+<link rel="stylesheet" href="{{asset('home')}}/Content/moco.min.css" type="text/css" />
 
 <script type="text/javascript">
 
@@ -37,7 +37,7 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a
 var OP_CONFIG={"module":"course","page":"learn"};
 var isLogin = 0;
 var is_choice = "";
-var seajsTimestamp="v=2017022402353";
+var seajsTimestamp="v=2016022402352";
 var _msg_unread = 0; 
 var _not_unread = 0; 
 var _cart_num = 0;
@@ -54,8 +54,8 @@ var _cart_num = 0;
 /*学习页通用配置*/
 var GC = {
   course: {
-    id: 124,
-    name: 'Java入门第二季',
+    id: 342,
+    name: 'C++远征之起航篇',
     pic: '',
     video_url: ''
   },
@@ -74,7 +74,7 @@ var hasLearn;
 
 
 
-<link rel="stylesheet" href="{{asset('new')}}/css/bc3226f9870a402eb27619e960abe5f1.css" type="text/css" />
+<link rel="stylesheet" href="{{asset('home')}}/Content/08babe285ec04043ba72015fae972d65.css" type="text/css" />
 </head>
 <body >
 
@@ -120,7 +120,7 @@ var hasLearn;
         </div>
                 <div class='search-warp clearfix' style='min-width: 32px; height: 60px;'>
                             <div class="pa searchTags" >
-                                    <a href="http://class.imooc.com/sc/17" target="_blank">安卓网络</a>
+                                    <a href="http://coding.imooc.com/class/83.html" target="_blank">react</a>
                                 </div>
             
             <div class="search-area" data-search="top-banner">
@@ -150,17 +150,17 @@ var hasLearn;
         <div class="path">  
             <a href="/course/list">课程</a>
                         <i class="path-split">\</i><a href="/course/list?c=be">后端开发</a>
-                                    <i class="path-split">\</i><a href="/course/list?c=java">Java</a>
-                        <i class="path-split">\</i><a href="/learn/124"><span>Java入门第二季</a></span>
+                                    <i class="path-split">\</i><a href="/course/list?c=C+puls+puls">C++</a>
+                        <i class="path-split">\</i><a href="/learn/342"><span>C++远征之起航篇</a></span>
         </div>
         <div class="hd clearfix">
-            <h2 class="l">Java入门第二季</h2>
+            <h2 class="l">C++远征之起航篇</h2>
                     </div>
 
         <div class="statics clearfix">
             
                         <div class="moco-btn l learn-btn green-btn red-btn"> 
-                <a href="/video/2161" class="J-learn-course">开始学习</a>
+                <a href="/video/6577" class="J-learn-course">开始学习</a>
                 <em></em>
                 <i class="follow-action js-follow-action"></i>
             </div>
@@ -178,33 +178,33 @@ var hasLearn;
             </div>
             <div class="static-item l">
                 <span class="meta">课程时长</span>
-                <span class="meta-value"> 4小时 0分</span>
+                <span class="meta-value"> 1小时 6分</span>
                 <em></em>
             </div>
             <div class="static-item l score-btn">
                 <span class="meta">综合评分</span>
-                <span class="meta-value">9.6</span>
+                <span class="meta-value">9.7</span>
                 <em></em>
                 
                                 
                 <div class="score-wrap icon-drop_up triangle">
                     <div class="score-box">
-                        <a href="/coursescore/124" class="person-num">
-                            <span class="person-num l">1421人评价</span>
+                        <a href="/coursescore/342" class="person-num">
+                            <span class="person-num l">587人评价</span>
                         </a>
-                                                                                <a href="/coursescore/124?page=1" class="evaluation-btn r">查看评价</a>
-                                                                            <div class="score-detail-box">
+                                                    <a href="/coursescore/342?page=1" class="evaluation-btn r">查看评价</a>
+                                                <div class="score-detail-box">
                             <div class="score-static-item">
-                                <span class="meta-value">9.8</span>
+                                <span class="meta-value">9.9</span>
                                 <span class="meta">内容实用</span>
                             </div>
                             <div class="score-static-item">
-                                <span class="meta-value">9.5</span>
+                                <span class="meta-value">9.6</span>
                                 <span class="meta">简洁易懂</span>
                                 <em></em>
                             </div>
                             <div class="score-static-item">
-                                <span class="meta-value">9.4</span>
+                                <span class="meta-value">9.5</span>
                                 <span class="meta">逻辑清晰</span>
                                 <em></em>
                             </div>
@@ -231,7 +231,7 @@ var hasLearn;
     </div>
     <div class="info-bg" id="js-info-bg">
         <div class="cover-img-wrap">
-        <img data-src="picture/57036062000139a406000338.jpg" alt="" style="display: none" id="js-cover-img">
+        <img data-src="Picture/570760430001d17606000338.jpg" alt="" style="display: none" id="js-cover-img">
         </div>
         <div class="cover-mask"></div>
     </div>
@@ -243,182 +243,60 @@ var hasLearn;
 <div class="course-info-main clearfix w">
     <div class="content-wrap">
         <div class="content">
-                            <div id="notice" class="clearfix">
-        <div class="l">
-            <strong>课程公告 : </strong> 
-            <a  href="javascript:void(0)">Java 第三季都上线啦</a> 
-        </div> 
-    </div>
-<!-- 课程公告 -->
                         <!-- 课程简介 -->
             <div class="course-brief">
-                <p class="auto-wrap">简介：本课程是程序猿质变课程，理解面向对象的思想，掌握面向对象的基本原则以及 Java 面向对象编程基本实现原理，熟练使用封装、继承、多态面向对象三大特性，带你进一步探索 Java 世界的奥秘！
-</p>
+                <p class="auto-wrap">简介：本课程是C++的初级课程，是在C语言基础上的一个延伸，讲述了包括新增数据类型、命名空间等内容，最后通过一个通俗易懂的例子将所述知识点融会贯通，以达到知识灵活运用，最终得以升华的目的。</p>
             </div>
             <!-- 课程简介 end -->
             <div class="mod-tab-menu ">
     <ul class="course-menu clearfix">
-        <li><a class="ui-tabs-active active" id="learnOn"  href="/learn/124"><span>章节</span></a></li>
-        <li><a id="commentOn" class="" href="/comment/124"><span>评论</span></a></li>
-        <li><a id="qaOn" class="" href="/qa/124/t/1?page=1"><span>问答</span></a></li>
-        <li><a id="noteOn" class="" href="/note/124?sort=last&page=1"><span>笔记</span></a></li>
+        <li><a class="ui-tabs-active active" id="learnOn"  href="/learn/342"><span>章节</span></a></li>
+        <li><a id="commentOn" class="" href="/comment/342"><span>评论</span></a></li>
+        <li><a id="qaOn" class="" href="/qa/342/t/1?page=1"><span>问答</span></a></li>
+        <li><a id="noteOn" class="" href="/note/342?sort=last&page=1"><span>笔记</span></a></li>
         <!--
-        <li><a id="wikiOn" class="" href="/wiki/124">WIKI</a></li>
+        <li><a id="wikiOn" class="" href="/wiki/342">WIKI</a></li>
         -->
     </ul>
     
 </div><!-- 课程面板 -->
             <!-- 课程章节 -->
             <div class="mod-chapters">
-                                        <div class="chapter chapter-active">
+                <div class="chapter chapter-active">
                     <!-- 章节标题 -->
                     <h3>
-                        
                         <span class="icon-drop_down js-close"></span>
                         <strong>
                             <i class="icon-chapter"></i>
-                            第1章 类和对象
+                            第1章 C++简介
                             <div class="icon-info chapter-info">
                                 <i class="icon-drop_up triangle">
                                     <div class="chapter-introubox">
-                                        <div class="chapter-content">本章内容主要讲解 Java 在面向对象编程中的基本语法，面向对象设计程序的思路</div>
+                                        <div class="chapter-content">本章讲述了C++语言的来龙去脉</div>
                                     </div>
                                 </i>
                             </div>
-                        </strong>
-                        
+                        </strong> 
                     </h3>
                     <!-- 章节标题 end -->
                     <!-- 章节小节 -->
                                         <ul class="video">
-                                                <li data-media-id="2161">
-                                                            <a href='/video/2161' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    1-1 什么是类和对象 
-                                                                            (07:36)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
+                                                <li data-media-id="6577">
+                                                <a href='/video/6577' class="J-media-item">
+                                            <i class="icon-video type"></i>
+                                            1-1 C++简介 (03:05)              
+                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                </a>
                                                         <!-- 未登录时 -->
                             <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
                                 <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
                             </a> -->
-                        </li>
-                                                <li data-media-id="2183">
-                                                            <a href='/video/2183' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    1-2 如何定义 Java 中的类 
-                                                                            (07:18)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2220">
-                                                            <a href='/video/2220' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    1-3 如何使用 Java 中的对象 
-                                                                            (04:45)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2383">
-                                                            <a href='/ceping/2383' class="J-media-item">
+                                                </li>
+                                                <li data-media-id="6725">
+                                                <a href='/ceping/6725' class="J-media-item">
                                     <i class="icon-test type"></i>
-                                    1-4 练习题
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2218">
-                                                            <a href='/video/2218' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    1-5 Java 中的成员变量和局部变量 
-                                                                            (07:13)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2247">
-                                                            <a href='/video/2247' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    1-6 Java 中的构造方法 
-                                                                            (11:01)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="1842">
-                                                            <a href='/code/1842' class="J-media-item">
-                                    <i class="icon-code type"></i>
-                                    1-7 Java 中的 static 使用之静态变量
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="1889">
-                                                            <a href='/ceping/1889' class="J-media-item">
-                                    <i class="icon-test type"></i>
-                                    1-8 练习题
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="1843">
-                                                            <a href='/code/1843' class="J-media-item">
-                                    <i class="icon-code type"></i>
-                                    1-9 Java 中的 static 使用之静态方法
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="1852">
-                                                            <a href='/code/1852' class="J-media-item">
-                                    <i class="icon-code type"></i>
-                                    1-10 Java 中的 static 使用之静态初始化块
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                    1-2 练习
+                                    <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
                                                                         
                                 </a>
                                                         <!-- 未登录时 -->
@@ -436,11 +314,11 @@ var hasLearn;
                         <span class="icon-drop_down js-close"></span>
                         <strong>
                             <i class="icon-chapter"></i>
-                            第2章 封装
+                            第2章 C++ IDE环境搭建
                             <div class="icon-info chapter-info">
                                 <i class="icon-drop_up triangle">
                                     <div class="chapter-introubox">
-                                        <div class="chapter-content">封装的意思是说对象数据和操作该数据的指令都是对象自身的一部分，封装能够实现尽可能对外部世界隐藏数据</div>
+                                        <div class="chapter-content">本章讲述了C++语言将用到的IDE环境。</div>
                                     </div>
                                 </i>
                             </div>
@@ -450,399 +328,11 @@ var hasLearn;
                     <!-- 章节标题 end -->
                     <!-- 章节小节 -->
                                         <ul class="video">
-                                                <li data-media-id="2360">
-                                                            <a href='/video/2360' class="J-media-item">
+                                                <li data-media-id="6578">
+                                                            <a href='/video/6578' class="J-media-item">
                                     <i class="icon-video type"></i>
-                                    2-1 什么是 Java 中的封装 
-                                                                            (05:53)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2371">
-                                                            <a href='/video/2371' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    2-2 使用包管理 Java 中的类 
-                                                                            (06:45)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2385">
-                                                            <a href='/video/2385' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    2-3 Java 中的访问修饰符 
-                                                                            (04:48)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2397">
-                                                            <a href='/video/2397' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    2-4 Java 中的 this 关键字 
-                                                                            (02:50)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2090">
-                                                            <a href='/code/2090' class="J-media-item">
-                                    <i class="icon-code type"></i>
-                                    2-5 什么是 Java 中的内部类
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2092">
-                                                            <a href='/code/2092' class="J-media-item">
-                                    <i class="icon-code type"></i>
-                                    2-6 Java 中的成员内部类
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2095">
-                                                            <a href='/code/2095' class="J-media-item">
-                                    <i class="icon-code type"></i>
-                                    2-7 Java 中的静态内部类
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2096">
-                                                            <a href='/code/2096' class="J-media-item">
-                                    <i class="icon-code type"></i>
-                                    2-8 Java 中的方法内部类
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2099">
-                                                            <a href='/ceping/2099' class="J-media-item">
-                                    <i class="icon-test type"></i>
-                                    2-9 练习题
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                            </ul>
-                                        <!-- 章节小节 end -->
-                </div>
-                            <div class="chapter ">
-                    <!-- 章节标题 -->
-                    <h3>
-                        
-                        <span class="icon-drop_down js-close"></span>
-                        <strong>
-                            <i class="icon-chapter"></i>
-                            第3章 继承
-                            <div class="icon-info chapter-info">
-                                <i class="icon-drop_up triangle">
-                                    <div class="chapter-introubox">
-                                        <div class="chapter-content">继承是面向对象程序设计能够提高软件开发效率的重要原因之一</div>
-                                    </div>
-                                </i>
-                            </div>
-                        </strong>
-                        
-                    </h3>
-                    <!-- 章节标题 end -->
-                    <!-- 章节小节 -->
-                                        <ul class="video">
-                                                <li data-media-id="2523">
-                                                            <a href='/video/2523' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    3-1 Java 中的继承 
-                                                                            (06:28)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2524">
-                                                            <a href='/video/2524' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    3-2 Java 中的方法重写 
-                                                                            (02:25)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2639">
-                                                            <a href='/ceping/2639' class="J-media-item">
-                                    <i class="icon-test type"></i>
-                                    3-3 练习题
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2643">
-                                                            <a href='/video/2643' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    3-4 Java 中的继承初始化顺序 
-                                                                            (04:45)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2644">
-                                                            <a href='/video/2644' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    3-5 Java 中的 final 的使用 
-                                                                            (05:11)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2690">
-                                                            <a href='/ceping/2690' class="J-media-item">
-                                    <i class="icon-test type"></i>
-                                    3-6 练习题
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2675">
-                                                            <a href='/video/2675' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    3-7 Java 中的 super 的使用 
-                                                                            (07:18)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2676">
-                                                            <a href='/video/2676' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    3-8 Java 中的 Object 类 Ⅰ 
-                                                                            (04:02)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2763">
-                                                            <a href='/video/2763' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    3-9 Java 中的 Object 类 Ⅱ 
-                                                                            (10:46)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2689">
-                                                            <a href='/ceping/2689' class="J-media-item">
-                                    <i class="icon-test type"></i>
-                                    3-10 练习题
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                            </ul>
-                                        <!-- 章节小节 end -->
-                </div>
-                            <div class="chapter ">
-                    <!-- 章节标题 -->
-                    <h3>
-                        
-                        <span class="icon-drop_down js-close"></span>
-                        <strong>
-                            <i class="icon-chapter"></i>
-                            第4章 多态
-                            <div class="icon-info chapter-info">
-                                <i class="icon-drop_up triangle">
-                                    <div class="chapter-introubox">
-                                        <div class="chapter-content">多态性是允许你将父对象设置成为和一个或更多的他的子对象相等的技术，赋值之后，父对象就可以根据当前赋值给它的子对象的特性以不同的方式运作</div>
-                                    </div>
-                                </i>
-                            </div>
-                        </strong>
-                        
-                    </h3>
-                    <!-- 章节标题 end -->
-                    <!-- 章节小节 -->
-                                        <ul class="video">
-                                                <li data-media-id="2684">
-                                                            <a href='/video/2684' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    4-1 Java 中的多态 
-                                                                            (09:27)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2687">
-                                                            <a href='/video/2687' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    4-2 多态中的引用类型转换 
-                                                                            (08:20)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2752">
-                                                            <a href='/video/2752' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    4-3 Java  中的抽象类 
-                                                                            (07:03)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2760">
-                                                            <a href='/ceping/2760' class="J-media-item">
-                                    <i class="icon-test type"></i>
-                                    4-4 练习题
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2789">
-                                                            <a href='/video/2789' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    4-5 Java 中的接口 
-                                                                            (13:04)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="2790">
-                                                            <a href='/ceping/2790' class="J-media-item">
-                                    <i class="icon-test type"></i>
-                                    4-6 练习题
-                                    
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="3029">
-                                                            <a href='/video/3029' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    4-7 UML 简介 
-                                                                            (15:48)
+                                    2-1 C++ IDE环境搭建 
+                                                                            (07:19)
                                                                         
                                                                         <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
                                                                         
@@ -862,11 +352,11 @@ var hasLearn;
                         <span class="icon-drop_down js-close"></span>
                         <strong>
                             <i class="icon-chapter"></i>
-                            第5章 阶段练习
+                            第3章 C++之初体验
                             <div class="icon-info chapter-info">
                                 <i class="icon-drop_up triangle">
                                     <div class="chapter-introubox">
-                                        <div class="chapter-content">通过人类继承关系的案例进一步学习Java中的面向对象</div>
+                                        <div class="chapter-content">编写第一个C++程序-HelloWorld</div>
                                     </div>
                                 </i>
                             </div>
@@ -876,26 +366,11 @@ var hasLearn;
                     <!-- 章节标题 end -->
                     <!-- 章节小节 -->
                                         <ul class="video">
-                                                <li data-media-id="6223">
-                                                            <a href='/video/6223' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    5-1 阶段练习 
-                                                                            (02:17)
-                                                                        
-                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                        </li>
-                                                <li data-media-id="6224">
-                                                            <a href='/video/6224' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                    5-2 代码实现 
-                                                                            (08:20)
-                                                                        
+                                                <li data-media-id="6653">
+                                                            <a href='/code/6653' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    3-1 C++之初体验
+                                    
                                                                         <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
                                                                         
                                 </a>
@@ -914,11 +389,11 @@ var hasLearn;
                         <span class="icon-drop_down js-close"></span>
                         <strong>
                             <i class="icon-chapter"></i>
-                            第6章 项目实战
+                            第4章 C++语言新特性
                             <div class="icon-info chapter-info">
                                 <i class="icon-drop_up triangle">
                                     <div class="chapter-introubox">
-                                        <div class="chapter-content">综合实战项目，编写属于你的“答答租车系统”，快来加入吧！！</div>
+                                        <div class="chapter-content">本章讲述C++语言在数据类型、初始化方式、I/O方法、名字空间的新特性</div>
                                     </div>
                                 </i>
                             </div>
@@ -928,11 +403,11 @@ var hasLearn;
                     <!-- 章节标题 end -->
                     <!-- 章节小节 -->
                                         <ul class="video">
-                                                <li data-media-id="3334">
-                                                            <a href='/video/3334' class="J-media-item">
+                                                <li data-media-id="6579">
+                                                            <a href='/video/6579' class="J-media-item">
                                     <i class="icon-video type"></i>
-                                    6-1 综合练习 
-                                                                            (09:07)
+                                    4-1 C++的新特性 
+                                                                            (05:47)
                                                                         
                                                                         <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
                                                                         
@@ -942,11 +417,143 @@ var hasLearn;
                                 <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
                             </a> -->
                         </li>
-                                                <li data-media-id="5114">
-                                                            <a href='/video/5114' class="J-media-item">
+                                                <li data-media-id="6726">
+                                                            <a href='/ceping/6726' class="J-media-item">
+                                    <i class="icon-test type"></i>
+                                    4-2 练习
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="6580">
+                                                            <a href='/video/6580' class="J-media-item">
                                     <i class="icon-video type"></i>
-                                    6-2 项目问题解析 1 
-                                                                            (03:01)
+                                    4-3 C++的输入输出方式 
+                                                                            (05:09)
+                                                                        
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="6727">
+                                                            <a href='/ceping/6727' class="J-media-item">
+                                    <i class="icon-test type"></i>
+                                    4-4 练习
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="6581">
+                                                            <a href='/video/6581' class="J-media-item">
+                                    <i class="icon-video type"></i>
+                                    4-5 C++新特性以及输入输出演示 
+                                                                            (06:54)
+                                                                        
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="6583">
+                                                            <a href='/video/6583' class="J-media-item">
+                                    <i class="icon-video type"></i>
+                                    4-6 C++之namespace 
+                                                                            (05:02)
+                                                                        
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="6730">
+                                                            <a href='/ceping/6730' class="J-media-item">
+                                    <i class="icon-test type"></i>
+                                    4-7 练习
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="6584">
+                                                            <a href='/video/6584' class="J-media-item">
+                                    <i class="icon-video type"></i>
+                                    4-8 namespace演示 
+                                                                            (10:09)
+                                                                        
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                                <li data-media-id="6714">
+                                                            <a href='/code/6714' class="J-media-item">
+                                    <i class="icon-code type"></i>
+                                    4-9 章节练习
+                                    
+                                                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
+                                                                        
+                                </a>
+                                                        <!-- 未登录时 -->
+                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
+                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
+                            </a> -->
+                        </li>
+                                            </ul>
+                                        <!-- 章节小节 end -->
+                </div>
+                            <div class="chapter ">
+                    <!-- 章节标题 -->
+                    <h3>
+                        
+                        <span class="icon-drop_down js-close"></span>
+                        <strong>
+                            <i class="icon-chapter"></i>
+                            第5章 综合练习
+                            <div class="icon-info chapter-info">
+                                <i class="icon-drop_up triangle">
+                                    <div class="chapter-introubox">
+                                        <div class="chapter-content">对本门课程中所学的综合练习</div>
+                                    </div>
+                                </i>
+                            </div>
+                        </strong>
+                        
+                    </h3>
+                    <!-- 章节标题 end -->
+                    <!-- 章节小节 -->
+                                        <ul class="video">
+                                                <li data-media-id="6837">
+                                                            <a href='/video/6837' class="J-media-item">
+                                    <i class="icon-video type"></i>
+                                    5-1 综合练习 
+                                                                            (12:09)
                                                                         
                                                                         <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
                                                                         
@@ -969,34 +576,25 @@ var hasLearn;
         <div class="box mb40 js-usercard-box">
         <h4>讲师提示</h4>
                         <div class="teacher-info">
-            <a href="/u/194288/courses?sort=publish" target="_blank" >
-                <img data-userid="194288" class="js-usercard-dialog" src="picture/539f9dd90001fc8401400140-80-80.jpg" width="80" height="80">
+            <a href="/u/1349694/courses?sort=publish" target="_blank" >
+                <img data-userid="1349694" class="js-usercard-dialog" src="Picture/550f82810001c44902200220-80-80.jpg" width="80" height="80">
             </a>
             <span class="tit">
-                <a href="/u/194288/courses?sort=publish" target="_blank">小慕</a><i class="icon-imooc"></i>
+                <a href="/u/1349694/courses?sort=publish" target="_blank">james_yuan</a><i class="icon-imooc"></i>
             </span>
-            <span class="job">JAVA开发工程师</span>
-        </div>
-                <div class="teacher-info">
-            <a href="/u/112258/courses?sort=publish" target="_blank" >
-                <img data-userid="112258" class="js-usercard-dialog" src="picture/535f03950001915501400140-80-80.jpg" width="80" height="80">
-            </a>
-            <span class="tit">
-                <a href="/u/112258/courses?sort=publish" target="_blank">laurenyang</a><i class="icon-imooc"></i>
-            </span>
-            <span class="job">JAVA开发工程师</span>
+            <span class="job">学生</span>
         </div>
                                 <div class="course-info-tip">
                         <dl class="first">
                 <dt>课程须知</dt>
-                <dd class="autowrap">本课程是Java开发的基础，需要大家：掌握 Java 基本语法的使用。如果您是新手，建议先移步 《Java入门第一季》
-</dd>
+                <dd class="autowrap">本课程是C++初级课程
+在学习本课程之前需要熟练掌握C语言的基础语法</dd>
             </dl>
                                     <dl>
                 <dt>老师告诉你能学到什么？</dt>
-                <dd class="autowrap">• 掌握 Java 基本语法和编程思路
-• 熟练运用面向对象程序设计思想
-</dd>
+                <dd class="autowrap">1、C++语言新的数据类型
+2、C++语言新的输入输出方式
+3、C++语言的命名空间</dd>
             </dl>
                     </div>
             </div>
@@ -1078,9 +676,9 @@ var hasLearn;
 
 
 <!--script-->
-<script src="{{asset('new')}}/js/ssologin.js"></script>
-<script type="text/javascript" src="{{asset('new')}}/js/sea.js"></script>
-<script type="text/javascript" src="{{asset('new')}}/js/sea_config.js"></script>
+<script src="{{asset('home')}}/Scipts/ssologin.js"></script>
+<script type="text/javascript" src="{{asset('home')}}/Scipts/sea.js"></script>
+<script type="text/javascript" src="{{asset('home')}}/Scipts/sea_config.js"></script>
 <script type="text/javascript">seajs.use("/static/page/"+OP_CONFIG.module+"/"+OP_CONFIG.page);</script>
 
  
@@ -1107,7 +705,7 @@ var hasLearn;
         "share": {}
     };
     setTimeout(function(){
-            with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/{{asset('new')}}/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+            with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
         },1000)
 
   })();
