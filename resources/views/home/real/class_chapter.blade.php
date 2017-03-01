@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Yii2.0打造完整电商平台-课程章节</title>
+    <title>{{$class_course['real_course_name']}}-课程章节</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
     <meta property="qc:admins" content="77103107776157736375" />
@@ -11,10 +11,13 @@
     <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Yii2.0打造完整电商平台，讲师为PHP开发工程师Mr_Jason，课程分为13个章节，详细介绍课程内容、背景和案例展示" />
+    <meta name="description" content="{{$class_course['real_course_intro']}}" />
 
     <link rel="stylesheet" href="{{asset('home')}}/Content/moco.min.css" type="text/css" />
-
+    <script type="text/javascript" src="{{asset('home')}}/Scripts/jquery.stellar.min.js"></script>
+    <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
+    <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
+    <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
     <style type="text/css">
         .moco-modal-info {
             font-size: 14px;
@@ -50,7 +53,7 @@
     <div class="w pr">
         <div class="path">
             <a href="/">实战</a>
-            <i class="path-split">\</i><span>Yii2.0打造完整电商平台</span>
+            <i class="path-split">\</i><span>{{$class_course['real_course_name']}}</span>
         </div>
 
         <div class="extra">
@@ -70,7 +73,7 @@
 
 
             <div class='hide'>
-                <h1 class="l">Yii2.0打造完整电商平台</h1>
+                <h1 class="l">{{$class_course['real_course_name']}}</h1>
             </div>
 
 
@@ -78,23 +81,22 @@
                 <div class="statics clearfix">
                     <div class="static-item first">
                         <span class="meta">难度</span>
-                        <span class="meta-value"><strong>中级</strong></span>
+                        <span class="meta-value"><strong>{{$class_course['real_course_level']}}</strong></span>
                     </div>
                     <div class="static-item static-time">
                         <span class="meta">时长</span>
-                        <span class="meta-value"><strong>13小时</strong></span>
+                        <span class="meta-value"><strong>{{$class_course['real_course_time']}}小时</strong></span>
                         <em></em>
                     </div>
                     <div class="static-item">
                         <span class="meta">学习人数</span>
-                        <span class="meta-value"><strong>848</strong></span>
+                        <span class="meta-value"><strong>{{$class_course['real_course_people_number']}}</strong></span>
                         <em></em>
                     </div>
                     <div class="static-item">
-                        <span class="meta-value"><strong>9.9分</strong></span>
-						<span class="meta meta-stars">
-							<i class="sz-star on"></i><i class="sz-star on"></i><i class="sz-star on"></i><i class="sz-star on"></i><i class="sz-star on"></i>
-						</span>
+                        <span class="meta">评分</span>
+                        <span class="meta-value"><strong>{{$class_course['real_course_grade']}}分</strong></span>
+
                         <em></em>
                     </div>
                 </div>
@@ -107,7 +109,7 @@
 					<span class="discount-price">
 						<span class="baseline baseliner0">
 						<span class="new-y">&yen;</span>
-						<span class="cur-price"><b>268</b><b class="sub">.00</b></span>
+						<span class="cur-price"><b>{{$class_course['real_course_price']}}</b></span>
 						</span>
 					</span>
 
@@ -132,7 +134,7 @@
     </div>
 
     <div class="info-bg" id="js-info-bg">
-        <div class="cover-img-wrap" style="background-image:url({{asset('home')}}/Images/581947fd0001f69e20000520.jpg)"></div>
+        <div class="cover-img-wrap" style="background-image:url({{asset('home')}}{{$class_course['real_course_picture']}})"></div>
     </div>
 </div>
 
@@ -141,47 +143,33 @@
     <div class="comp-tab-t js-comp-tab">
         <ul class='clearfix'>
             <li class="comp-tab-item-first comp-tab-item ">
-                <a href="/class/57.html#Anchor">课程介绍</a>
+                <a href="{{url('home/class')}}?real_course_id={{$course_id}}">课程介绍</a>
             </li>
             <li class="comp-tab-item active">
-                <a href="/class/chapter/57.html#Anchor">课程章节</a>
-            </li>
-            <li class="comp-tab-item">
-                <a href="/class/57.html#Prchor">课程咨询</a>
-                <span>30</span>
+                <a href="{{url('home/class/chapter')}}?real_course_id={{$course_id}}">课程章节</a>
             </li>
             <li class="comp-tab-item ">
-                <a href="/class/evaluation/57.html#Anchor">用户评价</a>
+                <a href="{{url('home/class/commit')}}?real_course_id={{$course_id}}">用户评价</a>
                 <span>50</span>
             </li>
-            <li class="comp-tab-item ">
-                <a href="/class/57.html#Envir">环境参数</a>
-            </li>
-
         </ul>
     </div>
 
     <div class='js-fixed course-fixed-nav hide'>
-        <h3 class='fixed-course-name' title='Yii2.0打造完整电商平台'>Yii2.0打造完整电商平台</h3>
+        <h3 class='fixed-course-name' title='{{$class_course['real_course_name']}}'>{{$class_course['real_course_name']}}</h3>
 
         <ul class='fixed-nav clearfix'>
             <li class="fixed-nav-item-first fixed-nav-item ml0 ">
-                <a href="/class/57.html#Anchor">课程介绍</a>
+                <a href="{{url('home/class')}}?real_course_id={{$course_id}}">课程介绍</a>
             </li>
             <li class="fixed-nav-item active">
-                <a href="/class/chapter/57.html#Anchor">课程章节</a>
-            </li>
-            <li class="fixed-nav-item">
-                <a href="/class/57.html#Prchor">课程咨询</a>
-                <span>30</span>
+                <a href="{{url('home/class/chapter')}}?real_course_id={{$course_id}}">课程章节</a>
             </li>
             <li class="fixed-nav-item ">
-                <a href="/class/evaluation/57.html#Anchor">用户评价</a>
-                <a href="/class/evaluation/57.html#Anchor"><span>50</span></a>
+                <a href="{{url('home/commit')}}?real_course_id={{$course_id}}">用户评价</a>
+                <a href="{{url('home/commit')}}?real_course_id={{$course_id}}"><span>50</span></a>
             </li>
-            <li class="fixed-nav-item ">
-                <a href="/class/57.html#Envir">环境参数</a>
-            </li>
+
 
         </ul>
 
@@ -200,24 +188,23 @@
 
 
     <div class="infolayout clearfix">
-
         <div class="w">
-
             <div class="comp-tabs-pannel class-tab-pannel course-cmt">
                 <div class="w chapter-box">
                     <div class="comp-tabs-pannel  outline-list">
                         <ul class='chapter-ul'>
                             @foreach($chapter as $key => $value)
+                        <li class="chapter clearfix">
 
-                                    <i class="chapter-icon sz-chapter"></i>
                                     <div class="chapter-bd l">
                                         <h5 class="name">{{$value['real_chapter_number']}} {{$value['real_chapter_name']}}</h5>
                                         <p class="desc">{{$value['real_chapter_intro']}}</p>
                                     </div>
-
+                        </li>
                             @endforeach
                         </ul>
                     </div>
+
                     <div class="chapter-update-state over" style='padding-left: 72px;line-height: 58px;border-bottom: 1px solid #eceef0;color: #93999f;'>本课程已完结</div>
                 </div>
             </div>
@@ -369,7 +356,7 @@
         });
         (function(){
             var imgPic = 'http://szimg.mukewang.com/579190240001d51d05400300-280-160.jpg' || 'http://img.mukewang.com/static/img/common/logo.png',
-                    text = '我正在参加@慕课网 的一门课程【' + 'Yii2.0打造完整电商平台' + '】，很不错哦！快来一起学习吧！', //节名称
+                    text = '我正在参加@慕课网 的一门课程【' + '{{$class_course['real_course_name']}}' + '】，很不错哦！快来一起学习吧！', //节名称
                     url = 'http://coding.imooc.com' + window.location.pathname;
 
             window._bd_share_config = {
@@ -401,7 +388,7 @@
             </div>
             <div class="content">
                 <div class="infos">
-                    <span class="name">Yii2.0打造完整电商平台</span>
+                    <span class="name">{{$class_course['real_course_name']}}</span>
                 <span class="price">
 																	<i>&yen;</i><b>268</b><i>.00</i>
 								</span>

@@ -26,20 +26,109 @@ class LoginController extends Controller
         if(!isset($check_issetqq)){
             $qc = new \QC($accesstoken,$openid);
             $info = $qc->get_user_info();
-//            return redirect()->action('home\LoginController@qq_register');
-//            Redirect::to("home/qq_register")->send("dsa","wqe");
-            return redirect('home/qq_register')->with('info',$info);
+            $info['openid'] = $openid;
+            return redirect('home/binding')->with('info',$info);
         }else{
             setcookie("qq_accesstoken",$accesstoken,time()+86400);
             setcookie("qq_openid",$openid,time()+86400);
         }
     }
 
-    public function qq_register(Request $request)
+    /**
+     * 初次使用互联登录网站的用户
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function binding(Request $request)
     {
-        $id = $request->session('info');
-        print_r($id);
+        $value = $request->session()->get('info');
+        $count = DB::table("user")->where("user_name",$value['nickname'])->count();
+        $name_count = $count + 1;
+        $name = "qq_".$value['nickname']."_".$name_count;
+        $arr = [
+            "picture" => $value['figureurl_qq_2'],
+            "name" => $name,
+            'gender' => $value['gender'],
+            'openid' => $value['openid']
+        ];
+        return view('home.user.binding',['info'=>$arr]);
     }
+
+    public function binding_login(Request $request)
+    {
+        $result = $request->input();
+
+        $header_name = rand(1111,9999).time();
+        $name = $this->getImage($result['image'],public_path('header'),$header_name);
+        if($name){
+            $add_arr = [
+                'user_name' => $result['user_name'],
+                'user_email' => $result['user_email'],
+                'user_pwd' => $result['user_pwd'],
+                'user_figurepath' => "/header/".$header_name.'.jpg',
+                'user_qq_openid' => $result['openid'],
+                'user_nowtime' => date('Y-m-d H:i:s')
+            ];
+            $add = DB::table("user")->insertGetId($add_arr,'user_id');
+            if($add){
+                $user_info  = DB::table("user")->where("user_id",$add)->first();
+                $user = serialize($user_info);
+                setcookie('user',$user,time()+60*60*24);
+                return redirect("home/direction");
+            }
+        }
+    }
+    /**
+     * 通过图片的远程url，下载到本地
+     * @param: $url为图片远程链接
+     * @param: $filename为下载图片后保存的文件名
+     */
+    function getImage($url,$save_dir='',$filename='',$type=0){
+        if(trim($url)==''){
+            return array('file_name'=>'','save_path'=>'','error'=>1);
+        }
+        if(trim($save_dir)==''){
+            $save_dir='./';
+        }
+        if(trim($filename)==''){//保存文件名
+            $ext=strrchr($url,'.');
+            if($ext!='.gif'&&$ext!='.jpg'){
+                return array('file_name'=>'','save_path'=>'','error'=>3);
+            }
+            $filename=time().$ext;
+        }
+        if(0!==strrpos($save_dir,'/')){
+            $save_dir.='/';
+        }
+        //创建保存目录
+        if(!file_exists($save_dir)&&!mkdir($save_dir,0777,true)){
+            return array('file_name'=>'','save_path'=>'','error'=>5);
+        }
+        //获取远程文件所采用的方法
+        if($type){
+            $ch=curl_init();
+            $timeout=5;
+            curl_setopt($ch,CURLOPT_URL,$url);
+            curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+            curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,$timeout);
+            $img=curl_exec($ch);
+            curl_close($ch);
+        }else{
+            ob_start();
+            readfile($url);
+            $img=ob_get_contents();
+            ob_end_clean();
+        }
+        //$size=strlen($img);
+        //文件大小
+        $fp2=@fopen($save_dir.$filename,'a');
+        fwrite($fp2,$img);
+        fclose($fp2);
+        unset($img,$url);
+        return array('file_name'=>$filename,'save_path'=>$save_dir.$filename,'error'=>0);
+    }
+
+
     /**
      * 第三方QQ登录入口
      */

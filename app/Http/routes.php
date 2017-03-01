@@ -30,6 +30,8 @@ Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], fun
     Route::get("direction",'Real\RealIndexController@Direction');
     Route::get("class",'Real\RealIndexController@CouresClass');
     Route::get("class/chapter",'Real\RealIndexController@ClassChapter');
+    //评论展示
+    Route::get("class/commit",'Real\RealIndexController@ClassCommit');
     Route::get("qqlogin",'LoginController@qq_login');
     Route::get("qq_callback",'LoginController@qq_callback');
     Route::get("qq_user",'LoginController@qq_user');
@@ -40,8 +42,9 @@ Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], fun
     Route::post("user/register",'LoginController@register');
     //用户激活邮箱
     Route::get("email_register",'LoginController@email_register');
-    //QQ互联用户绑定邮箱
-    Route::get("qq_register",'LoginController@qq_register');
+    //绑定互联网站初次登录网站的用户
+    Route::get("binding",'LoginController@binding');
+    Route::post("binding/login",'LoginController@binding_login');
 });
 
 Route::group(['middleware' => ['web']], function () {

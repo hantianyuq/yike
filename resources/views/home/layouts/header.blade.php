@@ -23,7 +23,7 @@
                     </a>
                     <div class="my-cart" id="js-my-cart"></div>
                 </li>
-                @if(isset($_COOKIE['qq_openid']) || isset($_COOKIE['qq_accesstoken']))
+                @if(isset($_COOKIE['user']))
                     <li class="set_btn user-card-box"  id="header-user-card">
                         <a id="header-avator" class="user-card-item" action-type="my_menu"  href="http://www.imooc.com/u/4651600/plans" target="_self">
                             <img src='{{asset('home')}}/Picture/585e910d0001aec101000100-40-40.jpg' width='40' height='40' />
