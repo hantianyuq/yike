@@ -2,125 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69ee0ac9-0a4b-4c6d-91a9-39aad9cf3c71" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/images/0.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/Symbola.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/Symbola.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/Symbola.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/Symbola.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/addimage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/alldeletebtnhoverskin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/alldeletebtnupskin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/images/bface.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/button.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/images/caret.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/video/images/center_focus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/images/cface.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/image/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/copy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/zh-cn/images/copy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/deletedisable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/deleteenable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/images/fface.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/formula/images/formula.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/images/icons.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/images/icons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/imglabel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/zh-cn/images/imglabel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/images/jxface2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/video/images/left_focus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/listbackground.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/localimage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/zh-cn/images/localimage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/music.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/zh-cn/images/music.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/images/neweditor-tab-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/video/images/none_focus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/images/ok.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/images/pop-bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/video/images/right_focus.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/rotateleftdisable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/rotateleftenable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/rotaterightdisable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/rotaterightenable.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/images/spacer.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneral-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneral-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneral-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbol-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbol-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbol-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbolita-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbolita-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbolita-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralitalic-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralitalic-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralitalic-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/images/tface.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/images/upload.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/zh-cn/images/upload.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/image/images/upload1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/image/images/upload2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/images/videologo.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/images/wface.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/images/yface.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/DetailController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/STIXFontLicense2010.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/Symbola.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/php/Uploader.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/detail.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/emotion.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/emotion/emotion.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/en/en.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/formula/formula.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/formula/formula.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/formula/formula.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/php/getContent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/image/image.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/image/image.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/php/imageUp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/Scripts/jquery-1.7.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/link/link.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/map/map.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/map/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/mathquill.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/mathquill.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/mathquill.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/myanswer.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneral-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbol-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralbolita-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/mathquill/font/stixgeneral-bundle/stixgeneralitalic-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/third-party/template.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/home/turn.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/umeditor.config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/css/umeditor.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/umeditor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/themes/default/css/umeditor.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/umeditor.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/video/video.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/dialogs/video/video.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/home/umeditor/lang/zh-cn/zh-cn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Picture/53daee770001dd0706000338.jpg" afterPath="$PROJECT_DIR$/public/home/Picture/53daee770001dd0706000338.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Picture/56a0932200014c4d06000338.jpg" afterPath="$PROJECT_DIR$/public/home/Picture/56a0932200014c4d06000338.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Picture/57075ab500016f5a06000338.jpg" afterPath="$PROJECT_DIR$/public/home/Picture/57075ab500016f5a06000338.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Images/587f31030001d7fc04680172.jpg" afterPath="$PROJECT_DIR$/public/home/Images/587f31030001d7fc04680172.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Images/answermember.png" afterPath="$PROJECT_DIR$/public/home/Images/answermember.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Images/bg-teacher.png" afterPath="$PROJECT_DIR$/public/home/Images/bg-teacher.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Images/lujing2.jpg" afterPath="$PROJECT_DIR$/public/home/Images/lujing2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Images/prompt.png" afterPath="$PROJECT_DIR$/public/home/Images/prompt.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Images/temp1.jpg" afterPath="$PROJECT_DIR$/public/home/Images/temp1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Home/AnswerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Home/AnswerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.php" afterPath="$PROJECT_DIR$/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/home/Content/moco.min.css" afterPath="$PROJECT_DIR$/public/home/Content/moco.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\web\phpStudy\WWW\big\yike\resources\views\components\home_footer.php" afterPath="$PROJECT_DIR$/resources/views/components/home_footer.blade.php" />
-      <change type="MOVED" beforePath="E:\web\phpStudy\WWW\big\yike\resources\views\components\home_header.php" afterPath="$PROJECT_DIR$/resources/views/components/home_header.blade.php" />
     </list>
     <ignored path="yike.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,7 +31,7 @@
       <file leaf-file-name="AnswerController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/AnswerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.035715" vertical-offset="1343" max-vertical-offset="2507">
+            <state vertical-scroll-proportion="-18.40625" vertical-offset="1343" max-vertical-offset="2507">
               <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
               <folding>
                 <element signature="e#44#80#0#PHP" expanded="true" />
@@ -160,8 +43,8 @@
       <file leaf-file-name="DetailController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/DetailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.110497236" vertical-offset="1113" max-vertical-offset="2277">
-              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.042671613" vertical-offset="1035" max-vertical-offset="2277">
+              <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
               <folding>
                 <element signature="e#44#80#0#PHP" expanded="true" />
               </folding>
@@ -260,6 +143,7 @@
         <option value="$PROJECT_DIR$/resources/views/home/myanswer.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Home/DetailController.php" />
         <option value="$PROJECT_DIR$/resources/views/home/detail.blade.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -733,16 +617,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="627">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
-          <folding>
-            <element signature="e#450#831#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home/myanswer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="7486" max-vertical-offset="11514">
@@ -1038,7 +912,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/AnswerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.035715" vertical-offset="1343" max-vertical-offset="2507">
+        <state vertical-scroll-proportion="-18.40625" vertical-offset="1343" max-vertical-offset="2507">
           <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
           <folding>
             <element signature="e#44#80#0#PHP" expanded="true" />
@@ -1100,10 +974,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="559">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Home/DetailController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.110497236" vertical-offset="1113" max-vertical-offset="2277">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.042671613" vertical-offset="1035" max-vertical-offset="2277">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
             <element signature="e#44#80#0#PHP" expanded="true" />
           </folding>
