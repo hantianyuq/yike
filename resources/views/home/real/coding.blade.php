@@ -24,9 +24,6 @@
             line-height: 20px;
         }
     </style>
-
-
-
     <script type="text/javascript">
         var OP_CONFIG={"module":"index","page":"index"};
         OP_CONFIG.isLogin = 0;
@@ -36,13 +33,9 @@
         var _cartFlag = 0;
         var seajsTimestamp="v=20170201916";
     </script>
-
-
-
     <link rel="stylesheet" href="{{asset('home')}}/Content/c588d3b17a134fcdb6883d84f9681c48.css" type="text/css" />
 </head>
 <body >
-
 <div id="header">
     <div class="page-container" id="nav">
         <div id="logo" class="logo"><a href="" target="_self" class="hide-text" title="首页">慕课网</a></div>
@@ -57,7 +50,6 @@
             </a>
             <ul class="nav-item l">
                 <li class="set-btn visible-xs-block"><a href="" target="_self">登录</a> / <a href="http://www.imooc.com/user/newsignup" target="_self">注册</a></li>
-
                 <li><a href="" target="_self">课程</a></li>
                 <li><a href="" target="_self" class="program-nav">职业路径<i class="icn-new"></i></a></li>
                 <li><a href="/" class="active" target="_self">实战</a></li>
@@ -101,9 +93,6 @@
     </div>
 </div>
 
-
-
-
 <!-- 顶部banner轮播 -->
 <div class="banner-bg-box">
     <div class="banner-bg">
@@ -123,18 +112,33 @@
 </div>
 <!-- 顶部轮播end -->
 <!--课程列表-->
+<?php  $arr['id']=-1;$result=$result?:$arr ?>
 <div class="w index-main">
     <div class="cato-nav-box clearfix">
         <div class="cato-nav-row">
             <ul class="">
-                <li class="cato-nav-item on">
-                    <a href="/" id="cato">全部</a>
-                </li>
-                @foreach($direction as $key => $value)
-                    <li class="cato-nav-item">
-                        <a href="{{url('home/direction')}}?name=<?=$value['direction_name']?>" data-ct="">{{$value['direction_name']}}</a>
+            @if($result['id']==-1)
+                    <li class="cato-nav-item on">
+                        <a href="{{url('home/direction')}}?id=-1">全部</a>
                     </li>
-                @endforeach
+            @else
+                    <li class="cato-nav-item">
+                        <a href="{{url('home/direction')}}?id=-1">全部</a>
+                    </li>
+            @endif
+
+            @foreach($direction as $key => $value)
+                @if($result['id']==$value['direction_id'])
+                    <li class="cato-nav-item on">
+                        <a href="{{url('home/direction')}}?id=<?=$value['direction_id']?>" data-ct="">{{$value['direction_name']}}</a>
+                    </li>
+                @else
+                    <li class="cato-nav-item">
+                        <a href="{{url('home/direction')}}?id=<?=$value['direction_id']?>" data-ct="">{{$value['direction_name']}}</a>
+                    </li>
+                @endif
+            @endforeach
+
             </ul>
         </div>
     </div>
@@ -143,415 +147,45 @@
     </script>
     <div class="index-list-wrap">
         <div class="moco-course-list clearfix">
+        @foreach($course as $key => $val)
+            @if($val['real_coures_pid']==$result['id'])
             <div class="moco-course-wrap">
                 <a href="/class/83.html">
                     <div class="moco-course-box">
-                        <img  alt="React.js入门与实战   开发适配PC端及移动端新闻头条平台" src="{{asset('home')}}/Picture/58a68f000001262805400300-360-202.jpg"  height="124" width="100%">
+                        <img  alt="{{$val['real_course_name']}}" src="{{asset('home').$val['real_coures_url']}}"  height="124" width="100%">
                         <div class="moco-course-intro">
                             <h3>
-                                React.js入门与实战   开发适配PC端及移动端新闻头条平台
+                               {{$val['real_course_name']}}
                             </h3>
-                            <p>跟随Facebook的脚步，从入门开始，学习领悟React.js不同的开发思想，搭建一个同时适配PC与移动端新闻平台</p>
+                            <p>{{$val['real_coures_intro']}}</p>
                         </div>
                         <div class="moco-course-bottom">
-                            <span class="l color-red">￥199.00</span>
-                            <span class="r">134人学习</span>
+                            <span class="l color-red">￥{{$val['real_coures_price']}}</span>
+                            <span class="r">{{$val['real_coures_people_number']}}人学习</span>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="moco-course-wrap">
-                <a href="/class/84.html">
-                    <div class="moco-course-box">
-                        <img  alt="组件化开发完整AndroidApp   开发同时封装出通用SDK" src="{{asset('home')}}/Picture/589c0e990001ac9505400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                组件化开发完整AndroidApp   开发同时封装出通用SDK
-                            </h3>
-                            <p>以组件化方式从0打造一个完整的Android App，积累到完整的项目成型经验</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥269.00</span>
-                            <span class="r">156人学习</span>
-                        </div>
+            @elseif($result['id']==-1)
+                    <div class="moco-course-wrap">
+                        <a href="/class/83.html">
+                            <div class="moco-course-box">
+                                <img  alt="{{$val['real_course_name']}}" src="{{asset('home').$val['real_coures_url']}}"  height="124" width="100%">
+                                <div class="moco-course-intro">
+                                    <h3>
+                                        {{$val['real_course_name']}}
+                                    </h3>
+                                    <p>{{$val['real_coures_intro']}}</p>
+                                </div>
+                                <div class="moco-course-bottom">
+                                    <span class="l color-red">￥{{$val['real_coures_price']}}</span>
+                                    <span class="r">{{$val['real_coures_people_number']}}人学习</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/80.html">
-                    <div class="moco-course-box">
-                        <img  alt="AngularJS仿拉勾网WebApp  开发移动端单页应用" src="{{asset('home')}}/Picture/588170340001b26105400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                AngularJS仿拉勾网WebApp  开发移动端单页应用
-                            </h3>
-                            <p>基于AngularJS，仿拉勾网开发一个招聘类的移动端单页应用</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥99.00</span>
-                            <span class="r">314人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/13.html">
-                    <div class="moco-course-box">
-                        <img  alt="webApp书城整站开发" src="{{asset('home')}}/Picture/586e0f55000158db05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                webApp书城整站开发
-                            </h3>
-                            <p>HTML5、Vue.js、zepto、Koa框架综合运用</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥128.00</span>
-                            <span class="r">2443人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/79.html">
-                    <div class="moco-course-box">
-                        <img  alt="高性能可扩展MySQL数据库设计及架构优化 电商项目" src="{{asset('home')}}/Picture/586359c00001af9005400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                高性能可扩展MySQL数据库设计及架构优化 电商项目
-                            </h3>
-                            <p>从基础设计入手，设计高性能可扩展的千万级数据库架构</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥249.00</span>
-                            <span class="r">101人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/78.html">
-                    <div class="moco-course-box">
-                        <img  alt="强力django+杀手级xadmin  打造上线标准的在线教育平台" src="{{asset('home')}}/Picture/5859ed790001b9da05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                强力django+杀手级xadmin  打造上线标准的在线教育平台
-                            </h3>
-                            <p>全面掌握django框架,轻松应对python web开发工作</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥369.00</span>
-                            <span class="r">479人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/77.html">
-                    <div class="moco-course-box">
-                        <img  alt="Android自动化测试实战  工具 框架 脚本" src="{{asset('home')}}/Picture/5850bc4500015ecd05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                Android自动化测试实战  工具 框架 脚本
-                            </h3>
-                            <p>找Android自动化测试工作必学的主流工具、框架和自动化脚本</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥179.00</span>
-                            <span class="r">174人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/75.html">
-                    <div class="moco-course-box">
-                        <img  alt="微信小程序入门与实战  常用组件 API 开发技巧 项目实战" src="{{asset('home')}}/Picture/583e42fb0001e04f05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                微信小程序入门与实战  常用组件 API 开发技巧 项目实战
-                            </h3>
-                            <p>开发一个集新闻阅读与电影影讯为一体的小程序，学会小程序开发</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥149.00</span>
-                            <span class="r">3974人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/74.html">
-                    <div class="moco-course-box">
-                        <img  alt="Vue.js高仿饿了么外卖App 最火前端框架 1.0升级2.0" src="{{asset('home')}}/Picture/582ac41a0001d3c705400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                Vue.js高仿饿了么外卖App 最火前端框架 1.0升级2.0
-                            </h3>
-                            <p>vue.js 兼具 angular.js 和 react.js 的优点，并剔除它们的缺点</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥198.00</span>
-                            <span class="r">2321人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/81.html">
-                    <div class="moco-course-box">
-                        <img  alt="巧用第三方快速开发Android App 热门SDK及框架" src="{{asset('home')}}/Picture/5876eed20001476f05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                巧用第三方快速开发Android App 热门SDK及框架
-                            </h3>
-                            <p>用Picasso、RXvolley、Bmob、Zxing等热门第三方SDK及框架，集成开发一个完整App</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥149.00</span>
-                            <span class="r">228人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/53.html">
-                    <div class="moco-course-box">
-                        <img  alt="Android专项测试-Python篇  10年测试经验讲师" src="{{asset('home')}}/Picture/582d71ae00017d5905400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                Android专项测试-Python篇  10年测试经验讲师
-                            </h3>
-                            <p>一套让你学会Android App压力，接口，性能等专项测试技术的课程</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥148.00</span>
-                            <span class="r">297人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/76.html">
-                    <div class="moco-course-box">
-                        <img  alt="Android5.0+高级动画开发 矢量图动画 轨迹动画 路径变换" src="{{asset('home')}}/Picture/5847b10c000199ec05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                Android5.0+高级动画开发 矢量图动画 轨迹动画 路径变换
-                            </h3>
-                            <p>Android5.0高级动画开发精髓，技术原理+实战技巧详解</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥99.00</span>
-                            <span class="r">240人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/71.html">
-                    <div class="moco-course-box">
-                        <img  alt="算法与数据结构C++精解" src="{{asset('home')}}/Picture/580d752500019ca805400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                算法与数据结构C++精解
-                            </h3>
-                            <p>深入讲解面试和实际开发中都会遇到的算法和数据结构问题</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥148.00</span>
-                            <span class="r">1095人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/72.html">
-                    <div class="moco-course-box">
-                        <img  alt="6小时用 jQuery 实现小应用" src="{{asset('home')}}/Picture/5806de7c00014a3105400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                6小时用 jQuery 实现小应用
-                            </h3>
-                            <p>搭建一个清单应用，一次性掌握jQuery核心功能和使用技巧</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥88.00</span>
-                            <span class="r">579人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/70.html">
-                    <div class="moco-course-box">
-                        <img  alt="Android网络层架构设计实战  基于okhttp3" src="{{asset('home')}}/Picture/5812bdf10001253505400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                Android网络层架构设计实战  基于okhttp3
-                            </h3>
-                            <p>设计实现完全解耦合、灵活扩展的网络框架，打造属于自己的框架</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥188.00</span>
-                            <span class="r">308人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/69.html">
-                    <div class="moco-course-box">
-                        <img  alt="React Native快速开发 厕所在哪App LBS定位 框架封装" src="{{asset('home')}}/Picture/57ec8a820001c60b05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                React Native快速开发 厕所在哪App LBS定位 框架封装
-                            </h3>
-                            <p>真实iOS APP项目讲解，多终端技术轻松实现一款APP从0到1的突破</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥128.00</span>
-                            <span class="r">440人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/56.html">
-                    <div class="moco-course-box">
-                        <img  alt="React Native贯穿全栈开发App" src="{{asset('home')}}/Picture/57bd5ec80001b0c405400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                React Native贯穿全栈开发App
-                            </h3>
-                            <p>18个小时纯干货内容，让您一个人从前端到后端完成APP开发。</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥368.00</span>
-                            <span class="r">493人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/57.html">
-                    <div class="moco-course-box">
-                        <img  alt="Yii2.0打造完整电商平台" src="{{asset('home')}}/Picture/579190240001d51d05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                Yii2.0打造完整电商平台
-                            </h3>
-                            <p>购物、下单、支付、收货...各功能模块开发，打造京东式电商平台</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥268.00</span>
-                            <span class="r">831人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/62.html">
-                    <div class="moco-course-box">
-                        <img  alt="Python高级编程技巧实战" src="{{asset('home')}}/Picture/57bd5f4300013d9e05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                Python高级编程技巧实战
-                            </h3>
-                            <p>精选50个python训练任务，提升实战技能与高效编程技巧</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥168.00</span>
-                            <span class="r">806人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/50.html">
-                    <div class="moco-course-box">
-                        <img  alt="所向披靡的响应式开发" src="{{asset('home')}}/Picture/576b84c10001b1c005400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                所向披靡的响应式开发
-                            </h3>
-                            <p>用一套代码开发出不受设备型号、尺寸限制的互联网金融网站</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥128.00</span>
-                            <span class="r">2362人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/49.html">
-                    <div class="moco-course-box">
-                        <img  alt="扛得住的MySQL数据库架构" src="{{asset('home')}}/Picture/5763761f0001c35e05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                扛得住的MySQL数据库架构
-                            </h3>
-                            <p>面面俱到讲解影响MySQL性能的各个因素，将MySQL架构了然于胸。</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥199.00</span>
-                            <span class="r">870人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/48.html">
-                    <div class="moco-course-box">
-                        <img  alt="前端后台ThinkPHP开发整站" src="{{asset('home')}}/Picture/576376440001766205400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                前端后台ThinkPHP开发整站
-                            </h3>
-                            <p>用PHP+MySQL+Ajax开完新闻资讯整站，实现“小全栈”的梦想</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥128.00</span>
-                            <span class="r">2314人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/38.html">
-                    <div class="moco-course-box">
-                        <img  alt="Node.js七天搞定微信公众号" src="{{asset('home')}}/Picture/576376520001da3d05400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                Node.js七天搞定微信公众号
-                            </h3>
-                            <p>Koa框架、ES2015新特性、MongoDB，开发微信公众号</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥199.00</span>
-                            <span class="r">1323人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="moco-course-wrap">
-                <a href="/class/15.html">
-                    <div class="moco-course-box">
-                        <img  alt="组件方式开发 Web App全站 " src="{{asset('home')}}/Picture/5763765d0001352105400300-360-202.jpg"  height="124" width="100%">
-                        <div class="moco-course-intro">
-                            <h3>
-                                组件方式开发 Web App全站
-                            </h3>
-                            <p>用HTML5/CSS3/JS流行技术，以组件式开发WebApp全站。</p>
-                        </div>
-                        <div class="moco-course-bottom">
-                            <span class="l color-red">￥78.00</span>
-                            <span class="r">2108人学习</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
+            @endif
+        @endforeach
             <!--<div class="non-open">
                 <div class="waiting-icon">
                     <i class="sz-hourglass_empty"></i>
