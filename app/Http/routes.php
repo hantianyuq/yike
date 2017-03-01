@@ -36,5 +36,11 @@ Route::group(['middleware' => ['web']], function () {
  *  后台猿问组
  */
 Route::group(['middleware' => ['web']], function () {
-    Route::get("home/answer",'Home\AnswerController@index');
+    Route::any("home/answer",'Home\AnswerController@Index');
+    Route::any("home/myanswer",'Home\AnswerController@MyAnswer');
+    Route::any("home/turn",'Home\AnswerController@turn');
+    Route::any("home/addmyanswer",'Home\AnswerController@AddMyAnswer');
+    Route::any("home/detail",'Home\DetailController@DetailShow');
+    Route::any("home/reply",'Home\DetailController@Reply');
+    Route::any("home/creply",'Home\DetailController@CReply');//评论下回复
 });
