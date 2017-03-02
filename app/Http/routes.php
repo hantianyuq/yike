@@ -53,4 +53,11 @@ Route::group(['middleware' => ['web']], function () {
 
 
     Route::any("home/section/lists",'Home\free\SectionController@lists');
+    Route::any("home/section/show",'Home\free\SectionController@show');
+    Route::any("home/section/publish",'Home\free\SectionController@publish');
+
+    Route::any("home/Comment/show",'Home\free\CommentController@show');
+    Route::any("home/Comment/praise",'Home\free\CommentController@praise');
+    Route::any("home/Comment/praiseCancel",'Home\free\CommentController@praiseCancel');
+
 });

@@ -325,7 +325,7 @@
                     <div class='index-card-container course-card-container container '>
 
                         <a target="_blank" class='course-card'
-                           href="/learn/9"
+                           href="{{url('courseShow')}}?id={{$val['course_id']}}"
 
 
                         >

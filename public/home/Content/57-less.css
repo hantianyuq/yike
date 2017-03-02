@@ -1,0 +1,336 @@
+﻿#footer {
+  margin-top: 0;
+  border-top: none;
+}
+.course-infos {
+  margin-bottom: 0;
+}
+h2 {
+  font-family: "Microsoft YaHei";
+  font-weight: bold;
+  font-size: 44px;
+}
+.introduce-content {
+  margin: 0 auto;
+  overflow: hidden;
+}
+.section.h778 {
+  height: 778px;
+}
+.section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(../Images/container.png) center bottom;
+}
+.section img {
+  display: block;
+  outline: none;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section .wrap {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 94px;
+}
+.section h2 {
+  color: #e74c3c;
+  line-height: 44px;
+}
+.section p {
+  font-size: 22px;
+  color: #5c5c5c;
+  line-height: 22px;
+  margin-top: 20px;
+}
+.wrap,
+.w_box {
+  width: 1200px;
+  margin: 0 auto;
+}
+.section1 {
+  position: relative;
+  width: 100%;
+  background: #fff;
+}
+.section1 .wrap {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 94px;
+}
+.section1 h2 {
+  text-align: center;
+  color: #000000;
+}
+.section1 .section1-block {
+  text-align: center;
+}
+.section1 img {
+  width: 1200px;
+  margin: 0 auto;
+}
+.section2 {
+  position: relative;
+  width: 100%;
+  background: #f2f2f3;
+}
+.section2 img {
+  width: 1200px;
+  margin: 0 auto;
+}
+.section2 .w_box {
+  position: relative;
+}
+.section2 h2 {
+  text-align: left;
+  color: #000;
+  margin-bottom: 16px;
+}
+.section2 .l-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 94px 0 0 144px;
+}
+.section2 li {
+  float: left;
+  color: #000000;
+  font-size: 16px;
+  line-height: 18px;
+}
+.section2 li span {
+  color: #626262;
+  font-size: 12px;
+}
+.section2 .ul1 {
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+.section2 .lil {
+  width: 208px;
+}
+.section3 {
+  background: url(../Images/section3.png) center bottom;
+  height: 435px;
+}
+.section3 .warp {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.section3 .warp-w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.section3 h2 {
+  margin: 120px 0 32px;
+  text-align: center;
+  color: #fff;
+}
+.section3 p {
+  font-size: 22px;
+  line-height: 38px;
+  color: #fff;
+  padding: 0 136px;
+}
+.section3-1 {
+  width: 100%;
+  background: #fff;
+  padding: 80px 0;
+}
+.section3-1 h2 {
+  text-align: center;
+}
+.section3-1 .section3-block {
+  overflow: hidden;
+  margin-top: 80px;
+}
+.section3-1 .section3-block li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.section3-1 .section3-block li span {
+  background: url('../Images/icon.png') no-repeat;
+  width: 50px;
+  height: 60px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.section3-1 .section3-block li .item1 {
+  background-position: -17px 0;
+}
+.section3-1 .section3-block li .item2 {
+  background-position: -162px 0;
+}
+.section3-1 .section3-block li .item3 {
+  background-position: -329px 0;
+}
+.section3-1 .section3-block li .item4 {
+  background-position: -484px 0;
+}
+.section3-1 .section3-block li h3 {
+  font-size: 24px;
+  font-family: "Microsoft YaHei";
+  color: #000000;
+  margin-bottom: 30px;
+}
+.section3-1 .section3-block li p {
+  font-size: 20px;
+  font-family: "Microsoft YaHei";
+  color: #595757;
+  line-height: 26px;
+  word-break: break-all;
+  word-wrap: break-word;
+  padding: 0 15px;
+}
+.section4 {
+  background: url("../Images/kaifabg.jpg") no-repeat 0 0;
+  display: block;
+  outline: none;
+  border: 0;
+  height: 578px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.section4 h2 {
+  text-align: center;
+  padding-top: 80px;
+  color: #fff;
+}
+.section4 .section4-block {
+  overflow: hidden;
+}
+.section4 .section4-block li {
+  float: left;
+  width: 50%;
+  margin-top: 65px;
+}
+.section4 .section4-block li span {
+  display: block;
+  float: left;
+  width: 90px;
+  height: auto;
+  text-align: center;
+  margin: 0 40px 0 90px;
+}
+.section4 .section4-block li span img {
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  margin-top: 30px;
+}
+.section4 .section4-block li h3 {
+  font-size: 24px;
+  font-family: "Microsoft YaHei";
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.section4 .section4-block li p {
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+  color: #fff;
+  line-height: 30px;
+}
+.section5 {
+  height: 570px;
+  background: url(../Images/section5.png) center bottom;
+}
+.section5 .wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.section5 .l-wrap {
+  position: relative;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section5 .lw-wrap {
+  padding: 135px 0 0 552px;
+  text-align: left;
+}
+.section5 h2 {
+  color: #000;
+  margin-bottom: 15px;
+}
+.section5 h3 {
+  color: #186bdc;
+  font-size: 22px;
+  line-height: 24px;
+  margin: 40px 0 20px;
+}
+.section5 p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #000000;
+  width: 485px;
+}
+.section6 {
+  width: 100%;
+  background: #fff;
+  padding-bottom: 80px;
+}
+.section6 .teacher {
+  position: relative;
+  z-index: 88;
+}
+.section6 .teacher h2 {
+  position: absolute;
+  top: -150px;
+  left: 520px;
+}
+.section6 .teacher .teacher-introduce {
+  background: #f3f4f4;
+  padding: 20px;
+  width: 860px;
+  margin: 210px auto 0;
+  overflow: hidden;
+}
+.section6 .teacher .teacher-introduce .teacher-block {
+  width: 510px;
+  float: right;
+}
+.section6 .teacher .teacher-introduce .teacher-block h3 {
+  color: #ff5b01;
+  font-size: 30px;
+  font-family: "Microsoft YaHei";
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.section6 .teacher .teacher-introduce .teacher-block p {
+  color: #000;
+  font-size: 16px;
+  font-family: "Microsoft YaHei";
+  line-height: 24px;
+}
+.section6 .teacher img {
+  position: absolute;
+  bottom: -80px;
+  left: 188px;
+  z-index: 99;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .wrap,
+  .section3 .warp-w {
+    width: 100%;
+  }
+  .section4 .section4-block li p {
+    font-size: 14px;
+  }
+  .section5 .lw-wrap {
+    padding-left: 455px;
+  }
+}
