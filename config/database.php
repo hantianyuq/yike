@@ -59,10 +59,7 @@ return [
             'database'  => env('DB_DATABASE', 'yike'),
             'username'  => env('DB_USERNAME', 'root'),
             'password'  => env('DB_PASSWORD', 'root'),
- 
 
- 
- 
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => 'yi_',

@@ -59,6 +59,7 @@ Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], fun
     Route::get('pay/centre','Pay\OrderController@centre');
 });
 
+
 Route::group(['middleware' => ['web']], function () {
     Route::get("admin/index",'Admin\IndexController@index');
     Route::get("admin/index_v1",'Admin\IndexController@index_v1');
@@ -105,6 +106,20 @@ Route::group(['middleware' => ['web']], function () {
 
 });
 
+ 
+/**
+ *  后台猿问组
+ */
+Route::group(['middleware' => ['web']], function () {
+    Route::any("home/answer",'Home\AnswerController@Index');
+    Route::any("home/myanswer",'Home\AnswerController@MyAnswer');
+    Route::any("home/turn",'Home\AnswerController@turn');
+    Route::any("home/addmyanswer",'Home\AnswerController@AddMyAnswer');
+    Route::any("home/detail",'Home\DetailController@DetailShow');
+    Route::any("home/reply",'Home\DetailController@Reply');
+    Route::any("home/creply",'Home\DetailController@CReply');//评论下回复
+});
+
 
 
 /*
@@ -124,4 +139,5 @@ Route::group(['middleware' => ['web']], function () {
     
 });
 
+ 
  
