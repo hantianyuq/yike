@@ -62,9 +62,19 @@ Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], fun
 Route::group(['middleware' => ['web']], function () {
     Route::get("admin/index",'Admin\IndexController@index');
     Route::get("admin/index_v1",'Admin\IndexController@index_v1');
+ 
+    Route::get("admin/cate/add",'Admin\CategoryController@add');
+    Route::any("admin/cate/adddo",'Admin\CategoryController@addDo');
+    Route::any("admin/cate/show",'Admin\CategoryController@show');
+    Route::any("admin/cate/del",'Admin\CategoryController@del');
+    Route::any("admin/cate/update",'Admin\CategoryController@update');
+    Route::any("admin/cate/updatado",'Admin\CategoryController@updateDo');
+    Route::any("admin/cate/updatado",'Admin\CategoryController@updateDo');
+
     Route::get("admin/TurnsShow",'Admin\Real\TurnsController@TurnsShow');
     Route::any("admin/TurnsAdd",'Admin\Real\TurnsController@TurnsAdd');
     Route::any("admin/TurnsUpload",'Admin\Real\TurnsController@TurnsUpload');
+ 
 });
 
 
