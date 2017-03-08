@@ -21,7 +21,7 @@
 
     {{--<script type="text/javascript">--}}
 
-        {{--eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('!4(){3 6=a;3 l=4(){3 b,e=9 y("(^| )"+"c=([^;]*)(;|$)");j(b=h.g.z(e)){k w(b[2])}x{k a}};3 8=4(t){3 f=l();3 7=9 o();7.A(7.d()+B*i*i*r);h.g="c="+t+";s="+7.M()+";N=/;L=O.m";j(t&&t!=f){Q.P.G()}};3 5=9 E();5.H=4(){K(6);6=a;8(0)};5.J=4(){8(1)};6=I(4(){5.n="";8(1)},F);5.n=\'R://p.u.m/p/v/q/D.C?t=\'+9 o().d()}()',54,54,'|||var|function|imgobj|timer|exp|setcookie|new|null|arr|IMCDNS|getTime|reg|_0|cookie|document|60|if|return|getcookie|com|src|Date|static|common|1000|expires||mukewang|img|unescape|else|RegExp|match|setTime|24|png|logo|Image|3000|reload|onload|setTimeout|onerror|clearTimeout|domain|toGMTString|path|imooc|location|window|http'.split('|'),0,{}))--}}
+    {{--eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('!4(){3 6=a;3 l=4(){3 b,e=9 y("(^| )"+"c=([^;]*)(;|$)");j(b=h.g.z(e)){k w(b[2])}x{k a}};3 8=4(t){3 f=l();3 7=9 o();7.A(7.d()+B*i*i*r);h.g="c="+t+";s="+7.M()+";N=/;L=O.m";j(t&&t!=f){Q.P.G()}};3 5=9 E();5.H=4(){K(6);6=a;8(0)};5.J=4(){8(1)};6=I(4(){5.n="";8(1)},F);5.n=\'R://p.u.m/p/v/q/D.C?t=\'+9 o().d()}()',54,54,'|||var|function|imgobj|timer|exp|setcookie|new|null|arr|IMCDNS|getTime|reg|_0|cookie|document|60|if|return|getcookie|com|src|Date|static|common|1000|expires||mukewang|img|unescape|else|RegExp|match|setTime|24|png|logo|Image|3000|reload|onload|setTimeout|onerror|clearTimeout|domain|toGMTString|path|imooc|location|window|http'.split('|'),0,{}))--}}
 
     {{--</script>--}}
 
@@ -341,7 +341,7 @@
                         };
                     </script>
 
-{{--------------------------------------------------推荐---start----------------------------------}}
+                    {{--------------------------------------------------推荐---start----------------------------------}}
                     @foreach($recommend as $key=>$val)
                         <div class="ques-answer">
                             <div class="tag-img">
@@ -359,17 +359,19 @@
                             <div class="answer-con first" data-answer-id="228768" id="answer-con">
                                 <div class="user">
 
-                                    {{--<span class="had-solve">已采纳</span>--}}
-                                    <a href="/u/2699509/bbs" target="_blank">woshiajuana</a><span class="signature">回答：</span>
+
+
                                 </div>
-                                <div class="answer-content">return字面理解就是返回的意思，在js也是返回的意思function getNum(a,b) {  //这是声明一个函数   c= a + b;  return c;}var x = getNum(1,2);    //这个是调用这个函数，用一个变量x去接收函数返回的值但你声明的函数没有return的时候，调用函数执行，函数将没有返回值，变量x的值将是undefined有return的时候，将是 变量c的值也就是3<span class="see-more">[ 查看全部 ]</span></div>
-                                <div class="answer-content-all rich-text imgPreview"><p>return字面理解就是返回的意思，在js也是返回的意思</p><p>function getNum(a,b) {  //这是声明一个函数</p><p>   c= a + b;</p><p>  return c;</p><p>}<br /></p><p>var x = getNum(1,2);    //这个是调用这个函数，用一个变量x去接收函数返回的值</p><p>但你声明的函数没有return的时候，调用函数执行，函数将没有返回值，变量x的值将是undefined</p><p>有return的时候，将是 变量c的值也就是3</p><p><br /></p><p><br /></p></div>
+                                <div class="answer-content">{{$val['answer_content']}}</div>
                                 <div class="ctrl-bar clearfix">
                                     <span class="agree-with " data-ques-id="342827" data-answer-id="228768" data-hasop=""><b>赞同</b><em>1</em></span>
                                     <span class="oppose " data-ques-id="342827" data-answer-id="228768" data-hasop="">反对</span>
 
                                     <div class="share-box clearfix">
-                                        <div class="show-btn">分享</div>
+
+                                        <div class="show-btn"><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more">分享</a></div>  </div>
+
+
                                         <div class="share-box-con">
                                             <div class="bdsharebuttonbox" data-tag="share_answer_228768" data-quesid="342827">
                                                 <a class="bds_weixin icon-share-weichat" data-cmd="weixin"></a>
@@ -377,13 +379,14 @@
                                                 <a class="bds_qzone icon-share-qq" data-cmd="qzone" href="#"></a>
                                             </div>
                                         </div>
+
                                     </div>
 
                                 </div><!--.ctrl-bar end-->
                             </div><!--.answer-con end-->
 
                         </div><!--.ques-answer end-->
-                        @endforeach
+                    @endforeach
 
 
                     {{--------------------------------------------------推荐-end------------------------------------}}
@@ -399,36 +402,36 @@
                 {{--登录 start--}}
                 <div id='islogin' style="display: none">
 
-                <div class="user-about">
-                    <div class="user-info">
-                        <div class="user-pic">
-                            <a href="/u/3310018/bbs">
-                                <img src="http://img.mukewang.com/5729f1bd0001dce001000099-100-100.jpg" alt="qq_謎之嘚殇_03310018"/>
-                            </a>
-                        </div>
-                        <div class="user-name">
-                            <a href="/u/3310018/bbs">qq_謎之嘚殇_03310018</a>
-                        </div>
-                        <div class="integral-info clearifx">
-                            <a href="/u/3310018/credit" class="integral">积分：0</a>
-                            <a href="/mall/index" class="integral-mall">积分商城</a>
-                        </div>
-                    </div><!--.user-info end-->
-                    <div class="user-action">
-                        <span class="ques"><a href="/u/3310018/bbs">提问</a><!-- <i></i>--></span>
-                        <span class="reply"><a href="/u/3310018/bbs?sort=reply">回答</a></span>
-                        <span class="follow"><a href="/u/3310018/bbs?sort=follow">关注</a></span>
-                    </div><!--.user-action end-->
-                </div><!--.user-about end-->
+                    <div class="user-about">
+                        <div class="user-info">
+                            <div class="user-pic">
+                                <a href="/u/3310018/bbs">
+                                    <img src="http://img.mukewang.com/5729f1bd0001dce001000099-100-100.jpg" alt="qq_謎之嘚殇_03310018"/>
+                                </a>
+                            </div>
+                            <div class="user-name">
+                                <a href="/u/3310018/bbs">qq_謎之嘚殇_03310018</a>
+                            </div>
+                            <div class="integral-info clearifx">
+                                <a href="/u/3310018/credit" class="integral">积分：0</a>
+                                <a href="/mall/index" class="integral-mall">积分商城</a>
+                            </div>
+                        </div><!--.user-info end-->
+                        <div class="user-action">
+                            <span class="ques"><a href="/u/3310018/bbs">提问</a><!-- <i></i>--></span>
+                            <span class="reply"><a href="/u/3310018/bbs?sort=reply">回答</a></span>
+                            <span class="follow"><a href="/u/3310018/bbs?sort=follow">关注</a></span>
+                        </div><!--.user-action end-->
+                    </div><!--.user-about end-->
 
-                <!--.my-follow-class登录后可见-->
-                <div class="my-follow-class">
-                    <h3>我关注的分类 <span class="js-open">+</span></h3>
-                    <div class="no-tag">
-                        <h4>您还没有关注任何分类</h4>
-                        <div class="follow-immediately">马上关注</div>
-                    </div><!--.no-tag end-->
-                </div>
+                    <!--.my-follow-class登录后可见-->
+                    <div class="my-follow-class">
+                        <h3>我关注的分类 <span class="js-open">+</span></h3>
+                        <div class="no-tag">
+                            <h4>您还没有关注任何分类</h4>
+                            <div class="follow-immediately">马上关注</div>
+                        </div><!--.no-tag end-->
+                    </div>
                 </div>
                 {{--登录 end--}}
                 <!--.my-follow-class登录后可见-->
@@ -439,45 +442,22 @@
                         <span class="all-cls">全部分类</span>
                     </div><!--title end-->
                     <ul class="cls-list">
-                        <li>
-                            <div class="class-info">
-                                <div class="class-icon">
-                                    <a href="/wenda/26" target="_blank">
-                                        <img src="{{asset('home/')}}/Picture/563b0af800018db300900090.jpg" alt="前端工具"/>
-                                    </a>
-                                </div><!--.class-icon end-->
-                                <h4><a href="/wenda/26" target="_blank">前端工具</a></h4>
-                                <p class="follow-person">26071人关注</p>
-                                <a href="javascript:void(0)" data-tag-id="26" class="follow">关注</a>
-                            </div><!--.class-info end-->
-                            <div class="desc">web前端开发时使用的相关工具</div>
-                        </li><!--li end-->
-                        <li>
-                            <div class="class-info">
-                                <div class="class-icon">
-                                    <a href="/wenda/38" target="_blank">
-                                        <img src="{{asset('home/')}}/Picture/563afd4600014d7e00900090.jpg" alt="C#"/>
-                                    </a>
-                                </div><!--.class-icon end-->
-                                <h4><a href="/wenda/38" target="_blank">C#</a></h4>
-                                <p class="follow-person">6215人关注</p>
-                                <a href="javascript:void(0)" data-tag-id="38" class="follow">关注</a>
-                            </div><!--.class-info end-->
-                            <div class="desc">C#是微软公司发布的一种面向对象的、运行于.NET Framewor...</div>
-                        </li><!--li end-->
-                        <li>
-                            <div class="class-info">
-                                <div class="class-icon">
-                                    <a href="/wenda/5" target="_blank">
-                                        <img src="{{asset('home/')}}/Picture/563affe40001680c00900090.jpg" alt="Html/CSS"/>
-                                    </a>
-                                </div><!--.class-icon end-->
-                                <h4><a href="/wenda/5" target="_blank">Html/CSS</a></h4>
-                                <p class="follow-person">55691人关注</p>
-                                <a href="javascript:void(0)" data-tag-id="5" class="follow">关注</a>
-                            </div><!--.class-info end-->
-                            <div class="desc">html是HyperText Mark-up Language的简称...</div>
-                        </li><!--li end-->
+                        @foreach($recommendType as $val)
+                            <li>
+                                <div class="class-info">
+                                    <div class="class-icon">
+                                        <a href="/wenda/26" target="_blank">
+                                            <img src="{{asset('home/')}}/Picture/563b0af800018db300900090.jpg" alt="前端工具"/>
+                                        </a>
+                                    </div><!--.class-icon end-->
+                                    <h4><a href="/wenda/26" target="_blank">{{$val['type_name']}}</a></h4>
+                                    <p class="follow-person">{{$val['type_number']}}人关注</p>
+                                    <a href="javascript:void(0)" data-tag-id="26" class="follow">关注</a>
+                                </div><!--.class-info end-->
+                                <div class="desc">{{$val['intro']}}</div>
+                            </li><!--li end-->
+
+                        @endforeach
                     </ul><!--.cls-list end-->
                 </div><!--.recommend-class end-->
 
@@ -1052,7 +1032,7 @@
     <script src="{{asset('home/Scripts/jquery-1.7.2.min.js')}}"></script>
     <script>
         $(document).ready(function(){
-           var is_login = $("#alreadylogin").val();
+            var is_login = $("#alreadylogin").val();
             if(is_login == 1){
                 $("#islogin").attr("style","display:block");
             }
@@ -1061,3 +1041,6 @@
 </div>
 </body>
 </html>
+
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>

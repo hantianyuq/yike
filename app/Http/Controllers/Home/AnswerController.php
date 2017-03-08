@@ -47,8 +47,11 @@ class AnswerController extends Controller
             $t = implode(",",$type[$i]);
             array_push($recommend[$i],$t);
         }
-//        print_r($recommend);die;
-        return view("home.index",['is_login'=>$is_login,'recommend'=>$recommend]);
+        $recommendType = DB::table('answer_type')->orderBy('type_number','desc')->take(3)->get();
+
+
+        //    print_r($recommend);die;
+        return view("home.index",['is_login'=>$is_login,'recommend'=>$recommend,'recommendType'=>$recommendType]);
     }
 
     public function MyAnswer(Request $request)
@@ -76,7 +79,7 @@ class AnswerController extends Controller
             return -2;
         }
         if(count($data['type'])>3){
-         //类型最多为3个
+            //类型最多为3个
             return -5;
         }
         if(empty($data['title'])){
@@ -99,6 +102,10 @@ class AnswerController extends Controller
     {
         return view("home/turn");
     }
+
+
+
+
 
 
 }
