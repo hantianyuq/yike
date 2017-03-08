@@ -47,17 +47,18 @@
                     <li>
                         <a href="#">
                             <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">统计图表</span>
+                            <span class="nav-label">实战</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="graph_echarts.html">百度ECharts</a>
+                                <a class="J_menuItem" href="{{url('admin/TurnsShow')}}">轮播图管理</a>
                             </li>
                             <li>
-                                <a class="J_menuItem" href="graph_flot.html">Flot</a>
+                                <a class="J_menuItem" href="graph_metrics.html">方向分类</a>
                             </li>
                             <li>
+ 
                                 <a class="J_menuItem" href="graph_morris.html">Morris.js</a>
                             </li>
                             <li>
@@ -308,9 +309,13 @@
                         <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label">工具 </span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li><a class="J_menuItem" href="form_builder.html">表单构建器</a>
+
+                                <a class="J_menuItem" href="graph_metrics.html">课程展示</a>
+ 
                             </li>
                         </ul>
                     </li>
+
 
                 </ul>
             </div>
