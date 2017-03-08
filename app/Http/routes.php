@@ -67,6 +67,12 @@ Route::group(['middleware' => ['web']], function () {
 |	章节展示 
 */
 Route::group(['middleware' => ['web']], function () {
-    Route::get("learnShow",'Home\free\LearnController@learnShow');   // 章节展示
-    // Route::get("learnShow",'Home\free\LearnController@learnShow');
+
+    Route::get("learnShow",'Home\free\LearnController@learnShow');      // 章节展示
+    Route::get("learnIssue",'Home\free\LearnController@learnIssue');    // 问题
+    Route::get("learnAnswer",'Home\free\LearnController@learnAnswer');  // 回答
+    Route::get("learnAnswer_do",'Home\free\LearnController@learnAnswer_do');  // 回答提交
+    Route::get("learnRevert",'Home\free\LearnController@learnRevert');  // 回复提交
+    Route::get("learnNote",'Home\free\LearnController@learnNote');      // 笔记
+    
 });

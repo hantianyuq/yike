@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8">
 <title>
-            <?php echo $course['course_name']?>_YI课网
-    </title>
+PS入门教程——新手过招_学习笔记_慕课网
+</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="renderer" content="webkit">
 <meta property="qc:admins" content="77103107776157736375" />
@@ -15,7 +15,9 @@
 
 <meta name="Keywords" content="" />
 
-<meta name="description" content="" />
+
+<meta name="Description" content="慕课网推出的PS入门教程，PS入门学习必备课程，本课程将带你从PS的基本界面开始熟悉，ps入门课程主要分为三个章节，ps基本工具，ps选择与变形，ps色彩调整，通过小案例来学习简单的工具，终极目标就是先揭开PS的面纱，让你掌握PS的基本用法。"/>
+
 
 
 
@@ -27,12 +29,13 @@
 
 
 
+
 <script type="text/javascript">
 
-var OP_CONFIG={"module":"course","page":"learn"};
-var isLogin = 0;
+var OP_CONFIG={"module":"course","page":"note","userInfo":{"uid":4911548}};
+var isLogin = 1;
 var is_choice = "";
-var seajsTimestamp="v=2016022402352";
+var seajsTimestamp="v=2017022402353";
 var _msg_unread = 0; 
 var _not_unread = 0; 
 var _cart_num = 0;
@@ -49,8 +52,8 @@ var _cart_num = 0;
 /*学习页通用配置*/
 var GC = {
   course: {
-    id: 342,
-    name: 'C++远征之起航篇',
+    id: 139,
+    name: 'PS入门教程——新手过招',
     pic: '',
     video_url: ''
   },
@@ -69,7 +72,7 @@ var hasLearn;
 
 
 
-<link rel="stylesheet" href="{{asset('home')}}/Content/08babe285ec04043ba72015fae972d65.css" type="text/css" />
+<link rel="stylesheet" href="{{asset('home')}}/Content/528263838f50485eac974749734fbe89.css" type="text/css" />
 </head>
 <body >
 
@@ -82,10 +85,10 @@ var hasLearn;
             <i class="icon-menu"></i>
         </button>
         <ul class="nav-item">
-                        <li class="set-btn visible-xs-block"><a href="/user/newlogin" target="_self">登录</a> / <a href="/user/newsignup" target="_self">注册</a></li>
+                        <li class="set-btn visible-xs-block js-header-avator"><a href="/u/4911548" target="_self"><img width="40" height="40"></a></li>
                         
             <li>
-                <a href="/course/list" class="active" target="_self">课程</a>
+                <a href="/course/list"  target="_self">课程</a>
             </li>
             <li><a href="/course/program" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
             <li>
@@ -93,10 +96,12 @@ var hasLearn;
             </li>
             <li><a href="/wenda"  target="_self">猿问</a></li>
             <li><a href="/article"  target="_self">手记</a></li>
+                                            <li class="visible-xs-block"><a href="/user/setprofile" target="_self">我的设置</a></li>
+                <li class="visible-xs-block"><a href="/passport/user/logout?referer=http://www.imooc.com" target="_self">退出</a></li>
             
         </ul>
                 <div id="login-area">
-            <ul class="header-unlogin clearfix">
+            <ul class="clearfix logined">
                 <li class="shop-cart" id="shop-cart">
                     <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
                         <span class="icon-shopping-cart js-endcart"></span>
@@ -105,17 +110,28 @@ var hasLearn;
                     </a>
                     <div class="my-cart" id="js-my-cart"></div>
                 </li>
-                <li class="header-signin">
-                    <a href="#" id="js-signin-btn">登录</a>
+                
+                <li class='remind_warp'>
+                    <i class="msg_remind"></i>
+                    <a target="_blank" href='/u/4911548/notices'>
+                        <i class='icon-notifi'></i>
+                        <!-- <span class="msg_icon" style="display: none;"></span> -->
+                    </a>
                 </li>
-                <li class="header-signup">
-                    <a href="#" id="js-signup-btn">注册</a>
+        	   
+                <li class="set_btn user-card-box" id='header-user-card'>
+                    <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu"  href="/u/4911548" target="_self">
+                        <img width="40" height="40">
+                        <i class="myspace_remind" style="display: none;"></i>
+                        <span style="display: none;">动态提醒</span>
+                    </a>
+                    <div class="g-user-card"></div>
                 </li>
             </ul>
         </div>
                 <div class='search-warp clearfix' style='min-width: 32px; height: 60px;'>
                             <div class="pa searchTags" >
-                                    <a href="http://coding.imooc.com/class/83.html" target="_blank">react</a>
+                                    <a href="http://class.imooc.com/sc/17" target="_blank">安卓网络</a>
                                 </div>
             
             <div class="search-area" data-search="top-banner">
@@ -140,22 +156,23 @@ var hasLearn;
 
 <div id="main">
 
+
 <div class="course-infos">
     <div class="w pr">
         <div class="path">  
             <a href="/course/list">课程</a>
-                        <i class="path-split">\</i><a href="/course/list?c=be">后端开发</a>
-                                    <i class="path-split">\</i><a href="/course/list?c=C+puls+puls">C++</a>
-                        <i class="path-split">\</i><a href="/learn/342"><span>C++远征之起航篇</a></span>
+                        <i class="path-split">\</i><a href="/course/list?c=photo">UI设计</a>
+                                    <i class="path-split">\</i><a href="/course/list?c=uitool">设计工具</a>
+                        <i class="path-split">\</i><a href="/learn/139"><span>PS入门教程——新手过招</a></span>
         </div>
         <div class="hd clearfix">
             <h2 class="l"><?php echo $course['course_name']?></h2>
                     </div>
 
         <div class="statics clearfix">
-                                    <!-- moco-btn l learn-btn green-btn -->
+            
                         <div class="moco-btn l learn-btn green-btn red-btn"> 
-                <a href="/video/6577" class="J-learn-course">开始学习</a>
+                <a href="/video/2147" class="J-learn-course">开始学习</a>
                 <em></em>
                 <i class="follow-action js-follow-action"></i>
             </div>
@@ -173,7 +190,7 @@ var hasLearn;
             </div>
             <div class="static-item l">
                 <span class="meta">课程时长</span>
-                <span class="meta-value"> 1小时 6分</span>
+                <span class="meta-value"> 9小时45分</span>
                 <em></em>
             </div>
             <div class="static-item l score-btn">
@@ -184,22 +201,22 @@ var hasLearn;
                                 
                 <div class="score-wrap icon-drop_up triangle">
                     <div class="score-box">
-                        <a href="/coursescore/342" class="person-num">
-                            <span class="person-num l">587人评价</span>
+                        <a href="/coursescore/139" class="person-num">
+                            <span class="person-num l">342人评价</span>
                         </a>
-                                                    <a href="/coursescore/342?page=1" class="evaluation-btn r">查看评价</a>
+                                                    <a href="/coursescore/139?page=1" class="evaluation-btn r">查看评价</a>
                                                 <div class="score-detail-box">
                             <div class="score-static-item">
                                 <span class="meta-value">9.9</span>
                                 <span class="meta">内容实用</span>
                             </div>
                             <div class="score-static-item">
-                                <span class="meta-value">9.6</span>
+                                <span class="meta-value">9.7</span>
                                 <span class="meta">简洁易懂</span>
                                 <em></em>
                             </div>
                             <div class="score-static-item">
-                                <span class="meta-value">9.5</span>
+                                <span class="meta-value">9.4</span>
                                 <span class="meta">逻辑清晰</span>
                                 <em></em>
                             </div>
@@ -226,7 +243,7 @@ var hasLearn;
     </div>
     <div class="info-bg" id="js-info-bg">
         <div class="cover-img-wrap">
-        <img data-src="Picture/570760430001d17606000338.jpg" alt="" style="display: none" id="js-cover-img">
+        <img data-src="{{asset('home')}}/Picture/55af49cd00011fc206000338.jpg" alt="" style="display: none" id="js-cover-img">
         </div>
         <div class="cover-mask"></div>
     </div>
@@ -234,125 +251,157 @@ var hasLearn;
         
 </div>
 
-
 <div class="course-info-main clearfix w">
-    <div class="content-wrap">
+    <div class="content-wrap clearfix">
         <div class="content">
-                        <!-- 课程简介 -->
+            <!-- 课程简介 -->
             <div class="course-brief">
                 <p class="auto-wrap">简介：<?php echo $course['course_intro']?></p>
             </div>
             <!-- 课程简介 end -->
             <div class="mod-tab-menu ">
-    <ul class="course-menu clearfix">
-        <li><a class="ui-tabs-active active" id="learnOn"  href="{{URL('learnShow')}}?id=<?php echo $course['course_id']?>"><span>章节</span></a></li>
-        <li><a id="commentOn" class="" href="{{URL('home/Comment/show')}}?id=<?php echo $course['course_id']?>"><span>评论</span></a></li>
-        <li><a id="qaOn" class="" href="{{URL('learnIssue')}}?id=<?php echo $course['course_id']?>"><span>问答</span></a></li>
-        <li><a id="noteOn" class="" href="{{URL('learnNote')}}?id=<?php echo $course['course_id']?>"><span>笔记</span></a></li>
-        <!--
-        <li><a id="wikiOn" class="" href="/wiki/342">WIKI</a></li>
+	<ul class="course-menu clearfix">
+		<li><a class="ui-tabs-active " id="learnOn"  href="{{URL('learnShow')}}?id=<?php echo $course['course_id']?>"><span>章节</span></a></li>
+		<li><a id="commentOn" class="" href="{{URL('learnShow')}}?id=<?php echo $course['course_id']?>"><span>评论</span></a></li>
+		<li><a id="qaOn" class="" href="{{URL('learnIssue')}}?id=<?php echo $course['course_id']?>"><span>问答</span></a></li>
+		<li><a id="noteOn" class="active" href="{{URL('learnNote')}}?id=<?php echo $course['course_id']?>"><span>笔记</span></a></li>
+	    <!--
+        <li><a id="wikiOn" class="" href="/wiki/139">WIKI</a></li>
         -->
-    </ul>
-    
-            </div>
-<!-- 课程面板 -->
-            <!-- 课程章节 -->
-            <div class="mod-chapters">
-                <?php foreach($section as $k=>$v){ ?>
-                <div class="chapter chapter-active">
-                    <!-- 章节标题 -->
-                    <h3>
-                        <span class="icon-drop_down js-close"></span>
-                        <strong class='hide'>
-                            <i class="icon-chapter"></i>
-                            <?=$v['name'] ?>
-                            <div class="icon-info chapter-info">
-                                <i class="icon-drop_up triangle">
-                                    <div class="chapter-introubox">
-                                        <div class="chapter-content"><?=$v['intro'] ?></div>
-                                    </div>
-                                </i>
-                            </div>
-                        </strong> 
-                    </h3>
-                    <!-- 章节标题 end -->
-                    <!-- 章节小节 -->
-                        <ul class="video">
-                        <?php foreach($v['child'] as $kk=>$vv){ ?>
-                            <li data-media-id="6577">
-                                <a href='/video/6577' class="J-media-item">
-                                    <i class="icon-video type"></i>
-                                        <?=$vv['chapter_name'] ?>            
-                                        <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                            </li>
-                            <?php } ?>
-                            <!-- <li data-media-id="6725">
-                                <a href='/ceping/6725' class="J-media-item">
-                                    <i class="icon-test type"></i>
-                                    1-2 练习
-                                    <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
-                                                                        
-                                </a>
-                                                        <!-- 未登录时 -->
-                            <!-- <a target="_blank" href="/video/1430" class="J-media-item studyvideo">1-1 Java简介 (05:49)
-                                <button class="r moco-btn moco-btn-blue preview-btn">预览</button>
-                            </a> -->
-                            <!-- </li> -->
-                        </ul>
-                                        <!-- 章节小节 end -->
-                </div>  
-                <?php } ?>
-            </div>
-        </div><!--content end-->
+	</ul>
+	
+</div><!-- 课程面板 -->
 
+            
+<div id="course_note">
+  <div class="course-tool-bar clearfix">
+      <div class="tool-left l">
+        <a href="#" class="sort-item active">最新</a>
+        <a href="#" class="sort-item ">点赞</a>
+      </div>
+
+      <div class="tool-right r">
+        
+                
+      </div>
+  </div>
+<ul id="js-note-container" class="mod-post">
+
+<?php foreach($note as $k=>$v){ ?>
+<li id="1591908" class="post-row js-find-txt" courseid="139" noteId="1591908" authorid="3032381">
+  <div class="media">
+    <a href="/u/3032381/courses" target="_blank"><img src="{{asset('home')}}/Picture/56e42a910001f95101800180-40-40.jpg" width="40" height="40"></a>
+  </div>
+  <div class="bd">
+    <div class="tit">
+      <a href="/u/3032381/courses" target="_blank"><?=$v['user_name'] ?></a>
+    </div>
+    <div class="js-notelist-content notelist-content mynote">
+      <pre class="autowrap"><?=$v['note_content'] ?></pre>
+     <!--  <div class="notelist-content-more">
+        <a href="javascript:;" class="js-toggle-content">[ 查看全文 ]</a>
+      </div> -->
+    </div>
+    <div class="clearfix">
+      <input class="moco-btn moco-btn-green sava_btn" type="button" value="保存">
+    </div>
+            <div class="footer clearfix">
+      <span title="17小时前" class="l timeago">时间：<?=$v['note_time'] ?></span>
+      <a href="/video/3164" class="from l">源自：<?=$v['chapter_name'] ?></a>
+      <div class="actions r">
+        <textarea style="display:none;">扩大选取--要求连续
+选取相似--不要求连续
+选取的操作：扩展，收缩，平滑，边界
+crtl+图层 选中该图层选取
+Q 快速蒙版模式编辑</textarea>
+        <a title="采集" href="javascript:;" class="Jcollect post-action "  data-mid="3164|3032381">
+          <i>采集</i>
+          <em>0</em>
+        </a>
+        <a title="赞" href="javascript:;" class="Jpraise post-action "  data-mid="3164">
+          <span class="icon-thumb-revert"></span>
+          <em>0</em>
+        </a> 
+      </div>
+    </div>
+  </div>
+</li>
+<?php } ?>
+
+
+<li id="1587495" class="post-row js-find-txt" courseid="139" noteId="1587495" authorid="4479730">
+  <div class="media">
+    <a href="/u/4479730/courses" target="_blank"><img src="{{asset('home')}}/Picture/545847c10001f40702200220-40-40.jpg" width="40" height="40"></a>
+  </div>
+  <div class="bd">
+    <div class="tit">
+      <a href="/u/4479730/courses" target="_blank">慕粉1930564643</a>
+    </div>
+    <div class="js-notelist-content notelist-content mynote">
+      <pre class="autowrap">可以采用矩尺工具把一个倾斜的物品给正过来，图像-旋转画布-任意角度</pre>
+      <div class="notelist-content-more">
+        <a href="javascript:;" class="js-toggle-content">[ 查看全文 ]</a>
+      </div>
+    </div>
+    <div class="clearfix">
+      <input class="moco-btn moco-btn-green sava_btn" type="button" value="保存">
+    </div>
+            <div class="footer clearfix">
+      <span title="2天前" class="l timeago">时间：2天前</span>
+      <a href="/video/2316" class="from l">源自：1-4 PS之图像的旋转和翻转</a>
+      <div class="actions r">
+        <textarea style="display:none;">可以采用矩尺工具把一个倾斜的物品给正过来，图像-旋转画布-任意角度</textarea>
+        <a title="采集" href="javascript:;" class="Jcollect post-action "  data-mid="2316|4479730">
+          <i>采集</i>
+          <em>0</em>
+        </a>
+        <a title="赞" href="javascript:;" class="Jpraise post-action "  data-mid="2316">
+          <span class="icon-thumb-revert"></span>
+          <em>0</em>
+        </a> 
+      </div>
+    </div>
+  </div>
+</li>
+
+</ul>
+<div class="page"><span class="disabled_page">首页</span><span class="disabled_page">上一页</span><a href="javascript:void(0)" class="active text-page-tag">1</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=2">2</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=3">3</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=4">4</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=5">5</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=6">6</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=7">7</a><a href="/course/note/id/139?sort=last&page=2">下一页</a><a href="/course/note/id/139?sort=last&page=316">尾页</a></div>
+</div>
+
+        </div>
         <div class="aside r">
             <div class="bd">
     
         
-                <div class="box mb40 js-usercard-box">
-                <h4>讲师提示</h4>
-                                <div class="teacher-info">
-                    <a href="/u/1349694/courses?sort=publish" target="_blank" >
-                        <img data-userid="1349694" class="js-usercard-dialog" src="Picture/550f82810001c44902200220-80-80.jpg" width="80" height="80">
-                    </a>
-                    <span class="tit">
-                        <a href="/u/1349694/courses?sort=publish" target="_blank">james_yuan</a><i class="icon-imooc"></i>
-                    </span>
-                    <span class="job">学生</span>
-                </div>
-                    <div class="course-info-tip">
-                    <dl class="first">
-                        <dt>课程须知</dt>
-                        <dd class="autowrap">本课程是C++初级课程
-        在学习本课程之前需要熟练掌握C语言的基础语法</dd>
-                    </dl>
-                    <dl>
-                        <dt>老师告诉你能学到什么？</dt>
-                        <dd class="autowrap">1、C++语言新的数据类型
-        2、C++语言新的输入输出方式
-        3、C++语言的命名空间</dd>
-                    </dl>
-                    </div>
-                </div>
-    
-            <div class="js-recom-box"></div>
-
-            </div>        
+        <div class="box mb40 js-usercard-box">
+        <h4>讲师提示</h4>
+                        <div class="teacher-info">
+            <a href="/u/141256/courses?sort=publish" target="_blank" >
+                <img data-userid="141256" class="js-usercard-dialog" src="{{asset('home')}}/Picture/53855e6f0001034501400140-80-80.jpg" width="80" height="80">
+            </a>
+            <span class="tit">
+                <a href="/u/141256/courses?sort=publish" target="_blank">Oeasy</a><i class="icon-imooc"></i>
+            </span>
+            <span class="job">页面重构设计</span>
         </div>
-    </div>
+                                <div class="course-info-tip">
+                        <dl class="first">
+                <dt>课程须知</dt>
+                <dd class="autowrap">零基础好上手，所有对Photoshop感兴趣的小伙伴都可以来学习</dd>
+            </dl>
+                                    <dl>
+                <dt>老师告诉你能学到什么？</dt>
+                <dd class="autowrap">PS基本界面及工具介绍</dd>
+            </dl>
+                    </div>
+            </div>
+    
+    <div class="js-recom-box"></div>
 
+</div>        </div>
+    </div>
     <div class="clear"></div>
 
-</div>
-<!-- 视频介绍 -->
-<div id="js-video-wrap" class="video pop-video" style="display:none">
-    <div class="video_box" id="js-video"></div>
-    <a href="javascript:;" class="pop-close icon-close"></a>
 </div>
 
 </div>
@@ -419,25 +468,11 @@ var hasLearn;
 
 
 <!--script-->
-<script src="{{asset('home')}}/Scipts/ssologin.js"></script>
-<script type="text/javascript" src="{{asset('home')}}/Scipts/sea.js"></script>
-<script type="text/javascript" src="{{asset('home')}}/Scipts/sea_config.js"></script>
+<script src="{{asset('home')}}/Scripts/ssologin.js"></script>
+<script type="text/javascript" src="{{asset('home')}}/Scripts/sea.js"></script>
+<script type="text/javascript" src="{{asset('home')}}/Scripts/sea_config.js"></script>
 <script type="text/javascript">seajs.use("/static/page/"+OP_CONFIG.module+"/"+OP_CONFIG.page);</script>
-<script src="{{asset('home')}}/js/jquery.js"></script>
-<script>
-    $(function(){
-        $('.hide').click(function(){
-            var _this = $(this);
-            var str = $(this).parent().parent().attr('class');
-            if(str == 'chapter chapter-active'){
-                // alert(str);
-                _this.parent().parent().attr('class','chapter');
-            }else{
-                _this.parent().parent().attr('class','chapter chapter-active');
-            }
-        })
-    })
-</script>
+
  
 
 <script type="text/javascript">
