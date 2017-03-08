@@ -12,6 +12,39 @@ use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
+    public function login(Request $request)
+    {
+        if($request->isMethod("post")){
+            //获取到表单提交到的数据
+            $user_info = $request->input();
+            //根据数据查询数据库中是否存在这个用户
+            $user = DB::table("user")
+                ->where("user_name",$user_info['user'])
+                ->orWhere('user_email',$user_info['user'])
+                ->orWhere('user_phone',$user_info['user'])->first();
+            //如果没有用户就返回
+            if(!isset($user)){
+                return back()->with("ccccc","用户名或者密码错误");
+            }elsE{
+                //有这个用户就对比密码
+                if($user_info['user_pwd'] != $user['user_pwd']){
+                    return back()->with('ccccc','用户名或者密码错误');
+                }else{
+                    $request->session()->put('user',$user_info);
+//                    $add_user = serialize($user);
+//                    setcookie('user',$add_user,time()+60*60*24);
+                    $arr_add['user_nowtime'] = date('Y-m-d H:i:s');
+                    $arr_add['user_lasttime'] = $user['user_nowtime'];
+                    $update = DB::table("user")->where("user_id",$user['user_id'])->update($arr_add);
+                    if($update){
+                        return redirect('home/direction');
+                    }
+                }
+            }
+
+
+        }
+    }
     /**
      * 第三方QQ登录回调地址
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
@@ -29,9 +62,16 @@ class LoginController extends Controller
             $info['openid'] = $openid;
             return redirect('home/binding')->with('info',$info);
         }else{
-            setcookie("qq_accesstoken",$accesstoken,time()+86400);
-            setcookie("qq_openid",$openid,time()+86400);
+            $user = serialize($check_issetqq);
+            setcookie('user',$user);
+            return redirect("home/direction");
         }
+    }
+
+    public function loginout()
+    {
+        setcookie("user",1,time()-1);
+        return redirect("home/direction");
     }
 
     /**
@@ -58,14 +98,14 @@ class LoginController extends Controller
     {
         $result = $request->input();
 
-        $header_name = rand(1111,9999).time();
-        $name = $this->getImage($result['image'],public_path('header'),$header_name);
+        $header_name = rand(1111,9999).time().".jpg";
+        $name = $this->getImage($result['image'],public_path('home/header'),$header_name);
         if($name){
             $add_arr = [
                 'user_name' => $result['user_name'],
                 'user_email' => $result['user_email'],
                 'user_pwd' => $result['user_pwd'],
-                'user_figurepath' => "/header/".$header_name.'.jpg',
+                'user_figurepath' => "/header/".$header_name,
                 'user_qq_openid' => $result['openid'],
                 'user_nowtime' => date('Y-m-d H:i:s')
             ];
@@ -73,8 +113,9 @@ class LoginController extends Controller
             if($add){
                 $user_info  = DB::table("user")->where("user_id",$add)->first();
                 $user = serialize($user_info);
-                setcookie('user',$user,time()+60*60*24);
-                return redirect("home/direction");
+                if(setcookie('user',$user)){
+                    return redirect("home/direction");
+                }
             }
         }
     }

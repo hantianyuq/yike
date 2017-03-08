@@ -16,17 +16,19 @@
         <div id="login-area">
             <ul class="clearfix logined">
                 <li class="shop-cart" id="shop-cart">
-                    <a href="{{url('home/shop')}}" class="shop-cart-icon" target="_blank">
+                    <a href="{{url('home/pay/ShopShow')}}" class="shop-cart-icon" target="_blank">
 
                         <span class="shopping_icon js-cart-num" data-ordernum="0"  data-cartnum="0" style='display: none'>0</span>
                         <span>购物车</span>
                     </a>
                     <div class="my-cart" id="js-my-cart"></div>
                 </li>
+
                 @if(isset($_COOKIE['user']))
+                    <?php $user = unserialize($_COOKIE['user'])?>
                     <li class="set_btn user-card-box"  id="header-user-card">
                         <a id="header-avator" class="user-card-item" action-type="my_menu"  href="http://www.imooc.com/u/4651600/plans" target="_self">
-                            <img src='{{asset('home')}}/Picture/585e910d0001aec101000100-40-40.jpg' width='40' height='40' />
+                            <img src='{{asset('home')}}{{$user['user_figurepath']}}' width='40' height='40' />
                             <i class="myspace_remind" style="display: none;"></i>
                             <span style="display: none;">动态提醒</span>
                         </a>
@@ -34,11 +36,11 @@
                             <div class="card-inner">
                                 <div class="card-top clearfix">
                                     <a href='http://www.imooc.com/u/4651600' class='l'>
-                                        <img src="{{asset('home')}}/Picture/585e910d0001aec101000100-100-100.jpg" alt="qq_echo_47">
+                                        <img src="{{asset('home')}}{{$user['user_figurepath']}}" alt="{{$user['user_name']}}">
                                     </a>
                                     <div class="card-top-right-box l">
                                         <a href='http://www.imooc.com/u/4651600' class="name text-ellipsis">
-                                            <span>qq_echo_47</span>
+                                            <span>{{$user['user_name']}}</span>
                                         </a>
 
                                         <div class="meta">
@@ -63,7 +65,7 @@
                                 </div>
 
                                 <div class="card-sets clearfix">
-                                    <a href="/passport/user/logout?referer=http://class.imooc.com" class="r">安全退出</a>
+                                    <a href="{{url('home/loginout')}}" class="r">安全退出</a>
                                 </div>
                             </div>
                         </div>

@@ -18,16 +18,13 @@
     <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
     <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
     <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
+    <script src='{{asset('home')}}/Scripts/jquery.min.js'></script>
     <style type="text/css">
         .moco-modal-info {
             font-size: 14px;
             line-height: 20px;
         }
     </style>
-
-
-
-
 
 
 
@@ -126,7 +123,7 @@
 
                 <a href='javascript:;' class='js-addcart addcart' data-cid='57' data-type='1'>
                     <span class='line'></span>
-                    <i class='sz-add-shopping-cart'></i>
+                    <i class='sz-add-shopping-cart'>加入购物车</i>
                 </a>
 
                 <div class="preview-tip">
@@ -139,7 +136,24 @@
         <div class="cover-img-wrap" style="background-image:url({{asset('home')}}{{$class_course['real_course_picture']}})"></div>
     </div>
 </div>
-
+<script>
+    $(".sz-add-shopping-cart").click(function(){
+        var course_id = '{{$course_id}}';
+        $.post("{{url('home/pay/shop')}}",{course_id:course_id,"_token":"{{csrf_token()}}"},function(data){
+                var code = data.code;
+                if(code == 0){
+                    //未登录游客加入购物车
+                    alert(data.content);
+                }else if(code == 1){
+                    //已经登录的用户加入购物车
+                    alert(data.content);
+                }else if(code ==2){
+                    //用户的购物车中已经有此课程
+                    alert(data.content);
+                }
+        },'json')
+    })
+</script>
 <div class='course-infos-t'>
     <div id='Anchor'></div>
     <div class="comp-tab-t js-comp-tab">
@@ -179,10 +193,6 @@
                 <span>立即购买</span>
             </a>
 
-            <a href='javascript:;' class='js-addcart addcart' data-cid='57' data-type='1'>
-                <span class='line'></span>
-                <i class='sz-add-shopping-cart'></i>
-            </a>
 
         </div>
     </div>
@@ -337,9 +347,13 @@
         <span class="">返回顶部</span>
     </a>
 </div>
+
 @include("home.layouts.signin");
+
+
+
 <script type="text/javascript" src="{{asset('home')}}/Scripts/require.js"></script>
-<script src='{{asset('home')}}/Scripts/jquery.min.js'></script>
+
 <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
 <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
 <script>
@@ -385,37 +399,35 @@
 
 
 
-
-
 <script>/*RESOURCE_MAP*/</script>
 <script src='{{asset("home")}}/Scripts/jquery.fly.js'></script>
 <!--[if gte IE 9]><script src='{{asset("home")}}/Scripts/requestanimationframe.js'></script><![endif]-->
-<script data-entry="class/index">
-    requirejs(['class/index'], function(){
-    });
-    (function(){
-        var imgPic = 'http://szimg.mukewang.com/579190240001d51d05400300-280-160.jpg' || 'http://img.mukewang.com/static/img/common/logo.png',
-                text = '我正在参加@慕课网 的一门课程【' + '{{$class_course['real_course_name']}}' + '】，很不错哦！快来一起学习吧！', //节名称
-                url = 'http://coding.imooc.com' + window.location.pathname;
+{{--<script data-entry="class/index">--}}
+    {{--requirejs(['class/index'], function(){--}}
+    {{--});--}}
+    {{--(function(){--}}
+        {{--var imgPic = 'http://szimg.mukewang.com/579190240001d51d05400300-280-160.jpg' || 'http://img.mukewang.com/static/img/common/logo.png',--}}
+                {{--text = '我正在参加@慕课网 的一门课程【' + '{{$class_course['real_course_name']}}' + '】，很不错哦！快来一起学习吧！', //节名称--}}
+                {{--url = 'http://coding.imooc.com' + window.location.pathname;--}}
 
-        window._bd_share_config = {
-            "common": {
-                "bdUrl": url,
-                "bdSnsKey": {
-                    'tsina':'2788596354'
-                },
-                "bdText": text,
-                "bdMini": "2",
-                "bdMiniList": false,
-                "bdPic": imgPic,
-                "bdStyle": "0",
-                "bdSize": "16"
-            },
-            "share": {}
-        };
-        with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
-    })();
-</script>
+        {{--window._bd_share_config = {--}}
+            {{--"common": {--}}
+                {{--"bdUrl": url,--}}
+                {{--"bdSnsKey": {--}}
+                    {{--'tsina':'2788596354'--}}
+                {{--},--}}
+                {{--"bdText": text,--}}
+                {{--"bdMini": "2",--}}
+                {{--"bdMiniList": false,--}}
+                {{--"bdPic": imgPic,--}}
+                {{--"bdStyle": "0",--}}
+                {{--"bdSize": "16"--}}
+            {{--},--}}
+            {{--"share": {}--}}
+        {{--};--}}
+        {{--with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];--}}
+    {{--})();--}}
+{{--</script>--}}
 
 
 <div class="comp-modal-overlay"></div>

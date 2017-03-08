@@ -46,6 +46,7 @@ class RealIndexController extends Controller
         $Direction = $real_direction->ShowDirection();
         $Course=new CourseModel();
         $real_course=$Course->ShowCourse();
+
         return view("home.real.coding",['turns' => $Turns,'direction'=>$Direction,'course'=>$real_course,'result'=>$result]);
     }
 
@@ -94,4 +95,5 @@ class RealIndexController extends Controller
             return view("home.real.commit",['course_id'=>$course_id,'class_course'=>$class,'chapter'=>$chapter]);
         }
     }
+
 }

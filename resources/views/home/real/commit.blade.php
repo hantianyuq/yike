@@ -117,9 +117,9 @@
                     <span>立即购买</span>
                 </a>
 
-                <a href='javascript:;' class='js-addcart addcart' data-cid='84' data-type='1'>
+                <a href='javascript:;' class='js-addcart addcart' data-cid='57' data-type='1'>
                     <span class='line'></span>
-                    <i class='sz-add-shopping-cart'></i>
+                    <i class='sz-add-shopping-cart'>加入购物车</i>
                 </a>
 
                 <div class="preview-tip">
@@ -792,7 +792,7 @@
             <span class="">返回顶部</span>
         </a>
     </div>
-
+@include("home.layouts.signin")
 
 
     <script src="{{asset('home')}}/Scripts/ssologin.js"></script>

@@ -6,40 +6,50 @@
         </h1>
         <button class="rl-close" type="button" data-dismiss="modal" hidefocus="true" aria-hidden="true"></button>
     </div>
+
+    {{--登录的DIV--}}
     <div class="rl-modal-body" id="logindiv">
         <div class="clearfix">
             <div class="l-left-wrap l">
-                <form id="signup-form" autocomplete="off">
+                @if(session('ccccc'))
+                    <script>
+                        var ccccc = '{{session('ccccc')}}';
+                        alert(ccccc);
+                    </script>
+                @endif
+                <form id="signup-form" autocomplete="off" action="{{url('home/user/login')}}" method="post">
+                    {{csrf_field()}}
                     <p id="signin-globle-error" class="rlf-tip-globle color-red"></p>
                     <div class="rlf-group pr">
-                        <input class="xa-emailOrPhone ipt ipt-email js-own-name" value="" maxlength="37" name="email" data-validate="require-mobile-phone" autocomplete="off" placeholder="请输入登录邮箱/手机号" type="text">
+                        <input class="xa-emailOrPhone ipt ipt-email js-own-name" value="" maxlength="37" name="user" data-validate="require-mobile-phone" autocomplete="off" placeholder="请输入登录邮箱/手机号" type="text">
                         <p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确的邮箱或手机号"></p>
                     </div>
                     <div class="rlf-group pr">
-                        <input class="ipt ipt-pwd js-loginPassword js-pass-pwd" name="password" data-validate="require-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="16" autocomplete="off" type="password">
+                        <input class="ipt ipt-pwd js-loginPassword js-pass-pwd" name="user_pwd" data-validate="require-password" placeholder="6-16位密码，区分大小写，不能用空格" maxlength="16" autocomplete="off" type="password">
 
                         <p class="rlf-tip-wrap errorHint color-red " data-error-hint="请输入6-16位密码，区分大小写，不能使用空格！"></p>
                     </div>
-                    <div class="rlf-group clearfix form-control js-verify-row" style="display: none;">
-                        <input class="ipt ipt-verify l" id="verify" name="verify" data-validate="require-string" data-callback="checkverity" maxlength="4" data-minlength="4" placeholder="请输入验证码" type="text" >
-                        <a class="verify-img-wrap js-verify-refresh" href="javascript:void(0)" hidefocus="true"></a>
-                        <a class="icon-refresh js-verify-refresh" href="javascript:void(0)" hidefocus="true"></a>
-                        <p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>
-                    </div>
+                    {{--<div class="rlf-group clearfix form-control js-verify-row" style="display: none;">--}}
+                        {{--<input class="ipt ipt-verify l" id="verify" name="verify" data-validate="require-string" data-callback="checkverity" maxlength="4" data-minlength="4" placeholder="请输入验证码" type="text" >--}}
+                        {{--<a class="verify-img-wrap js-verify-refresh" href="javascript:void(0)" hidefocus="true"></a>--}}
+                        {{--<a class="icon-refresh js-verify-refresh" href="javascript:void(0)" hidefocus="true"></a>--}}
+                        {{--<p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码"></p>--}}
+                    {{--</div>--}}
                     <div class="rlf-group rlf-appendix form-control clearfix">
                         <label class="rlf-autoin l" for="auto-signin" hidefocus="true">
-                            <input id="auto-signin" class="auto-cbx" checked="checked" type="checkbox">
+                            <input id="auto-signin" class="auto-cbx" checked="checked" name='free_login' type="checkbox" >
                             下次自动登录
                         </label>
                         <a class="rlf-forget r" href="/user/newforgot" target="_blank" hidefocus="true">忘记密码 </a>
                     </div>
                     <div class="rlf-group clearfix">
-                        <input class="btn-red btn-full xa-login" value="登录" hidefocus="true" type="button">
+                        <input class="btn-red btn-full xa-login" value="登录" hidefocus="true" type="submit">
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    {{--注册的DIV--}}
     <div class="rl-modal-body " id='registerdiv' style="display: none">
         <form id="signup-form pr register">
             <p id="signup-globle-error" class="rlf-tip-globle color-red rlf-g-tip"></p>
@@ -100,6 +110,7 @@
 <div class="modal-backdrop in" style="display: none"></div>
 
 <script>
+
     $(".rl-close").click(function(){
         $("#signin").hide();
         $(".modal-backdrop").hide();

@@ -18,6 +18,7 @@
     <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
     <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
     <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
+    <script src='{{asset('home')}}/Scripts/jquery.min.js'></script>
     <style type="text/css">
         .moco-modal-info {
             font-size: 14px;
@@ -124,7 +125,7 @@
 
                 <a href='javascript:;' class='js-addcart addcart' data-cid='57' data-type='1'>
                     <span class='line'></span>
-                    <i class='sz-add-shopping-cart'></i>
+                    <i class='sz-add-shopping-cart'>加入购物车</i>
                 </a>
 
                 <div class="preview-tip">
@@ -132,7 +133,13 @@
             </div>
         </div>
     </div>
-
+    <script>
+        $("#buy-trigger").click(function(){
+            var id = '{{$course_id}}';
+            var url = '{{url('home/pay/comfirm_order')}}';
+            location.href=url+'?course_id='+id;
+        })
+    </script>
     <div class="info-bg" id="js-info-bg">
         <div class="cover-img-wrap" style="background-image:url({{asset('home')}}{{$class_course['real_course_picture']}})"></div>
     </div>
@@ -174,7 +181,7 @@
         </ul>
 
         <div class="goumai">
-            <a href="javascript:;" class="js-buy-trigger fixed-nav-btn fixed-btn1" data-cid="57" data-pay="0" id="buy-trigger">
+            <a href="javascript:;" class="js-buy-trigger fixed-nav-btn fixed-btn1" data-cid="57" data-pay="0" id="">
                 <span>立即购买</span>
             </a>
 
@@ -301,50 +308,49 @@
 
     @include("home.layouts.signin");
 
-    <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
-    <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
-
     <script type="text/javascript" src="{{asset('home')}}/Scripts/require.js"></script>
     <script src='{{asset('home')}}/Scripts/jquery.min.js'></script>
-
-
+    <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
+    <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
     <script>
         requirejs.config({
-            urlArgs:seajsTimestamp,
+            urlArgs: requirejsTimestamp,
             baseUrl: '/static/module/',
             skipDataMain: true,
             waitSeconds: 0,
             paths: {
                 lib: '/static/lib',
+                socketio: '/static/lib/socket.io/1.3.6/socket.io.min.js',
+                store: '/static/lib/store/store.min.js',
+                ueditor: '/static/lib/ueditor/ueditor.final.min.js',
+                moco: '/static/moco/v1.0/dist/js/moco.min.js',
+                scrollbar: '/static/lib/scrollbar/jquery.scrollbar.js',
+                juicer: '/static/lib/juicer/juicer.min.js',
+                ace: '/static/lib/ace/src-min-noconflict/ace.js',
+                //ace: '/static/lib/ace/src/ace.js',
+                pagination: '/static/lib/pagination/jquery.pagination.js',
+                swfobject: '/static/lib/swfobject/2.2/swfobject.min.js',
+                uploader: '/static/lib/webuploader/0.1.5/webuploader.js',
+
                 jwplayer: '/static/lib/jwplayer/1.0.0/jwplayer.js',
                 ide: '/static/lib/ide/dest/ide.min.js',
-                juicer: '/static/lib/juicer/juicer.min.js',
-                ace:'/static/lib/ace1.2.6/ace.js',
                 autocomplete:'/static/lib/util/autocomplete.js',
                 validate:'/static/lib/util/validate.js',
                 placeholder:'/static/lib/util/placeholder.js',
                 modalbutton:'/static/lib/util/modal.button.js',
                 scrollbar: '/static/lib/scrollbar/jquery.scrollbar.js',
-                ueditor: '/static/lib/ueditor/ueditor.final.min.js',
-                store: '/static/lib/store/store.min.js',
-                pagination: '/static/lib/pagination/jquery.pagination.js',
                 SyntaxHighlighter:'/static/lib/ueditor/third-party/SyntaxHighlighter/shCore.js',
                 socketio: '/static/lib/socket.io/1.3.6/socket.io.min.js',
                 clipbord: '/static/lib/clipboard/dist/clipboard.min.js',
-                swfobject: '/static/lib/swfobject/2.2/swfobject.min.js',
                 jqueryValidate: '/static/lib/jquery-validate/jquery.validate.min.js'
             },
             shim: {
-                'ide': {
-                    exports: 'ide'
-                },
                 'swfobject': {
                     exports: 'swfobject'
                 }
             }
         });
     </script>
-
 
 
 

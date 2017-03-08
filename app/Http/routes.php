@@ -32,10 +32,16 @@ Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], fun
     Route::get("class/chapter",'Real\RealIndexController@ClassChapter');
     //评论展示
     Route::get("class/commit",'Real\RealIndexController@ClassCommit');
+    //首页登录
+    Route::post("user/login",'LoginController@login');
+    //QQ第三方登录
     Route::get("qqlogin",'LoginController@qq_login');
     Route::get("qq_callback",'LoginController@qq_callback');
     Route::get("qq_user",'LoginController@qq_user');
-    Route::get("shop",'Pay\PayController@Shop');
+    //购物车页面
+    Route::get("pay/ShopShow",'Pay\PayController@ShopShow');
+    //发送给购物车
+    Route::post("pay/shop",'Pay\PayController@Shop');
     //验证码
     Route::get("captcha/mews",'LoginController@mews');
     //用户注册
@@ -45,6 +51,12 @@ Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], fun
     //绑定互联网站初次登录网站的用户
     Route::get("binding",'LoginController@binding');
     Route::post("binding/login",'LoginController@binding_login');
+    //退出登录
+    Route::get("loginout",'LoginController@loginout');
+    //确定订单
+    Route::get("pay/comfirm_order",'Pay\OrderController@comfirm');
+    //订单中心
+    Route::get('pay/centre','Pay\OrderController@centre');
 });
 
 Route::group(['middleware' => ['web']], function () {

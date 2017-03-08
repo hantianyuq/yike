@@ -13,10 +13,9 @@ return [
     |
     */
 
-<<<<<<< HEAD
-=======
+
+
 //    'fetch' => PDO::FETCH_CLASS,
->>>>>>> ba6e4cfa582ff70d5eb1ab1b978e6fc9838bf3a3
     'fetch' => PDO::FETCH_ASSOC,
 
     /*

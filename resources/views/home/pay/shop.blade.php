@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +13,12 @@
     <meta name="description" content="" />
     <link rel="stylesheet" href="{{asset('home')}}/Content/moco.min.css" type="text/css" />
 
+    <script type="text/javascript" src="{{asset('home')}}/Scripts/jquery.stellar.min.js"></script>
+    <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
+    <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
+    <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
+    <script src='{{asset('home')}}/Scripts/jquery.min.js'></script>
+
     <script type="text/javascript">
         var OP_CONFIG = {"module":"pay","page":"cart","userInfo":{"uid":"4651600","nickname":"qq_echo_47","head":"http:\/\/img.mukewang.com\/user\/585e910d0001aec101000100-80-80.jpg","usertype":"1","roleid":0,"phone":""}};
         OP_CONFIG.isLogin = 1;
@@ -22,16 +27,6 @@
         var _cart_num = 0;
         var requirejsTimestamp="v=201702231";
     </script>
-
-
-
-    <!--imooc-->
-
-    <!--/imooc-->
-
-
-
-
     <link rel="stylesheet" href="{{asset('home')}}/Content/f35fdf538549447f841a1ee364ed6eaa.css" type="text/css" />
 </head>
 
@@ -66,7 +61,7 @@
     <div class='cart-body' id='cartBody'>
         <div class='cart-body-title clearfix'>
             <div class='item-1 l'>
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" id="del" value="all"/>
                 <span class='c-93999f'>全选</span>
             </div>
 
@@ -89,36 +84,33 @@
 				]
 	</textarea>
         <div id='js-cart-body-table' class='cart-body-table'>
-            <div class='item clearfix js-item-cart js-each-75' data-type='1' data-typeid='75' data-goodsid="105" data-price="149.00">
-                <div class='item-1'>
-                    <input type="checkbox" name="" id="">
-                </div>
-
-                <div class='item-2 clearfix'>
-                    <a href="http://coding.imooc.com/class/75.html" target="_blank">
-                        <img src='' width='160' height='90' class='left' />
-                    </a>
-                    <dl class='left'>
-                        <a href="http://coding.imooc.com/class/75.html" target="_blank"><dt></dt></a>
-                    </dl>
-                </div>
-
-                <div class='item-3'>
-                    <div class='price clearfix'>
-                        <em>￥</em>
-                        <span>149.00</span>
+            @foreach($cart_info as $key => $value)
+                <div class='item clearfix js-item-cart js-each-75' data-type='1' data-typeid='75' data-goodsid="105" data-price="149.00">
+                    <div class='item-1'>
+                        <input type="checkbox" name="della">
+                    </div>
+                    <div class='item-2 clearfix'>
+                        <a href="http://coding.imooc.com/class/75.html" target="_blank">
+                            <img src='{{asset('home/')}}{{$value['real_course_thume']}}' width='160' height='90' class='left' />
+                        </a>
+                        <dl class='left'>
+                            <a href="{{url('home/class')}}?real_course_id={{$value['real_course_id']}}" target="_blank"><dt>{{$value['real_course_name']}}</dt></a>
+                        </dl>
+                    </div>
+                    <div class='item-3'>
+                        <div class='price clearfix'>
+                            <em>￥</em>
+                            <span class="course_price">{{$value['real_course_price']}}</span>
+                        </div>
+                    </div>
+                    <div class='item-4'>
+                        <i class="imv2-close js-close-cart close"></i>
                     </div>
                 </div>
-
-                <div class='item-4'>
-                    <i class="imv2-close js-close-cart close"></i>
-                </div>
-            </div>
+                @endforeach
             <div id='Anchor'></div>
             <div class='cart-body-bot js-cart-body-bot'>
                 <div class='clearfix cart-body-bot-box'>
-
-
                     <div class='right'>
                         <ul class='clearfix'>
                             <li class='li-2'>
@@ -138,13 +130,30 @@
             </div>
         </div>
     </div>
-
-
-
-
 </div>
+<script>
+    $(function() {
+
+        $("#del").click(function() {
+            $('input[name="della"]').attr("checked",this.checked);
+        });
+        var subBox = $("input[name='della']");
+        subBox.click(function(){
+            $("#del").attr("checked",subBox.length == $("input[name='della']:checked").length ? true : false);
+        });
+    });
 
 
+        price();
+    function price() {
+        var sum = 0
+        for (var i = 0; i < 2; i++) {
+            var price = parseInt($(".course_price").eq(i).html());
+            sum=parseInt(sum)+price;
+        }
+        $(".jsAltogether").html(sum);
+    }
+</script>
 <div id="footer">
     <div class="waper">
         <div class="footerwaper clearfix">
