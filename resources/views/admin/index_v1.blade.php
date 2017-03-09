@@ -596,6 +596,7 @@
             </div>
         </div>
     </div>
+ 
 </div>
 <!-- 全局js -->
 <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
@@ -614,6 +615,25 @@
         var container = $("#flot-line-chart-moving");
         var maximum = container.outerWidth() / 2 || 300;
         var data = [];
+
+    <!-- 全局js -->
+    <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
+    <script src="{{asset('admin')}}/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="{{asset('admin')}}/js/plugins/layer/layer.min.js"></script>
+    <!-- Flot -->
+    <script src="{{asset('admin')}}/js/plugins/flot/jquery.flot.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/flot/jquery.flot.pie.js"></script>
+    <!-- 自定义js -->
+    <script src="{{asset('admin')}}/js/content.js"></script>
+    <!--flotdemo-->
+    <script type="text/javascript">
+        $(function() {
+            var container = $("#flot-line-chart-moving");
+            var maximum = container.outerWidth() / 2 || 300;
+            var data = [];
+ 
 
         function getRandomData() {
             if (data.length) {

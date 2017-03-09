@@ -50,9 +50,9 @@
                                 <label class="col-sm-3 control-label">分类名：</label>
 
                                 <div class="col-sm-8">
-                                    <input type="text" placeholder="用户名" class="form-control" name="categray_name" value="{{$data['categray_name']}}">
+                                    <input type="text" placeholder="用户名" class="form-control" name="category_name" value="{{$data['category_name']}}">
                                     <span class="help-block m-b-none">请输入要修改的分类名字</span>
-                                    <input type="hidden" name="cid" value="{{$data['categray_id']}}">
+                                    <input type="hidden" name="cid" value="{{$data['category_id']}}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -61,7 +61,7 @@
                                     <select name="pid" >
                                         <option value="0">顶级</option>
                                         <?php foreach($cate as $k=>$v){?>
-                                        <option value="{{$v['categray_id']}}">{{$v['categray_name']}}</option>
+                                        <option value="{{$v['category_id']}}">{{$v['category_name']}}</option>
                                         <?php }?>
                                     </select>
                                 </div>
