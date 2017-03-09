@@ -31,6 +31,7 @@
                                     </span>
                                 </span>
                         </a>
+
                     </div>
                     <div class="logo-element">yike
                     </div>
@@ -398,15 +399,7 @@
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <div class="text-center link-block">
-                                    <a class="J_menuItem" href="notifications.html">
-                                        <strong>查看所有 </strong>
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
+
                 </ul>
             </nav>
         </div>
@@ -417,6 +410,7 @@
     <!--右侧部分结束-->
 </div>
 
+ 
 <!-- 全局js -->
 <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
 <script src="{{asset('admin')}}/js/bootstrap.min.js?v=3.3.6"></script>
@@ -430,6 +424,21 @@
 
 <!-- 第三方插件 -->
 <script src="{{asset('admin')}}/js/plugins/pace/pace.min.js"></script>
+
+    <!-- 全局js -->
+    <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
+    <script src="{{asset('admin')}}/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="{{asset('admin')}}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="{{asset('admin')}}/js/plugins/layer/layer.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="{{asset('admin')}}/js/hAdmin.js?v=4.1.0"></script>
+    <script type="text/javascript" src="{{asset('admin')}}/js/index.js"></script>
+
+    <!-- 第三方插件 -->
+    <script src="{{asset('admin')}}/js/plugins/pace/pace.min.js"></script>
+
 <div style="text-align:center;">
     <p>来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
 </div>
