@@ -117,7 +117,7 @@
             </div>
 
             <div class="clearfix btnwarp">
-                <a href="javascript:;" class="js-buy-trigger buy-class-btn class-btn1" data-cid="57" data-pay="0" id="buy-trigger">
+                <a href="javascript:void(0);" class="js-buy-trigger buy-class-btn class-btn1" data-cid="57" data-pay="0" id="buy-trigger">
                     <span>立即购买</span>
                 </a>
 
@@ -131,7 +131,19 @@
             </div>
         </div>
     </div>
-
+    <script>
+        $(".class-btn1").click(function(){
+            $.post('{{url('home/pay/comfirm_order')}}',{code:1,'_token':'{{csrf_token()}}'},function(data){
+                if(data.code == 1){
+                    alert(data.content);
+                }else{
+                    var id = '{{$course_id}}';
+                    var url = '{{url('home/pay/comfirm_order')}}';
+                    location.href=url+'?course_id='+id;
+                }
+            },'json');
+        });
+    </script>
     <div class="info-bg" id="js-info-bg">
         <div class="cover-img-wrap" style="background-image:url({{asset('home')}}{{$class_course['real_course_picture']}})"></div>
     </div>

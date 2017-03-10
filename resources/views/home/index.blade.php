@@ -48,7 +48,7 @@
 <body >
 
 {{--header start--}}
-@include('components.home_header')
+@include('home.layouts.header')
 {{--header end--}}
 
 <div class="bindHintBox js-bindHintBox hide">

@@ -54,9 +54,11 @@ Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], fun
     //退出登录
     Route::get("loginout",'LoginController@loginout');
     //确定订单
-    Route::get("pay/comfirm_order",'Pay\OrderController@comfirm');
+    Route::any("pay/comfirm_order",'Pay\OrderController@comfirm');
     //订单中心
-    Route::get('pay/centre','Pay\OrderController@centre');
+    Route::get('pay/pay_center','Pay\OrderController@pay_center');
+    //提交订单
+    Route::post('order/add_order','Pay\OrderController@add_order');
 });
 
 

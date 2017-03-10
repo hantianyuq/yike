@@ -19,6 +19,7 @@
     <script src="{{asset('home')}}/Scripts/ssologin.js"></script>
     <script type="text/javascript" src="{{asset('home')}}/Scripts/common.js"></script>
     <script src="{{asset('admin')}}/js/jquery.min.js?v=2.1.4"></script>
+    <link rel="stylesheet" href="{{asset('home')}}/Content/style.css" type="text/css" media="screen">
     <style type="text/css">
         .moco-modal-info {
             font-size: 14px;
@@ -46,20 +47,38 @@
 
 @include("home.layouts.header")
 <!-- 顶部banner轮播 -->
-<div class="banner-bg-box">
-    <div class="banner-bg">
-        <ul class="banner-box">
-            @foreach($turns as $key => $value)
-                <li class="">
-                    <a href="http://coding.imooc.com/class/38.html" target="_blank" onclick="_hmt.push(['_trackEvent', '实战首页', 'click', '一屏实战课程推荐位'])" data-track="szbanner-1-3">
-                        <img src="{{asset('/')}}<?=$value['real_turns_path']?>" title="<?=$value['real_turns_name']?>" />
-                    </a>
-                </li>
-            @endforeach
-        </ul>
-        <ul class="banner-dots"></ul>
-        <a href="javascript:;" class="banner-anchor prev"></a>
-        <a href="javascript:;" class="banner-anchor next"></a>
+<div class="container">
+    <div style="position: relative;" class="slideshow grid_12">
+        <div class="holder" style="">
+            <!-- 主体部分 -->
+            <div id="wowslider-container">
+                <div class="ws_images">
+                    <ul>
+                        @foreach($turns as $key => $value)
+                        <li>
+                            <a href="#overview">
+                                <img src="{{asset('')}}{{$value['real_turns_path']}}" alt="123" title="" />
+                            </a>
+                        </li>
+                       @endforeach
+                    </ul>
+                </div>
+                <div class="ws_bullets">
+                    <div>
+                        @foreach($turns as $key => $value)
+                        <a href="#">
+                            <img src="{{asset('')}}{{$value['real_turns_path']}}" alt="CSS3 Slider" />
+                        </a>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="{{asset('home')}}/Scripts/wowslider.js">
+            </script>
+            <script type="text/javascript" src="{{asset('home')}}/Scripts/script.js">
+            </script>
+            <!-- 主体部分. -->
+        </div>
     </div>
 </div>
 <!-- 顶部轮播end -->
@@ -363,16 +382,7 @@ $result=$result?:$arr ?>
 
         </ul>
     </div>
-    <ul class="star-item-btn js-star-item-btn">
-        <li class="on"></li>
 
-        <li></li>
-
-        <li></li>
-
-        <li></li>
-
-    </ul>
     <div class="slide-draw"></div>
 </div>
 <!-- 老师介绍end -->

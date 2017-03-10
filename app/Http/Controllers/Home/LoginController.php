@@ -63,14 +63,16 @@ class LoginController extends Controller
             return redirect('home/binding')->with('info',$info);
         }else{
             $user = serialize($check_issetqq);
+            session(['user'=>$check_issetqq]);
             setcookie('user',$user);
             return redirect("home/direction");
         }
     }
 
-    public function loginout()
+    public function loginout(Request $request)
     {
         setcookie("user",1,time()-1);
+        $request->session()->forget('user');
         return redirect("home/direction");
     }
 

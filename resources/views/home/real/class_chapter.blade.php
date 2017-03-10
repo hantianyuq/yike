@@ -134,7 +134,7 @@
         </div>
     </div>
     <script>
-        $("#buy-trigger").click(function(){
+        $(".class-btn1").click(function(){
             var id = '{{$course_id}}';
             var url = '{{url('home/pay/comfirm_order')}}';
             location.href=url+'?course_id='+id;

@@ -11,12 +11,6 @@
     <div class="rl-modal-body" id="logindiv">
         <div class="clearfix">
             <div class="l-left-wrap l">
-                @if(session('ccccc'))
-                    <script>
-                        var ccccc = '{{session('ccccc')}}';
-                        alert(ccccc);
-                    </script>
-                @endif
                 <form id="signup-form" autocomplete="off" action="{{url('home/user/login')}}" method="post">
                     {{csrf_field()}}
                     <p id="signin-globle-error" class="rlf-tip-globle color-red"></p>

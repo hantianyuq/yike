@@ -94,6 +94,7 @@
                         </p>
                     </div>
                     <p class="info-price l"><em>￥</em><span class="course_price">{{$value['real_course_price']}}</span></p>
+                    <input type="hidden" class="course_id" value="{{$value['real_course_id']}}" course_id="1">
                 </li>
                 @endforeach
             </ul>
@@ -136,17 +137,11 @@
                 <p class="r price-text">应付：</p>
             </div>
             <div class="pay-account-box clearfix">
-                <p class="pay-account r">购买账号：<span>qq_echo_47</span></p>
+                <p class="pay-account r">购买账号：<span>{{$user['user_name']}}</span></p>
             </div>
             <a href="javascript:void(0);" class="r moco-btn moco-btn-red submit-btn js-pay-submit">提交订单</a>
         </div>
-        <div class='clearfix'>
-            <div class='bot-right r'>
-                <i class='imv2-checkbox check js-agreement-check'></i>
-                <span>我已经阅读并同意</span>
-                <a target="_blank" href='http://coding.imooc.com/user/faqdetail?column_id=1&id=9'>《用户付费协议》</a>
-            </div>
-        </div>
+
     </div>
 </div>
 <script>
@@ -159,6 +154,32 @@
     }
     $("#js-actual-price").html(sum+".00");
     $("#js-pay-price").html(sum+".00");
+
+    $(".js-pay-submit").click(function(){
+            order_submit();
+    })
+
+    function order_submit(){
+
+        var array = null;
+        for(var u = 0; u<size;u++){
+            var course = parseInt($(".course_id").eq(u).val());
+            array +=  ','+ course;
+        }
+
+        var add_array = array.substr(5);
+        var user_id = "{{$user['user_id']}}";
+        $.post('{{url("home/order/add_order")}}',{"_token":"{{csrf_token()}}",course_id:add_array,user_id:user_id},function(data){
+            if(data.code == 2){
+                alert(data.content);
+            }else{
+                var order_sn = data.url;
+                var url = '{{url('home/pay/pay_center')}}';
+                location.href=url+'?order_sn='+order_sn;
+            }
+        },'json')
+
+    }
 </script>
 
 <div id="footer">

@@ -127,7 +127,13 @@
             </div>
         </div>
     </div>
-
+    <script>
+        $(".class-btn1").click(function(){
+            var id = '{{$course_id}}';
+            var url = '{{url('home/pay/comfirm_order')}}';
+            location.href=url+'?course_id='+id;
+        })
+    </script>
     <div class="info-bg" id="js-info-bg">
         <div class="cover-img-wrap" style="background-image:url({{asset('home')}}{{$class_course['real_course_picture']}})"></div>
     </div>
