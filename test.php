@@ -56,3 +56,8 @@
 //exit;
 //
 //?>
+<?php
+    $a =['1'];
+    print $a;
+//    echo substr($a,0,1);
+?>
