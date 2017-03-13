@@ -12,7 +12,7 @@
     <meta property="wb:webmaster" content="c4f857219bfae3cb" />
     <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <meta http-equiv="Cache-Control" content="no-transform " />
-
+    <link rel="stylesheet" href="{{URL::asset('home/bootstrap.min.css')}}">
     <meta name="Keywords" content="" />
 
 
