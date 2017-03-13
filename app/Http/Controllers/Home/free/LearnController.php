@@ -18,7 +18,8 @@ class LearnController extends Controller
 		foreach($section as $k=>$v){
 			$section[$k]['child'] = DB::table('free_chapter')->where('section_id',$v['section_id'])->get();
 		}
-
+		var_dump($course);
+		var_dump($section);
 		return view('home.freeLearn.learnShow',[
 				'course'=>$course,
 				'section'=>$section,
@@ -67,18 +68,14 @@ class LearnController extends Controller
 			if(!empty($v['xin'])){
 				foreach($v['xin'] as $kk=>$vv){
 					$name[$vv['answer_id']] = $vv['user_name'];
-            		
                  }
 			}
-				
 		}
 		// 显示 谁回复谁
 		foreach($answer  as $k=>$v){
 			foreach($v['xin'] as $kk=>$vv){
-				$answer[$k]['xin'][$kk]['user_name'] = $answer[$k]['xin'][$kk]['user_name']."回复：".$name[$vv['p_id']]; 
-			    
+				$answer[$k]['xin'][$kk]['user_name'] = $answer[$k]['xin'][$kk]['user_name']."回复：".$name[$vv['p_id']];   
 			}
-			
 		}
 		// 赋值前台
 		return view('home.freeLearn.learnAnswer',[

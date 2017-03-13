@@ -87,6 +87,7 @@ Route::group(['middleware' => ['web']], function () {
 |	免费课程 
 */
 Route::group(['middleware' => ['web']], function () {
+    
     Route::get("courseShow",'Admin\free\CourseController@courseShow');        // 课程展示
     Route::get("courseAdd",'Admin\free\CourseController@courseAdd');	      // 课程添加 
     Route::get("courseDel",'Admin\free\CourseController@courseDel');	      // 课程删除 

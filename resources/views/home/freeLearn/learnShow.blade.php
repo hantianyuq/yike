@@ -41,34 +41,6 @@ var _cart_num = 0;
 
 
 
-
-
-
-
-<script>
-/*学习页通用配置*/
-var GC = {
-  course: {
-    id: 342,
-    name: 'C++远征之起航篇',
-    pic: '',
-    video_url: ''
-  },
-  classmates: 20 // 你的同学一页显示数量
-};
-
-
-</script>
-<script>
-
-var hasLearn;
-    hasLearn = 0;
-
-</script>
-
-
-
-
 <link rel="stylesheet" href="{{asset('home')}}/Content/08babe285ec04043ba72015fae972d65.css" type="text/css" />
 </head>
 <body >
