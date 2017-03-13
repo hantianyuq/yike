@@ -42,7 +42,6 @@ class CommentController extends Controller
         }
         $arr[1]['name'] = $cate['category_name'];
         $arr[1]['a'] = "?bid=".$cate['category_id'];
-
         return view('home.free.chapterShow',[
             'course'=>$course,
             'review'=>$review,

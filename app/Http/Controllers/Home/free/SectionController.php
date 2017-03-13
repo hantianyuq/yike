@@ -96,8 +96,8 @@ class SectionController extends Controller
         $res = DB::table('free_review')->insert([
             'chapter_id'=>$chapter_id,
             'chapter_name'=>$chapter_name,
-            'user_id'=>'1',
-            'user_name'=>'nans',
+            'user_id'=>$user['user_id'],
+            'user_name'=>$user['user_name'],
             'time'=>$time,
             'review_content'=>$val,
         ]);

@@ -91,6 +91,13 @@ Route::group(['middleware' => ['web']], function () {
 
 
     Route::any("home/section/lists",'Home\free\SectionController@lists');
+    Route::any("home/section/show",'Home\free\SectionController@show'); //展示单个章节
+    Route::any("home/section/publish",'Home\free\SectionController@publish');  //发表评论
+
+
+    Route::any("home/comment/show",'Home\free\CommentController@show');
+    Route::any("home/Comment/praise",'Home\free\CommentController@praise'); //点赞
+    Route::any("home/Comment/praiseCancel",'Home\free\CommentController@praiseCancel');  //取消赞
 
     Route::get("admin/TurnsShow",'Admin\Real\TurnsController@TurnsShow');
     Route::any("admin/TurnsAdd",'Admin\Real\TurnsController@TurnsAdd');
