@@ -304,7 +304,7 @@
             </div>
             <div class="page">
 
-            {{$res->appends(['tid' => $tid,'bid'=>$bid])->links()}}
+            {{$res->appends(['tid' => $tid,'bid'=>$bid])->render()}}
 
 
 
