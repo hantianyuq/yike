@@ -84,30 +84,32 @@
 				]
 	</textarea>
         <div id='js-cart-body-table' class='cart-body-table'>
-            @foreach($cart_info as $key => $value)
-                <div class='item clearfix js-item-cart js-each-75' data-type='1' data-typeid='75' data-goodsid="105" data-price="149.00">
-                    <div class='item-1'>
-                        <input type="checkbox" name="della">
-                    </div>
-                    <div class='item-2 clearfix'>
-                        <a href="http://coding.imooc.com/class/75.html" target="_blank">
-                            <img src='{{asset('home/')}}{{$value['real_course_thume']}}' width='160' height='90' class='left' />
-                        </a>
-                        <dl class='left'>
-                            <a href="{{url('home/class')}}?real_course_id={{$value['real_course_id']}}" target="_blank"><dt>{{$value['real_course_name']}}</dt></a>
-                        </dl>
-                    </div>
-                    <div class='item-3'>
-                        <div class='price clearfix'>
-                            <em>￥</em>
-                            <span class="course_price">{{$value['real_course_price']}}</span>
+            @if(isset($_COOKIE['user']))
+                @foreach($cart_info as $key => $value)
+                    <div class='item clearfix js-item-cart js-each-75' data-type='1' data-typeid='75' data-goodsid="105" data-price="149.00">
+                        <div class='item-1'>
+                            <input type="checkbox" name="della">
+                        </div>
+                        <div class='item-2 clearfix'>
+                            <a href="http://coding.imooc.com/class/75.html" target="_blank">
+                                <img src='{{asset('home/')}}{{$value['real_course_thume']}}' width='160' height='90' class='left' />
+                            </a>
+                            <dl class='left'>
+                                <a href="{{url('home/class')}}?real_course_id={{$value['real_course_id']}}" target="_blank"><dt>{{$value['real_course_name']}}</dt></a>
+                            </dl>
+                        </div>
+                        <div class='item-3'>
+                            <div class='price clearfix'>
+                                <em>￥</em>
+                                <span class="course_price">{{$value['real_course_price']}}</span>
+                            </div>
+                        </div>
+                        <div class='item-4'>
+                            <i class="imv2-close js-close-cart close">删除</i>
                         </div>
                     </div>
-                    <div class='item-4'>
-                        <i class="imv2-close js-close-cart close">删除</i>
-                    </div>
-                </div>
                 @endforeach
+            @endif
             <div id='Anchor'></div>
             <div class='cart-body-bot js-cart-body-bot'>
                 <div class='clearfix cart-body-bot-box'>
