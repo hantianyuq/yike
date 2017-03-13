@@ -19,10 +19,6 @@
 
 
 
-
-
-
-
 <link rel="stylesheet" href="{{asset('home')}}/Content/moco.min.css" type="text/css" />
 
 
@@ -71,7 +67,7 @@ var _cart_num = 0;
             <ul class="header-unlogin clearfix">
                 <li class="shop-cart" id="shop-cart">
                     <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
-                        <span class="icon-shopping-cart js-endcart"></span>
+                        <!-- <span class="icon-shopping-cart js-endcart"></span> -->
                         <span class="shopping_icon js-cart-num" data-ordernum="0"  data-cartnum="0" style='display: none'>0</span>
                         <span>购物车</span>
                     </a>
@@ -85,10 +81,10 @@ var _cart_num = 0;
                 </li>
             </ul>
         </div>
-                <div class='search-warp clearfix' style='min-width: 32px; height: 60px;'>
-                            <div class="pa searchTags" >
-                                    <a href="http://coding.imooc.com/class/83.html" target="_blank">react</a>
-                                </div>
+        <div class='search-warp clearfix' style='min-width: 32px; height: 60px;'>
+            <div class="pa searchTags" >
+                <a href="" target="_blank">react</a>
+            </div>
             
             <div class="search-area" data-search="top-banner">
                 <input class="search-input" data-suggest-trigger="suggest-trigger"      type="text" autocomplete="off">
@@ -96,7 +92,9 @@ var _cart_num = 0;
                 <ul class="search-area-result" data-suggest-result="suggest-result">
                 </ul>
             </div>
-            <div class='showhide-search' data-show='no'><i class='icon-search'></i></div>
+            <div class='showhide-search' data-show='no'>
+                <!-- <i class='icon-search'></i> -->
+            </div>
         </div>
     </div>
 </div>
@@ -182,19 +180,17 @@ var _cart_num = 0;
             </div>
             
         </div>
-        <div class="extra">
-            <!-- credit -->
+       <!--  <div class="extra">
             <div class="share-rl-tips share-posi js-share-statue">
                 <span class="icon-drop_up share-triangle"></span>
                 <span>分享即可 +</span><strong>1积分</strong>
             </div>
-            <!-- share -->
             <div class="share-action r bdsharebuttonbox">
                 <a href="javascript:;" class="share wx js-share icon-share-weichat" data-cmd="weixin"></a>
                 <a href="javascript:;" class="share qq js-share icon-share-qq" data-cmd="qzone"></a>
                 <a href="javascript:;" class="share sina js-share icon-share-weibo" data-cmd="tsina"></a>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="info-bg" id="js-info-bg">
         <div class="cover-img-wrap">
@@ -218,7 +214,7 @@ var _cart_num = 0;
             <div class="mod-tab-menu ">
     <ul class="course-menu clearfix">
         <li><a class="ui-tabs-active active" id="learnOn"  href="{{URL('learnShow')}}?id=<?php echo $course['course_id']?>"><span>章节</span></a></li>
-        <li><a id="commentOn" class="" href="{{URL('home/Comment/show')}}?id=<?php echo $course['course_id']?>"><span>评论</span></a></li>
+        <li><a id="commentOn" class="" href="{{URL('home/Comment/show')}}?course_id=<?php echo $course['course_id']?>"><span>评论</span></a></li>
         <li><a id="qaOn" class="" href="{{URL('learnIssue')}}?id=<?php echo $course['course_id']?>"><span>问答</span></a></li>
         <li><a id="noteOn" class="" href="{{URL('learnNote')}}?id=<?php echo $course['course_id']?>"><span>笔记</span></a></li>
         <!--
@@ -234,9 +230,9 @@ var _cart_num = 0;
                 <div class="chapter chapter-active">
                     <!-- 章节标题 -->
                     <h3>
-                        <span class="icon-drop_down js-close"></span>
+                        <span class=" js-close"></span>
                         <strong class='hide'>
-                            <i class="icon-chapter"></i>
+                            <!-- <i class="icon-chapter"></i> -->
                             <?=$v['name'] ?>
                             <div class="icon-info chapter-info">
                                 <i class="icon-drop_up triangle">
@@ -253,7 +249,7 @@ var _cart_num = 0;
                         <?php foreach($v['child'] as $kk=>$vv){ ?>
                             <li data-media-id="6577">
                                 <a href='/video/6577' class="J-media-item">
-                                    <i class="icon-video type"></i>
+                                    <!-- <i class="icon-video type"></i> -->
                                         <?=$vv['chapter_name'] ?>            
                                         <button class="r moco-btn moco-btn-red preview-btn">开始学习</button>
                                 </a>

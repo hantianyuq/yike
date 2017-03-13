@@ -20,13 +20,7 @@ PS入门教程——新手过招_学习笔记_慕课网
 
 
 
-
-
-
-
-
 <link rel="stylesheet" href="{{asset('home')}}/Content/moco.min.css" type="text/css" />
-
 
 
 
@@ -42,108 +36,10 @@ var _cart_num = 0;
 </script>
 
 
-
-
-
-
-
-
-<script>
-/*学习页通用配置*/
-var GC = {
-  course: {
-    id: 139,
-    name: 'PS入门教程——新手过招',
-    pic: '',
-    video_url: ''
-  },
-  classmates: 20 // 你的同学一页显示数量
-};
-
-
-</script>
-<script>
-
-var hasLearn;
-    hasLearn = 0;
-
-</script>
-
-
-
-
 <link rel="stylesheet" href="{{asset('home')}}/Content/528263838f50485eac974749734fbe89.css" type="text/css" />
 </head>
 <body >
-
-<div id="header">
-    <div class="page-container" id="nav">
-        <div id="logo" class="logo"><a href="/" target="_self" class="hide-text" title="首页">慕课网</a></div>
-
-
-        <button type="button" class="navbar-toggle visible-xs-block js-show-menu" >
-            <i class="icon-menu"></i>
-        </button>
-        <ul class="nav-item">
-                        <li class="set-btn visible-xs-block js-header-avator"><a href="/u/4911548" target="_self"><img width="40" height="40"></a></li>
-                        
-            <li>
-                <a href="/course/list"  target="_self">课程</a>
-            </li>
-            <li><a href="/course/program" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
-            <li>
-                <a href="http://coding.imooc.com" target="_self">实战</a>
-            </li>
-            <li><a href="/wenda"  target="_self">猿问</a></li>
-            <li><a href="/article"  target="_self">手记</a></li>
-                                            <li class="visible-xs-block"><a href="/user/setprofile" target="_self">我的设置</a></li>
-                <li class="visible-xs-block"><a href="/passport/user/logout?referer=http://www.imooc.com" target="_self">退出</a></li>
-            
-        </ul>
-                <div id="login-area">
-            <ul class="clearfix logined">
-                <li class="shop-cart" id="shop-cart">
-                    <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
-                        <span class="icon-shopping-cart js-endcart"></span>
-                        <span class="shopping_icon js-cart-num" data-ordernum="0"  data-cartnum="0" style='display: none'>0</span>
-                        <span>购物车</span>
-                    </a>
-                    <div class="my-cart" id="js-my-cart"></div>
-                </li>
-                
-                <li class='remind_warp'>
-                    <i class="msg_remind"></i>
-                    <a target="_blank" href='/u/4911548/notices'>
-                        <i class='icon-notifi'></i>
-                        <!-- <span class="msg_icon" style="display: none;"></span> -->
-                    </a>
-                </li>
-        	   
-                <li class="set_btn user-card-box" id='header-user-card'>
-                    <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu"  href="/u/4911548" target="_self">
-                        <img width="40" height="40">
-                        <i class="myspace_remind" style="display: none;"></i>
-                        <span style="display: none;">动态提醒</span>
-                    </a>
-                    <div class="g-user-card"></div>
-                </li>
-            </ul>
-        </div>
-                <div class='search-warp clearfix' style='min-width: 32px; height: 60px;'>
-                            <div class="pa searchTags" >
-                                    <a href="http://class.imooc.com/sc/17" target="_blank">安卓网络</a>
-                                </div>
-            
-            <div class="search-area" data-search="top-banner">
-                <input class="search-input" data-suggest-trigger="suggest-trigger"      type="text" autocomplete="off">
-                <input type='hidden' class='btn_search' data-search-btn="search-btn" />
-                <ul class="search-area-result" data-suggest-result="suggest-result">
-                </ul>
-            </div>
-            <div class='showhide-search' data-show='no'><i class='icon-search'></i></div>
-        </div>
-    </div>
-</div>
+@include("home.layouts.header")
 
 <div class="bindHintBox js-bindHintBox hide">
     <div class="pr">
@@ -227,19 +123,17 @@ var hasLearn;
             </div>
             
         </div>
-        <div class="extra">
-            <!-- credit -->
+       <!--  <div class="extra">
             <div class="share-rl-tips share-posi js-share-statue">
                 <span class="icon-drop_up share-triangle"></span>
                 <span>分享即可 +</span><strong>1积分</strong>
             </div>
-            <!-- share -->
             <div class="share-action r bdsharebuttonbox">
                 <a href="javascript:;" class="share wx js-share icon-share-weichat" data-cmd="weixin"></a>
                 <a href="javascript:;" class="share qq js-share icon-share-qq" data-cmd="qzone"></a>
                 <a href="javascript:;" class="share sina js-share icon-share-weibo" data-cmd="tsina"></a>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="info-bg" id="js-info-bg">
         <div class="cover-img-wrap">
@@ -262,7 +156,7 @@ var hasLearn;
             <div class="mod-tab-menu ">
 	<ul class="course-menu clearfix">
 		<li><a class="ui-tabs-active " id="learnOn"  href="{{URL('learnShow')}}?id=<?php echo $course['course_id']?>"><span>章节</span></a></li>
-		<li><a id="commentOn" class="" href="{{URL('learnShow')}}?id=<?php echo $course['course_id']?>"><span>评论</span></a></li>
+		<li><a id="commentOn" class="" href="{{URL('home/Comment/show')}}?course_id=<?php echo $course['course_id']?>"><span>评论</span></a></li>
 		<li><a id="qaOn" class="" href="{{URL('learnIssue')}}?id=<?php echo $course['course_id']?>"><span>问答</span></a></li>
 		<li><a id="noteOn" class="active" href="{{URL('learnNote')}}?id=<?php echo $course['course_id']?>"><span>笔记</span></a></li>
 	    <!--
@@ -309,19 +203,14 @@ var hasLearn;
       <span title="17小时前" class="l timeago">时间：<?=$v['note_time'] ?></span>
       <a href="/video/3164" class="from l">源自：<?=$v['chapter_name'] ?></a>
       <div class="actions r">
-        <textarea style="display:none;">扩大选取--要求连续
-选取相似--不要求连续
-选取的操作：扩展，收缩，平滑，边界
-crtl+图层 选中该图层选取
-Q 快速蒙版模式编辑</textarea>
         <a title="采集" href="javascript:;" class="Jcollect post-action "  data-mid="3164|3032381">
-          <i>采集</i>
+          <i>赞</i>
           <em>0</em>
         </a>
-        <a title="赞" href="javascript:;" class="Jpraise post-action "  data-mid="3164">
+        <!-- <a title="赞" href="javascript:;" class="Jpraise post-action "  data-mid="3164">
           <span class="icon-thumb-revert"></span>
           <em>0</em>
-        </a> 
+        </a> --> 
       </div>
     </div>
   </div>
@@ -329,43 +218,22 @@ Q 快速蒙版模式编辑</textarea>
 <?php } ?>
 
 
-<li id="1587495" class="post-row js-find-txt" courseid="139" noteId="1587495" authorid="4479730">
-  <div class="media">
-    <a href="/u/4479730/courses" target="_blank"><img src="{{asset('home')}}/Picture/545847c10001f40702200220-40-40.jpg" width="40" height="40"></a>
-  </div>
-  <div class="bd">
-    <div class="tit">
-      <a href="/u/4479730/courses" target="_blank">慕粉1930564643</a>
-    </div>
-    <div class="js-notelist-content notelist-content mynote">
-      <pre class="autowrap">可以采用矩尺工具把一个倾斜的物品给正过来，图像-旋转画布-任意角度</pre>
-      <div class="notelist-content-more">
-        <a href="javascript:;" class="js-toggle-content">[ 查看全文 ]</a>
-      </div>
-    </div>
-    <div class="clearfix">
-      <input class="moco-btn moco-btn-green sava_btn" type="button" value="保存">
-    </div>
-            <div class="footer clearfix">
-      <span title="2天前" class="l timeago">时间：2天前</span>
-      <a href="/video/2316" class="from l">源自：1-4 PS之图像的旋转和翻转</a>
-      <div class="actions r">
-        <textarea style="display:none;">可以采用矩尺工具把一个倾斜的物品给正过来，图像-旋转画布-任意角度</textarea>
-        <a title="采集" href="javascript:;" class="Jcollect post-action "  data-mid="2316|4479730">
-          <i>采集</i>
-          <em>0</em>
-        </a>
-        <a title="赞" href="javascript:;" class="Jpraise post-action "  data-mid="2316">
-          <span class="icon-thumb-revert"></span>
-          <em>0</em>
-        </a> 
-      </div>
-    </div>
-  </div>
-</li>
-
 </ul>
-<div class="page"><span class="disabled_page">首页</span><span class="disabled_page">上一页</span><a href="javascript:void(0)" class="active text-page-tag">1</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=2">2</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=3">3</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=4">4</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=5">5</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=6">6</a><a class="text-page-tag" href="/course/note/id/139?sort=last&page=7">7</a><a href="/course/note/id/139?sort=last&page=2">下一页</a><a href="/course/note/id/139?sort=last&page=316">尾页</a></div>
+    <div class="page">
+    <span class="disabled_page"><?php echo $page?></span>
+    
+        <!-- <span class="disabled_page">首页</span>
+        <span class="disabled_page">上一页</span>
+        <a href="javascript:void(0)" class="active text-page-tag">1</a>
+        <a class="text-page-tag" href="/course/note/id/139?sort=last&page=2">2</a>
+        <a class="text-page-tag" href="/course/note/id/139?sort=last&page=3">3</a>
+        <a class="text-page-tag" href="/course/note/id/139?sort=last&page=4">4</a>
+        <a class="text-page-tag" href="/course/note/id/139?sort=last&page=5">5</a>
+        <a class="text-page-tag" href="/course/note/id/139?sort=last&page=6">6</a>
+        <a class="text-page-tag" href="/course/note/id/139?sort=last&page=7">7</a>
+        <a href="/course/note/id/139?sort=last&page=2">下一页</a>
+        <a href="/course/note/id/139?sort=last&page=316">尾页</a> -->
+    </div>
 </div>
 
         </div>

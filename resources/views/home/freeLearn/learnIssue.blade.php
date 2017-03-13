@@ -44,107 +44,11 @@ var _cart_num = 0;
 
 
 
-
-
-
-
-<script>
-/*学习页通用配置*/
-var GC = {
-  course: {
-    id: 139,
-    name: 'PS入门教程——新手过招',
-    pic: '',
-    video_url: ''
-  },
-  classmates: 20 // 你的同学一页显示数量
-};
-
-
-</script>
-<script>
-
-var hasLearn;
-    hasLearn = 0;
-
-</script>
-
-
-
-
-
 <link rel="stylesheet" href="{{asset('home')}}/Content/ab4bc18fdce3498f9fceeac1429203be.css" type="text/css" />
 </head>
 <body >
 
-<div id="header">
-    <div class="page-container" id="nav">
-        <div id="logo" class="logo"><a href="/" target="_self" class="hide-text" title="首页">慕课网</a></div>
-
-
-        <button type="button" class="navbar-toggle visible-xs-block js-show-menu" >
-            <i class="icon-menu"></i>
-        </button>
-        <ul class="nav-item">
-                        <li class="set-btn visible-xs-block js-header-avator"><a href="/u/4911548" target="_self"><img width="40" height="40"></a></li>
-                        
-            <li>
-                <a href="/course/list"  target="_self">课程</a>
-            </li>
-            <li><a href="/course/program" class="program-nav " target="_self">职业路径<i class="icn-new"></i></a></li>
-            <li>
-                <a href="http://coding.imooc.com" target="_self">实战</a>
-            </li>
-            <li><a href="/wenda"  target="_self">猿问</a></li>
-            <li><a href="/article"  target="_self">手记</a></li>
-                                            <li class="visible-xs-block"><a href="/user/setprofile" target="_self">我的设置</a></li>
-                <li class="visible-xs-block"><a href="/passport/user/logout?referer=http://www.imooc.com" target="_self">退出</a></li>
-            
-        </ul>
-                <div id="login-area">
-            <ul class="clearfix logined">
-                <li class="shop-cart" id="shop-cart">
-                    <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
-                        <span class="icon-shopping-cart js-endcart"></span>
-                        <span class="shopping_icon js-cart-num" data-ordernum="0"  data-cartnum="0" style='display: none'>0</span>
-                        <span>购物车</span>
-                    </a>
-                    <div class="my-cart" id="js-my-cart"></div>
-                </li>
-                
-                <li class='remind_warp'>
-                    <i class="msg_remind"></i>
-                    <a target="_blank" href='/u/4911548/notices'>
-                        <i class='icon-notifi'></i>
-                        <!-- <span class="msg_icon" style="display: none;"></span> -->
-                    </a>
-                </li>
-               
-                <li class="set_btn user-card-box" id='header-user-card'>
-                    <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu"  href="/u/4911548" target="_self">
-                        <img width="40" height="40">
-                        <i class="myspace_remind" style="display: none;"></i>
-                        <span style="display: none;">动态提醒</span>
-                    </a>
-                    <div class="g-user-card"></div>
-                </li>
-            </ul>
-        </div>
-                <div class='search-warp clearfix' style='min-width: 32px; height: 60px;'>
-                            <div class="pa searchTags" >
-                                    <a href="http://class.imooc.com/sc/17" target="_blank">安卓网络</a>
-                                </div>
-            
-            <div class="search-area" data-search="top-banner">
-                <input class="search-input" data-suggest-trigger="suggest-trigger"      type="text" autocomplete="off">
-                <input type='hidden' class='btn_search' data-search-btn="search-btn" />
-                <ul class="search-area-result" data-suggest-result="suggest-result">
-                </ul>
-            </div>
-            <div class='showhide-search' data-show='no'><i class='icon-search'></i></div>
-        </div>
-    </div>
-</div>
+@include("home.layouts.header")
 
 <div class="bindHintBox js-bindHintBox hide">
     <div class="pr">
@@ -228,19 +132,17 @@ var hasLearn;
             </div>
             
         </div>
-        <div class="extra">
-            <!-- credit -->
+    <!--     <div class="extra">
             <div class="share-rl-tips share-posi js-share-statue">
                 <span class="icon-drop_up share-triangle"></span>
                 <span>分享即可 +</span><strong>1积分</strong>
             </div>
-            <!-- share -->
             <div class="share-action r bdsharebuttonbox">
                 <a href="javascript:;" class="share wx js-share icon-share-weichat" data-cmd="weixin"></a>
                 <a href="javascript:;" class="share qq js-share icon-share-qq" data-cmd="qzone"></a>
                 <a href="javascript:;" class="share sina js-share icon-share-weibo" data-cmd="tsina"></a>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="info-bg" id="js-info-bg">
         <div class="cover-img-wrap">
@@ -268,7 +170,7 @@ var hasLearn;
             </a>
         </li>
         <li>
-            <a id="commentOn" class="" href="{{URL('learnIssue')}}?id=<?php echo $course['course_id']?>">
+            <a id="commentOn" class="" href="{{URL('home/Comment/show')}}?course_id=<?php echo $course['course_id']?>">
                 <span>评论</span>
             </a>
         </li>

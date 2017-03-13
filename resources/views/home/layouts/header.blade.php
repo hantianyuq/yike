@@ -89,7 +89,9 @@
                 <input type='hidden' class='btn_search' data-search-btn="search-btn" />
                 <ul class="search-area-result" data-suggest-result="suggest-result"></ul>
             </div>
-            <div class='showhide-search' data-show='no'><i class='imv2-search'></i></div>
+            <div class='showhide-search' data-show='no'>
+            <!-- <i class='imv2-search'></i> -->
+            </div>
         </div>
     </div>
 </div>
