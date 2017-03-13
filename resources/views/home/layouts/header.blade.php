@@ -4,10 +4,10 @@
 
         <div class="l">
             <ul class="nav-item l">
-                <li><a href="http://www.imooc.com/course/list" target="_self">课程</a></li>
+                <li><a href="{{url('home/section/lists')}}" target="_self">课程</a></li>
                 <li><a class='program-nav' href="http://www.imooc.com/course/program" target="_self">职业路径<i class="icn-new"></i></a></li>
-                <li><a href="http://coding.imooc.com" target="_self">实战</a></li>
-                <li><a href="http://www.imooc.com/wenda" target="_self">猿问</a></li>
+                <li><a href="{{url('home/direction')}}" target="_self">实战</a></li>
+                <li><a href="{{url('home/answer')}}" target="_self">猿问</a></li>
                 <li><a href="http://www.imooc.com/article" target="_self">手记</a></li>
 
             </ul>

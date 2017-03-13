@@ -65,7 +65,7 @@
 
             <div class='clearfix'>
                 <div class='left trade-title'>
-                    <span class='order'>订单：</span><span class='num'>1703031322349292</span>
+                    <span class='order'>订单：</span><span class='num'>{{$order_info['order_sn']}}</span>
                 </div>
                 <div class='right'>
                     <a href='javascript:;' class='js-toggle-detai'>详情</a>
@@ -106,7 +106,7 @@
         <div class='pay-method'>
             <h2 class='pay-method-title'>支付方式</h2>
             <ul class='clearfix js-pay-method'>
-                <li class='alipay active' data-type='1'>
+                <li class='alipay' data-type='1'>
 
                     <div class='bottomright'>
                         <div class='triangle'></div>
@@ -122,10 +122,20 @@
                 </li>
             </ul>
         </div>
+        <script>
+            $(".alipay").click(function(){
+                $(this).addClass('active');
+                $(".wxpay").removeClass('active');
+            })
+            $(".wxpay").click(function(){
+                $(this).addClass('active');
+                $(".alipay").removeClass('active');
+            })
+        </script>
         <div class='pay-summary clearfix'>
             <div class='warning'>
                 <i class='imv2-error_c'></i>
-                <span>请在 <b>23小时57分钟</b> 以内支付完成，如未完成此订单将自动关闭。需重新购买！</span>
+                <span>请在 <b id="remainTime"></b> 以内支付完成，如未完成此订单将自动关闭。需重新购买！</span>
             </div>
 
             <div class='summary'>
@@ -143,9 +153,11 @@
                     <span class='label'>应付金额：</span>
 				<span class='price'>
 					<em>￥</em>
-					<span>199.00</span>
+					<span>{{$order_info['course_amount']}}</span>
 				</span>
                 </div>
+
+                <div id="remainSeconds" style="display:none">{{$time}}</div>
 
                 <div class='submit-warp clearfix'>
                     <span data-ordernum='1703031322349292' class='pay-summary-submit js-pay-submit'>立即支付</span>
@@ -162,10 +174,32 @@
 
     <input type='hidden' id='jsPrice' value='199.00'>
 
-
-
-
 </div>
+<script type="text/javascript">
+    var SysSecond;
+    var InterValObj;
+
+    $(document).ready(function() {
+        SysSecond = parseInt($("#remainSeconds").html()); //这里获取倒计时的起始时间
+        InterValObj = window.setInterval(SetRemainTime, 1000); //间隔函数，1秒执行
+    });
+
+    //将时间减去1秒，计算天、时、分、秒
+    function SetRemainTime() {
+        if (SysSecond > 0) {
+            SysSecond = SysSecond - 1;
+            var second = Math.floor(SysSecond % 60);             // 计算秒
+            var minite = Math.floor((SysSecond / 60) % 60);      //计算分
+            var hour = Math.floor((SysSecond / 3600) % 24);      //计算小时
+            $("#remainTime").html(hour + "小时" + minite + "分" + second + "秒");
+        } else {//剩余时间小于或等于0的时候，就停止间隔函数
+            window.clearInterval(InterValObj);
+            //这里可以添加倒计时时间为0后需要执行的事件
+        }
+    }
+</script>
+
+
 
 
 <div id="footer">

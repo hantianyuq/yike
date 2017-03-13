@@ -54,28 +54,49 @@ Route::group(['middleware' => ['web'],'prefix'=>'home','namespace'=>"Home"], fun
     //退出登录
     Route::get("loginout",'LoginController@loginout');
     //确定订单
-    Route::get("pay/comfirm_order",'Pay\OrderController@comfirm');
+    Route::any("pay/comfirm_order",'Pay\OrderController@comfirm');
     //订单中心
-    Route::get('pay/centre','Pay\OrderController@centre');
+    Route::get('pay/pay_center','Pay\OrderController@pay_center');
+    //提交订单
+    Route::post('order/add_order','Pay\OrderController@add_order');
 });
 
 
 Route::group(['middleware' => ['web']], function () {
     Route::get("admin/index",'Admin\IndexController@index');
     Route::get("admin/index_v1",'Admin\IndexController@index_v1');
- 
-    Route::get("admin/cate/add",'Admin\CategoryController@add');
-    Route::any("admin/cate/adddo",'Admin\CategoryController@addDo');
-    Route::any("admin/cate/show",'Admin\CategoryController@show');
-    Route::any("admin/cate/del",'Admin\CategoryController@del');
-    Route::any("admin/cate/update",'Admin\CategoryController@update');
-    Route::any("admin/cate/updatado",'Admin\CategoryController@updateDo');
-    Route::any("admin/cate/updatado",'Admin\CategoryController@updateDo');
+
+    Route::get("admin/cate/add",'Admin\CategrayController@add');
+    Route::any("admin/cate/adddo",'Admin\CategrayController@addDo');
+    Route::any("admin/cate/show",'Admin\CategrayController@show');
+    Route::any("admin/cate/del",'Admin\CategrayController@del');
+    Route::any("admin/cate/update",'Admin\CategrayController@update');
+    Route::any("admin/cate/updatado",'Admin\CategrayController@updateDo');
+    Route::any("admin/section/add",'Admin\free\SectionController@add');
+    Route::any("admin/section/adddo",'Admin\free\SectionController@addDo');
+    Route::any("admin/section/lists",'Admin\free\SectionController@lists');
+    Route::any("admin/section/del",'Admin\free\SectionController@del');
+    Route::any("admin/section/update",'Admin\free\SectionController@update');
+
+    Route::any("admin/chapter/add",'Admin\free\ChapterController@add');
+    Route::any("admin/chapter/adddo",'Admin\free\ChapterController@addDo');
+    Route::any("admin/chapter/lists",'Admin\free\ChapterController@lists');
+    Route::any("admin/chapter/del",'Admin\free\ChapterController@del');
+    Route::any("admin/chapter/update",'Admin\free\ChapterController@update');
+
+    Route::any("admin/review/show",'Admin\free\ReviewController@show');
+    Route::any("admin/review/del",'Admin\free\ReviewController@del');
+
+
+
+
+    Route::any("home/section/lists",'Home\free\SectionController@lists');
 
     Route::get("admin/TurnsShow",'Admin\Real\TurnsController@TurnsShow');
     Route::any("admin/TurnsAdd",'Admin\Real\TurnsController@TurnsAdd');
     Route::any("admin/TurnsUpload",'Admin\Real\TurnsController@TurnsUpload');
  
+
 });
 
 

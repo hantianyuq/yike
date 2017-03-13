@@ -42,7 +42,7 @@
                 <h1 class='left'>我的购物车</h1>
 
                 <div class='left js-number-box-cart'>
-                    共<span class='js-coures-num'>0</span>门，已选择<span class='js-choice-num'>0</span>门
+                    共<span class='js-coures-num'></span>门
                 </div>
 
             </div>
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class='item-4'>
-                        <i class="imv2-close js-close-cart close"></i>
+                        <i class="imv2-close js-close-cart close">删除</i>
                     </div>
                 </div>
                 @endforeach
@@ -142,7 +142,8 @@
             $("#del").attr("checked",subBox.length == $("input[name='della']:checked").length ? true : false);
         });
     });
-
+    var size = $(".js-each-75").size();
+    $(".js-coures-num").html(size);
 
         price();
     function price() {
