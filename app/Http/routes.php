@@ -91,10 +91,7 @@ Route::group(['middleware' => ['web']], function () {
 
 
     Route::any("home/section/lists",'Home\free\SectionController@lists');
-<<<<<<< HEAD
-=======
 
->>>>>>> fa6c1567bc36b6e187fca0b188e42476f46fafbb
     Route::get("admin/TurnsShow",'Admin\Real\TurnsController@TurnsShow');
     Route::any("admin/TurnsAdd",'Admin\Real\TurnsController@TurnsAdd');
     Route::any("admin/TurnsUpload",'Admin\Real\TurnsController@TurnsUpload');
