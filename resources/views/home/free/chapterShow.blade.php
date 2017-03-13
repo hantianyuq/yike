@@ -12,7 +12,7 @@
     <meta property="wb:webmaster" content="c4f857219bfae3cb" />
     <meta http-equiv="Access-Control-Allow-Origin" content="*" />
     <meta http-equiv="Cache-Control" content="no-transform " />
-
+    <link rel="stylesheet" href="{{URL::asset('home/bootstrap.min.css')}}">
     <meta name="Keywords" content="" />
 
 
@@ -106,29 +106,19 @@
         <div id="login-area">
             <ul class="clearfix logined">
                 <li class="shop-cart" id="shop-cart">
-                    <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
-                        <span class="icon-shopping-cart js-endcart"></span>
-                        <span class="shopping_icon js-cart-num" data-ordernum="0"  data-cartnum="0" style='display: none'>0</span>
-                        <span>购物车</span>
-                    </a>
-                    <div class="my-cart" id="js-my-cart"></div>
+
                 </li>
 
                 <li class='remind_warp'>
-                    <i class="msg_remind"></i>
-                    <a target="_blank" href='/u/4911548/notices'>
-                        <i class='icon-notifi'></i>
+
+
+
                         <!-- <span class="msg_icon" style="display: none;"></span> -->
                     </a>
                 </li>
 
                 <li class="set_btn user-card-box" id='header-user-card'>
-                    <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu"  href="/u/4911548" target="_self">
-                        <img width="40" height="40">
-                        <i class="myspace_remind" style="display: none;"></i>
-                        <span style="display: none;">动态提醒</span>
-                    </a>
-                    <div class="g-user-card"></div>
+
                 </li>
             </ul>
         </div>
@@ -143,7 +133,7 @@
                 <ul class="search-area-result" data-suggest-result="suggest-result">
                 </ul>
             </div>
-            <div class='showhide-search' data-show='no'><i class='icon-search'></i></div>
+            <div class='showhide-search' data-show='no'></div>
         </div>
     </div>
 </div>
@@ -234,14 +224,11 @@
             <div class="extra">
                 <!-- credit -->
                 <div class="share-rl-tips share-posi js-share-statue">
-                    <span class="icon-drop_up share-triangle"></span>
-                    <span>分享即可 +</span><strong>1积分</strong>
+
                 </div>
                 <!-- share -->
                 <div class="share-action r bdsharebuttonbox">
-                    <a href="javascript:;" class="share wx js-share icon-share-weichat" data-cmd="weixin"></a>
-                    <a href="javascript:;" class="share qq js-share icon-share-qq" data-cmd="qzone"></a>
-                    <a href="javascript:;" class="share sina js-share icon-share-weibo" data-cmd="tsina"></a>
+
                 </div>
             </div>
         </div>
@@ -265,10 +252,10 @@
                 <!-- 课程简介 end -->
                 <div class="mod-tab-menu ">
                     <ul class="course-menu clearfix">
-                        <li><a class="ui-tabs-active " id="learnOn"  href="/learn/139"><span>章节</span></a></li>
-                        <li><a id="commentOn" class="active" href="/comment/139"><span>评论</span></a></li>
-                        <li><a id="qaOn" class="" href="/qa/139/t/1?page=1"><span>问答</span></a></li>
-                        <li><a id="noteOn" class="" href="/note/139?sort=last&page=1"><span>笔记</span></a></li>
+                        <li><a class="ui-tabs-active " id="learnOn"  href="{{URL('learnShow')}}?id=<?php echo $course['course_id']?>"><span>章节</span></a></li>
+                        <li><a id="commentOn" class="active" href="#"><span>评论</span></a></li>
+                        <li><a id="qaOn" class="" href="{{URL('learnIssue')}}?id=<?php echo $course['course_id']?>"><span>问答</span></a></li>
+                        <li><a id="noteOn" class="" href="{{URL('learnNote')}}?id=<?php echo $course['course_id']?>"><span>笔记</span></a></li>
                         <!--
                         <li><a id="wikiOn" class="" href="/wiki/139">WIKI</a></li>
                         -->
@@ -302,7 +289,7 @@
                                                 @endif
 
                                             </a>
-                                            <em>{{$val['praise_num']}}</em>
+                                            <em class="praise_num">{{$val['praise_num']}}</em>
                                         </div>
                                     </div>
                                 </div>
@@ -375,7 +362,7 @@
                     success: function(msg){
                         if(msg == 1){
                             obj.parent().html('<span class="praise_cancel" rid="'+rid+'">取消赞</span>');
-                            obj.parent().siblings('em').html(num);
+                            $('.praise_num').html(num);
                             alert('点赞成功');
                         }else{
                             alert('点赞失败，请重试');
@@ -399,7 +386,7 @@
                 success: function(msg){
                     if(msg == 1){
                         obj.parent().html('<span class="praise" rid="'+rid+'">赞</span>');
-                        obj.parent().siblings('em').html(num);
+                        $('.praise_num').html(num);
                         alert('取消赞成功');
                     }else{
                         alert('取消赞失败，请重试');
